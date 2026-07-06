@@ -257,7 +257,7 @@ body.nav-open .mobile-nav{transform:translateY(0);}
 }
 .footer-logo{height:74px;width:auto;display:block;}
 .footer-nav{display:flex;gap:1.5rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.8;}
-.copyright{font-size:0.7rem;opacity:0.5;}
+.copyright{font-size:0.7rem;opacity:0.65;}
 @media (min-width:700px){
   .footer-inner{flex-direction:row;justify-content:space-between;text-align:left;}
 }
