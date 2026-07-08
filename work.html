@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Websites Built for Local Trades — GDB Media &amp; Marketing</title>
+<meta name="description" content="See the websites GDB Media has built for local businesses — plumbers, electricians, gardeners, barbers, music studios and more. Filter by trade to see what we'd build for yours.">
+<link rel="canonical" href="https://gdbmedia.com.au/work.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#023047">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GDB Media & Marketing">
+<meta property="og:title" content="Our Work — Websites for Local Trades | GDB Media">
+<meta property="og:description" content="See the websites we've built for plumbers, electricians, gardeners, barbers and other local businesses.">
+<meta property="og:url" content="https://gdbmedia.com.au/work.html">
+<meta property="og:image" content="https://gdbmedia.com.au/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Work — Websites for Local Trades | GDB Media">
+<meta name="twitter:description" content="See the websites we've built for plumbers, electricians, gardeners, barbers and other local businesses.">
+<meta name="twitter:image" content="https://gdbmedia.com.au/images/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="nav-side nav-left" aria-label="Primary">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#approach" class="nav-link">Approach</a>
+      </nav>
+
+      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+        <!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
+        <span class="logo-badge">GDB</span>
+        <span class="logo-sub">Media &amp; Marketing</span>
+      </a>
+
+      <nav class="nav-side nav-right" aria-label="Secondary">
+        <div class="dropdown" data-dropdown>
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenu">
+            Our Work <span class="caret" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown-menu" id="workMenu">
+            <a href="#plumbers">Plumbers</a>
+            <a href="#electricians">Electricians</a>
+            <a href="#gardeners">Gardeners</a>
+            <a href="#barbers">Barbers</a>
+            <a href="#music">Music &amp; Lessons</a>
+            <a href="#all" class="menu-all">View All Work</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="nav-close" id="navClose" aria-label="Close menu">
+      <span></span><span></span>
+    </button>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#approach" class="nav-link">Approach</a>
+    <div class="dropdown" data-dropdown>
+      <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
+        Our Work <span class="caret" aria-hidden="true"></span>
+      </button>
+      <div class="dropdown-menu" id="workMenuMobile">
+        <a href="#plumbers">Plumbers</a>
+        <a href="#electricians">Electricians</a>
+        <a href="#gardeners">Gardeners</a>
+        <a href="#barbers">Barbers</a>
+        <a href="#music">Music &amp; Lessons</a>
+        <a href="#all" class="menu-all">View All Work</a>
+      </div>
+    </div>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
+
+  <main id="main">
+    <section class="page-head on-dark">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="page-head-inner">
+        <p class="eyebrow">Our Work</p>
+        <h1>Built for local businesses, <em class="u-wavy">by trade</em>.</h1>
+        <p>Every business below is someone's livelihood. We treat their website the same way they treat their work — done properly, built to last, and easy for their customers to use. Filter by trade to see what we'd build for yours.</p>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="filter-bar" role="group" aria-label="Filter projects by trade">
+        <button class="filter-chip" data-filter="all" aria-pressed="true">All Work</button>
+        <button class="filter-chip" data-filter="plumbers" aria-pressed="false">Plumbers</button>
+        <button class="filter-chip" data-filter="electricians" aria-pressed="false">Electricians</button>
+        <button class="filter-chip" data-filter="gardeners" aria-pressed="false">Gardeners</button>
+        <button class="filter-chip" data-filter="barbers" aria-pressed="false">Barbers</button>
+        <button class="filter-chip" data-filter="music" aria-pressed="false">Music &amp; Lessons</button>
+      </div>
+
+      <p id="workCount" class="visually-hidden" aria-live="polite"></p>
+
+      <div class="work-grid" id="workGrid">
+        <!-- cards are rendered from the projects array in work.js -->
+      </div>
+      <p class="work-empty" id="workEmpty">No projects in this category yet — they're coming. In the meantime, <a href="contact.html" class="work-link">yours could be the first</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+        <span class="logo-badge">GDB</span>
+        <span class="logo-sub">Media &amp; Marketing</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="work.html">Our Work</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="work.js"></script>
+</body>
+</html>

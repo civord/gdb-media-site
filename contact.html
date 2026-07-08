@@ -3,17 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — GDB Media &amp; Marketing</title>
-<meta name="description" content="Start a conversation with GDB Media & Marketing. Tell us about your brand and we'll be in touch within one business day.">
+<title>Contact — GDB Media &amp; Marketing | Get a Free Website Quote</title>
+<meta name="description" content="Get in touch with GDB Media & Marketing for a free, no-pressure quote. We build websites for local trades and small businesses and reply within one business day.">
+<link rel="canonical" href="https://gdbmedia.com.au/contact.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#023047">
+
+<!-- Open Graph (social sharing) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GDB Media & Marketing">
+<meta property="og:title" content="Contact GDB Media — Get a Free Website Quote">
+<meta property="og:description" content="Tell us about your business and we'll reply within one business day. No pressure, no jargon.">
+<meta property="og:url" content="https://gdbmedia.com.au/contact.html">
+<meta property="og:image" content="https://gdbmedia.com.au/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GDB Media & Marketing — websites for local businesses">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact GDB Media — Get a Free Website Quote">
+<meta name="twitter:description" content="Tell us about your business and we'll reply within one business day.">
+<meta name="twitter:image" content="https://gdbmedia.com.au/images/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Structured data: contact page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact GDB Media & Marketing",
+  "url": "https://gdbmedia.com.au/contact.html",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "name": "GDB Media & Marketing",
+    "email": "info@gdbmedia.com.au",
+    "areaServed": "AU"
+  }
+}
+</script>
 </head>
 <body>
 
-  <div class="grain" aria-hidden="true"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-header">
     <div class="header-inner">
@@ -22,11 +58,26 @@
         <a href="index.html#approach" class="nav-link">Approach</a>
       </nav>
 
-      <a href="index.html" class="wordmark">
-        <img src="images/Logo.png" alt="GDB Media & Marketing" class="wordmark-img">
+      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+        <!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
+        <span class="logo-badge">GDB</span>
+        <span class="logo-sub">Media &amp; Marketing</span>
       </a>
 
       <nav class="nav-side nav-right" aria-label="Secondary">
+        <div class="dropdown" data-dropdown>
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenu">
+            Our Work <span class="caret" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown-menu" id="workMenu">
+            <a href="work.html#plumbers">Plumbers</a>
+            <a href="work.html#electricians">Electricians</a>
+            <a href="work.html#gardeners">Gardeners</a>
+            <a href="work.html#barbers">Barbers</a>
+            <a href="work.html#music">Music &amp; Lessons</a>
+            <a href="work.html" class="menu-all">View All Work</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link">Contact</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
@@ -41,35 +92,39 @@
     </button>
     <a href="index.html#services" class="nav-link">Services</a>
     <a href="index.html#approach" class="nav-link">Approach</a>
+    <div class="dropdown" data-dropdown>
+      <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
+        Our Work <span class="caret" aria-hidden="true"></span>
+      </button>
+      <div class="dropdown-menu" id="workMenuMobile">
+        <a href="work.html#plumbers">Plumbers</a>
+        <a href="work.html#electricians">Electricians</a>
+        <a href="work.html#gardeners">Gardeners</a>
+        <a href="work.html#barbers">Barbers</a>
+        <a href="work.html#music">Music &amp; Lessons</a>
+        <a href="work.html" class="menu-all">View All Work</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-link">Contact</a>
   </nav>
 
-  <main>
+  <main id="main">
     <section class="contact-section">
-      <div class="frame-marks" aria-hidden="true">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
-      </div>
-      <span class="frame-label tl-label" aria-hidden="true">GDB — Contact</span>
-
       <div class="contact-inner">
         <div class="contact-intro">
           <p class="eyebrow">Start a Conversation</p>
-          <h1 class="contact-title">Let's build something <em class="text-gold">remarkable</em>.</h1>
-          <p class="contact-lead">Tell us a little about your brand and where you'd like to take it. We read every message ourselves and reply within one business day.</p>
-          <div class="divider" aria-hidden="true"><span class="line"></span><span class="dot"></span></div>
+          <h1 class="contact-title">Let's build something <em class="u-wavy">remarkable</em>.</h1>
+          <p class="contact-lead">Tell us a little about your business and what you need. No pressure and no jargon — we read every message ourselves and reply within one business day.</p>
           <p class="contact-direct">Prefer email? Reach us directly at<br>
             <a href="mailto:info@gdbmedia.com.au" class="contact-email">info@gdbmedia.com.au</a>
           </p>
         </div>
 
         <div class="contact-form-wrap">
-          <!-- No <form> element with onsubmit — submission is handled in contact.js.
-               Web3Forms setup: replace the access key placeholder below with your own
-               free key from https://web3forms.com (uses info@gdbmedia.com.au as the
-               destination when you generate the key for that address). -->
+          <!-- Web3Forms setup: replace the access key placeholder below with your own
+               free key from https://web3forms.com generated for info@gdbmedia.com.au -->
           <form id="contactForm" class="contact-form" novalidate>
-            <input type="hidden" name="access_key" value="ec6ecef7-3e01-49fb-b564-dc0bb9b38f2a">
+            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY-HERE">
             <input type="hidden" name="subject" value="New enquiry from the GDB website">
             <input type="hidden" name="from_name" value="GDB Media Website">
             <!-- honeypot spam trap: bots fill this, humans never see it -->
@@ -111,10 +166,14 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <img src="images/Logo.png" alt="GDB Media & Marketing" class="footer-logo">
-      <nav class="footer-nav">
+      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+        <span class="logo-badge">GDB</span>
+        <span class="logo-sub">Media &amp; Marketing</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
         <a href="index.html#services">Services</a>
         <a href="index.html#approach">Approach</a>
+        <a href="work.html">Our Work</a>
         <a href="contact.html">Contact</a>
       </nav>
       <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
