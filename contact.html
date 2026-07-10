@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — GDB Media &amp; Marketing | Get a Free Website Quote</title>
-<meta name="description" content="Get in touch with GDB Media & Marketing for a free, no-pressure quote. We build websites for local trades and small businesses and reply within one business day.">
-<link rel="canonical" href="https://gdbmedia.com.au/contact.html">
+<meta name="description" content="Get a free, no-pressure quote for a tradie or small business website. GDB Media & Marketing builds websites for trades across Australia and replies within one business day.">
+<link rel="canonical" href="https://gdbmedia.com.au/contact">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#023047">
 
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="GDB Media & Marketing">
 <meta property="og:title" content="Contact GDB Media — Get a Free Website Quote">
 <meta property="og:description" content="Tell us about your business and we'll reply within one business day. No pressure, no jargon.">
-<meta property="og:url" content="https://gdbmedia.com.au/contact.html">
+<meta property="og:url" content="https://gdbmedia.com.au/contact">
 <meta property="og:image" content="https://gdbmedia.com.au/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,22 +28,50 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 
 <!-- Structured data: contact page -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact GDB Media & Marketing",
-  "url": "https://gdbmedia.com.au/contact.html",
-  "mainEntity": {
-    "@type": "ProfessionalService",
-    "name": "GDB Media & Marketing",
-    "email": "info@gdbmedia.com.au",
-    "areaServed": "AU"
-  }
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://gdbmedia.com.au/contact#page",
+      "name": "Contact GDB Media & Marketing",
+      "url": "https://gdbmedia.com.au/contact",
+      "inLanguage": "en-AU",
+      "mainEntity": {
+        "@type": "ProfessionalService",
+        "@id": "https://gdbmedia.com.au/#business",
+        "name": "GDB Media & Marketing",
+        "url": "https://gdbmedia.com.au/",
+        "email": "info@gdbmedia.com.au",
+        "image": "https://gdbmedia.com.au/images/og-image.jpg",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Australia"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gdbmedia.com.au/"},
+        {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://gdbmedia.com.au/contact"}
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -54,11 +82,11 @@
   <header class="site-header">
     <div class="header-inner">
       <nav class="nav-side nav-left" aria-label="Primary">
-        <a href="index.html#services" class="nav-link">Services</a>
-        <a href="index.html#approach" class="nav-link">Approach</a>
+        <a class='nav-link' href='/#services'>Services</a>
+        <a class='nav-link' href='/#approach'>Approach</a>
       </nav>
 
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
         <span class="logo-badge">GDB</span>
         <span class="logo-sub">Media &amp; Marketing</span>
@@ -70,15 +98,15 @@
             Our Work <span class="caret" aria-hidden="true"></span>
           </button>
           <div class="dropdown-menu" id="workMenu">
-            <a href="work.html#plumbers">Plumbers</a>
-            <a href="work.html#electricians">Electricians</a>
-            <a href="work.html#gardeners">Gardeners</a>
-            <a href="work.html#barbers">Barbers</a>
-            <a href="work.html#music">Music &amp; Lessons</a>
-            <a href="work.html" class="menu-all">View All Work</a>
+            <a href='/work#plumbers'>Plumbers</a>
+            <a href='/work#electricians'>Electricians</a>
+            <a href='/work#gardeners'>Gardeners</a>
+            <a href='/work#barbers'>Barbers</a>
+            <a href='/work#music'>Music &amp; Lessons</a>
+            <a class='menu-all' href='/work'>View All Work</a>
           </div>
         </div>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a class='nav-link' href='/contact'>Contact</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
         </button>
@@ -90,22 +118,22 @@
     <button class="nav-close" id="navClose" aria-label="Close menu">
       <span></span><span></span>
     </button>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="index.html#approach" class="nav-link">Approach</a>
+    <a class='nav-link' href='/#services'>Services</a>
+    <a class='nav-link' href='/#approach'>Approach</a>
     <div class="dropdown" data-dropdown>
       <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
         Our Work <span class="caret" aria-hidden="true"></span>
       </button>
       <div class="dropdown-menu" id="workMenuMobile">
-        <a href="work.html#plumbers">Plumbers</a>
-        <a href="work.html#electricians">Electricians</a>
-        <a href="work.html#gardeners">Gardeners</a>
-        <a href="work.html#barbers">Barbers</a>
-        <a href="work.html#music">Music &amp; Lessons</a>
-        <a href="work.html" class="menu-all">View All Work</a>
+        <a href='/work#plumbers'>Plumbers</a>
+        <a href='/work#electricians'>Electricians</a>
+        <a href='/work#gardeners'>Gardeners</a>
+        <a href='/work#barbers'>Barbers</a>
+        <a href='/work#music'>Music &amp; Lessons</a>
+        <a class='menu-all' href='/work'>View All Work</a>
       </div>
     </div>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a class='nav-link' href='/contact'>Contact</a>
   </nav>
 
   <main id="main">
@@ -115,16 +143,28 @@
           <p class="eyebrow">Start a Conversation</p>
           <h1 class="contact-title">Let's build something <em class="u-wavy">remarkable</em>.</h1>
           <p class="contact-lead">Tell us a little about your business and what you need. No pressure and no jargon — we read every message ourselves and reply within one business day.</p>
+
+          <p class="contact-copy">Whether you're a plumber who needs a first website, an electrician whose old site never rings the phone, or a café or studio ready for a proper online presence — the first step is the same. Send us a message and we'll come back with straight answers and a fixed-price quote for a website built around your trade.</p>
+
+          <div class="contact-steps">
+            <h2 class="contact-steps-title">What happens next</h2>
+            <ol>
+              <li><strong>You tell us about your business.</strong> A few lines is plenty — your trade, where you work, and what you want the website to do.</li>
+              <li><strong>We reply within one business day.</strong> A real reply from the people who'll build your site, with honest advice and a fixed quote. No obligation.</li>
+              <li><strong>We build, you approve, you launch.</strong> Design, copy, SEO and setup handled for you. The finished website is yours to keep.</li>
+            </ol>
+          </div>
+
+          <p class="contact-copy">We work with trades and small businesses Australia-wide from our base in Melbourne — the whole process runs smoothly by phone and email if you're anywhere else in the country.</p>
+
           <p class="contact-direct">Prefer email? Reach us directly at<br>
             <a href="mailto:info@gdbmedia.com.au" class="contact-email">info@gdbmedia.com.au</a>
           </p>
         </div>
 
         <div class="contact-form-wrap">
-          <!-- Web3Forms setup: replace the access key placeholder below with your own
-               free key from https://web3forms.com generated for info@gdbmedia.com.au -->
           <form id="contactForm" class="contact-form" novalidate>
-            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY-HERE">
+            <input type="hidden" name="access_key" value="ec6ecef7-3e01-49fb-b564-dc0bb9b38f2a">
             <input type="hidden" name="subject" value="New enquiry from the GDB website">
             <input type="hidden" name="from_name" value="GDB Media Website">
             <!-- honeypot spam trap: bots fill this, humans never see it -->
@@ -166,21 +206,21 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <span class="logo-badge">GDB</span>
         <span class="logo-sub">Media &amp; Marketing</span>
       </a>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#approach">Approach</a>
-        <a href="work.html">Our Work</a>
-        <a href="contact.html">Contact</a>
+        <a href='/#services'>Services</a>
+        <a href='/#approach'>Approach</a>
+        <a href='/work'>Our Work</a>
+        <a href='/contact'>Contact</a>
       </nav>
       <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="contact.js"></script>
+  <script src="script.js" defer></script>
+  <script src="contact.js" defer></script>
 </body>
 </html>

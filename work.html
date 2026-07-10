@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Work | Websites Built for Local Trades — GDB Media &amp; Marketing</title>
-<meta name="description" content="See the websites GDB Media has built for local businesses — plumbers, electricians, gardeners, barbers, music studios and more. Filter by trade to see what we'd build for yours.">
-<link rel="canonical" href="https://gdbmedia.com.au/work.html">
+<meta name="description" content="See the websites GDB Media has built for local businesses across Australia — plumbers, electricians, gardeners, barbers, music studios and more. Filter by trade to see what we'd build for yours.">
+<link rel="canonical" href="https://gdbmedia.com.au/work">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#023047">
 
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="GDB Media & Marketing">
 <meta property="og:title" content="Our Work — Websites for Local Trades | GDB Media">
 <meta property="og:description" content="See the websites we've built for plumbers, electricians, gardeners, barbers and other local businesses.">
-<meta property="og:url" content="https://gdbmedia.com.au/work.html">
+<meta property="og:url" content="https://gdbmedia.com.au/work">
 <meta property="og:image" content="https://gdbmedia.com.au/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,8 +25,51 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
+
+<!-- Structured data: portfolio page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://gdbmedia.com.au/work#page",
+      "name": "Our Work — Websites for Local Trades",
+      "url": "https://gdbmedia.com.au/work",
+      "inLanguage": "en-AU",
+      "about": {"@id": "https://gdbmedia.com.au/#business"},
+      "description": "Portfolio of websites built by GDB Media & Marketing for tradies and small businesses across Australia."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gdbmedia.com.au/"},
+        {"@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://gdbmedia.com.au/work"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Websites built by GDB Media & Marketing",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebSite",
+            "name": "Suburban Rhythm Music Studio",
+            "url": "https://suburbanrhythm.com.au",
+            "description": "Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -35,11 +78,11 @@
   <header class="site-header">
     <div class="header-inner">
       <nav class="nav-side nav-left" aria-label="Primary">
-        <a href="index.html#services" class="nav-link">Services</a>
-        <a href="index.html#approach" class="nav-link">Approach</a>
+        <a class='nav-link' href='/#services'>Services</a>
+        <a class='nav-link' href='/#approach'>Approach</a>
       </nav>
 
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
         <span class="logo-badge">GDB</span>
         <span class="logo-sub">Media &amp; Marketing</span>
@@ -60,7 +103,7 @@
             <a href="#all" class="menu-all">View All Work</a>
           </div>
         </div>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a class='nav-link' href='/contact'>Contact</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
         </button>
@@ -72,8 +115,8 @@
     <button class="nav-close" id="navClose" aria-label="Close menu">
       <span></span><span></span>
     </button>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="index.html#approach" class="nav-link">Approach</a>
+    <a class='nav-link' href='/#services'>Services</a>
+    <a class='nav-link' href='/#approach'>Approach</a>
     <div class="dropdown" data-dropdown>
       <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
         Our Work <span class="caret" aria-hidden="true"></span>
@@ -88,7 +131,7 @@
         <a href="#all" class="menu-all">View All Work</a>
       </div>
     </div>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a class='nav-link' href='/contact'>Contact</a>
   </nav>
 
   <main id="main">
@@ -97,7 +140,7 @@
       <div class="page-head-inner">
         <p class="eyebrow">Our Work</p>
         <h1>Built for local businesses, <em class="u-wavy">by trade</em>.</h1>
-        <p>Every business below is someone's livelihood. We treat their website the same way they treat their work — done properly, built to last, and easy for their customers to use. Filter by trade to see what we'd build for yours.</p>
+        <p>Every business below is someone's livelihood. We treat their website the same way they treat their work — done properly, built to last, and easy for their customers to use. From tradie websites to studio booking pages, filter by trade to see what we'd build for yours.</p>
       </div>
     </section>
 
@@ -114,30 +157,160 @@
 
       <p id="workCount" class="visually-hidden" aria-live="polite"></p>
 
+      <!-- Cards are static HTML so search engines and AI crawlers can read them.
+           work.js only handles filtering. TO ADD A CLIENT: copy a card, update
+           the text, swap the placeholder SVG for <img src="images/work/name.jpg"
+           alt="Screenshot of the … website" loading="lazy"> -->
       <div class="work-grid" id="workGrid">
-        <!-- cards are rendered from the projects array in work.js -->
+
+        <article class="work-card" data-category="music">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Suburban Rhythm Music Studio">
+              <rect width="400" height="300" fill="#f7fafc"/>
+              <rect width="400" height="34" fill="#023047"/>
+              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
+              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
+              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+              <rect x="30" y="64" width="340" height="150" rx="10" fill="#219ebc" opacity="0.16"/>
+              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#219ebc">SR</text>
+              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">MUSIC &amp; LESSONS</text>
+              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+            </svg>
+          </div>
+          <div class="work-body">
+            <span class="cat-tag">Music &amp; Lessons</span>
+            <h3>Suburban Rhythm Music Studio</h3>
+            <p>Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking.</p>
+            <a class="work-link" href="https://suburbanrhythm.com.au" target="_blank" rel="noopener">Visit site ↗</a>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="plumbers">
+          <span class="sample-badge">Sample</span>
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Bayside Plumbing Co.">
+              <rect width="400" height="300" fill="#f7fafc"/>
+              <rect width="400" height="34" fill="#023047"/>
+              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
+              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
+              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+              <rect x="30" y="64" width="340" height="150" rx="10" fill="#fb8500" opacity="0.16"/>
+              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#fb8500">BP</text>
+              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">PLUMBERS</text>
+              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+            </svg>
+          </div>
+          <div class="work-body">
+            <span class="cat-tag">Plumbers</span>
+            <h3>Bayside Plumbing Co.</h3>
+            <p>Sample plumber website concept — service pages, emergency call-out button and quote form, built to win local search.</p>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="electricians">
+          <span class="sample-badge">Sample</span>
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Volt &amp; Wire Electrical">
+              <rect width="400" height="300" fill="#f7fafc"/>
+              <rect width="400" height="34" fill="#023047"/>
+              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
+              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
+              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+              <rect x="30" y="64" width="340" height="150" rx="10" fill="#8ecae6" opacity="0.16"/>
+              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#8ecae6">VW</text>
+              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">ELECTRICIANS</text>
+              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+            </svg>
+          </div>
+          <div class="work-body">
+            <span class="cat-tag">Electricians</span>
+            <h3>Volt &amp; Wire Electrical</h3>
+            <p>Sample electrician website concept — licence and safety credentials up front, clear service areas, one-tap call.</p>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="gardeners">
+          <span class="sample-badge">Sample</span>
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Greenline Garden Care">
+              <rect width="400" height="300" fill="#f7fafc"/>
+              <rect width="400" height="34" fill="#023047"/>
+              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
+              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
+              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+              <rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
+              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">GG</text>
+              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">GARDENERS</text>
+              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+            </svg>
+          </div>
+          <div class="work-body">
+            <span class="cat-tag">Gardeners</span>
+            <h3>Greenline Garden Care</h3>
+            <p>Sample gardener website concept — before-and-after photo galleries, seasonal services and easy quote requests.</p>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="barbers">
+          <span class="sample-badge">Sample</span>
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Fade District Barbershop">
+              <rect width="400" height="300" fill="#f7fafc"/>
+              <rect width="400" height="34" fill="#023047"/>
+              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
+              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
+              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+              <rect x="30" y="64" width="340" height="150" rx="10" fill="#023047" opacity="0.16"/>
+              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#023047">FD</text>
+              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">BARBERS</text>
+              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+            </svg>
+          </div>
+          <div class="work-body">
+            <span class="cat-tag">Barbers</span>
+            <h3>Fade District Barbershop</h3>
+            <p>Sample barbershop website concept — online booking, price list and a gallery that shows off the cuts.</p>
+          </div>
+        </article>
+
       </div>
-      <p class="work-empty" id="workEmpty">No projects in this category yet — they're coming. In the meantime, <a href="contact.html" class="work-link">yours could be the first</a>.</p>
+      <p class="work-empty" id="workEmpty">No projects in this category yet — they're coming. In the meantime, <a class='work-link' href='/contact'>yours could be the first</a>.</p>
+
+      <div class="work-outro">
+        <h2 class="work-outro-title">What every GDB build includes</h2>
+        <p>Whatever the trade, every website we build for a local business ships with the same foundations: mobile-first design that works on the phone in your customer's pocket, fast load times, clear calls to action, and the on-page SEO — titles, structured data and locally-searched keywords — that helps you show up on Google and in AI search results. We write the copy with you, so it sounds like your business and answers the questions your customers actually ask.</p>
+        <p>Don't see your trade here yet? That list keeps growing — cafés, cleaners, landscapers, mechanics, tutors and more. <a href="/contact">Tell us about your business</a> and we'll show you exactly what your website could look like, with a fixed-price quote and no obligation.</p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <span class="logo-badge">GDB</span>
         <span class="logo-sub">Media &amp; Marketing</span>
       </a>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#approach">Approach</a>
-        <a href="work.html">Our Work</a>
-        <a href="contact.html">Contact</a>
+        <a href='/#services'>Services</a>
+        <a href='/#approach'>Approach</a>
+        <a href='/work'>Our Work</a>
+        <a href='/contact'>Contact</a>
       </nav>
       <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="work.js"></script>
+  <script src="script.js" defer></script>
+  <script src="work.js" defer></script>
 </body>
 </html>

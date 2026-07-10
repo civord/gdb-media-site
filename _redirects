@@ -1,0 +1,4 @@
+# Netlify redirects — collapse duplicate .html URLs to canonical extensionless URLs
+/contact.html   /contact   301!
+/work.html      /work      301!
+/index.html     /          301!

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>GDB Media &amp; Marketing | Websites for Local Trades &amp; Small Business</title>
-<meta name="description" content="GDB Media & Marketing builds fast, affordable websites for plumbers, electricians, gardeners, barbers and other local businesses. Get a site that brings in more calls and bookings.">
+<title>Websites for Tradies &amp; Small Business Australia | GDB Media &amp; Marketing</title>
+<meta name="description" content="GDB Media & Marketing builds fast, affordable websites for tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers and more. Get a site that brings in more calls and bookings.">
 <link rel="canonical" href="https://gdbmedia.com.au/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#023047">
@@ -14,7 +14,7 @@
 <!-- Open Graph (social sharing) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GDB Media & Marketing">
-<meta property="og:title" content="Websites for Local Trades & Small Business | GDB Media">
+<meta property="og:title" content="Websites for Tradies & Small Business Australia | GDB Media">
 <meta property="og:description" content="Fast, affordable websites for plumbers, electricians, gardeners, barbers and other local businesses — built to bring in more calls and bookings.">
 <meta property="og:url" content="https://gdbmedia.com.au/">
 <meta property="og:image" content="https://gdbmedia.com.au/images/og-image.jpg">
@@ -24,29 +24,106 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Websites for Local Trades & Small Business | GDB Media">
-<meta name="twitter:description" content="Fast, affordable websites for plumbers, electricians, gardeners, barbers and other local businesses.">
+<meta name="twitter:title" content="Websites for Tradies & Small Business Australia | GDB Media">
+<meta name="twitter:description" content="Fast, affordable websites for plumbers, electricians, gardeners, barbers and other local businesses across Australia.">
 <meta name="twitter:image" content="https://gdbmedia.com.au/images/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Fonts load async so they don't block first paint; noscript fallback below -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 
-<!-- Structured data: tells search engines exactly what GDB is -->
+<!-- Structured data: business, website and FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "GDB Media & Marketing",
-  "description": "Web design and digital marketing agency building websites for local trades and small businesses.",
-  "url": "https://gdbmedia.com.au/",
-  "email": "info@gdbmedia.com.au",
-  "image": "https://gdbmedia.com.au/images/og-image.jpg",
-  "areaServed": "AU",
-  "priceRange": "$$",
-  "serviceType": ["Web Design", "Brand Strategy", "Content Production", "Digital Marketing"],
-  "knowsAbout": ["Web Design for Tradespeople", "Local Business Marketing", "Small Business Websites"]
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://gdbmedia.com.au/#business",
+      "name": "GDB Media & Marketing",
+      "description": "Web design and digital marketing agency building fast, affordable websites for tradies and small businesses across Australia.",
+      "url": "https://gdbmedia.com.au/",
+      "email": "info@gdbmedia.com.au",
+      "image": "https://gdbmedia.com.au/images/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "priceRange": "$$",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer enquiries",
+        "email": "info@gdbmedia.com.au",
+        "availableLanguage": "English"
+      },
+      "serviceType": ["Web Design", "Website Design for Tradies", "Small Business Websites", "SEO", "Digital Marketing", "Social Media Marketing", "Branding", "Content Production"],
+      "knowsAbout": ["Web Design for Tradespeople", "Local Business Marketing", "Small Business Websites", "Search Engine Optimisation", "Local SEO for Trades"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & Branding", "description": "Custom websites and logos for tradies and small businesses."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photos & Content", "description": "Photography guidance and clear website copy that shows customers what you do."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO & Getting Found", "description": "Local SEO so your business shows up on Google and in AI search when customers look for your trade."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing", "description": "Social media setup and content for local businesses — profiles that match your website and posts that bring in work."}}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gdbmedia.com.au/#website",
+      "url": "https://gdbmedia.com.au/",
+      "name": "GDB Media & Marketing",
+      "publisher": {"@id": "https://gdbmedia.com.au/#business"},
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gdbmedia.com.au/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who does GDB Media build websites for?",
+          "acceptedAnswer": {"@type": "Answer", "text": "GDB Media & Marketing builds websites for tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers, cafés, music studios and any local business that lives on calls and bookings."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a small business website cost?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Every build is quoted as a fixed price up front, based on what your business actually needs — no hourly surprises and no ongoing lock-in. Start with a free quote: tell us about your business and we'll reply within one business day."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only work with businesses in Melbourne?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. GDB Media is based in Melbourne but works with trades and small businesses Australia-wide. The whole process — from first chat to launch — works just as well remotely."}
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in a website build?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Design, clear customer-focused copy, mobile-friendly build, fast load times and the SEO fundamentals — page titles, structured data and keywords your customers actually search for. Photos and branding help are available too."}
+        },
+        {
+          "@type": "Question",
+          "name": "Will my website show up on Google and in AI search?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Every site we build ships with the technical SEO that search engines and AI assistants rely on: fast pages, structured data, sitemaps and content written around what your customers search for. Getting found is a core service, not an add-on."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own my website?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your website is yours to keep — no lock-in contracts, no hostage hosting. We build it, you own it."}
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -61,7 +138,7 @@
         <a href="#approach" class="nav-link">Approach</a>
       </nav>
 
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <!-- LOGO PLACEHOLDER: replace this span pair with
              <img src="images/logo.png" alt="GDB Media & Marketing" class="wordmark-img">
              when the new logo is ready -->
@@ -75,16 +152,16 @@
             Our Work <span class="caret" aria-hidden="true"></span>
           </button>
           <div class="dropdown-menu" id="workMenu">
-            <a href="work.html#plumbers">Plumbers</a>
-            <a href="work.html#electricians">Electricians</a>
-            <a href="work.html#gardeners">Gardeners</a>
-            <a href="work.html#barbers">Barbers</a>
-            <a href="work.html#music">Music &amp; Lessons</a>
-            <a href="work.html#developers">Developers</a>
-            <a href="work.html" class="menu-all">View All Work</a>
+            <a href='/work#plumbers'>Plumbers</a>
+            <a href='/work#electricians'>Electricians</a>
+            <a href='/work#gardeners'>Gardeners</a>
+            <a href='/work#barbers'>Barbers</a>
+            <a href='/work#music'>Music &amp; Lessons</a>
+            <a href='/work#developers'>Developers</a>
+            <a class='menu-all' href='/work'>View All Work</a>
           </div>
         </div>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a class='nav-link' href='/contact'>Contact</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
         </button>
@@ -103,16 +180,16 @@
         Our Work <span class="caret" aria-hidden="true"></span>
       </button>
       <div class="dropdown-menu" id="workMenuMobile">
-        <a href="work.html#plumbers">Plumbers</a>
-        <a href="work.html#electricians">Electricians</a>
-        <a href="work.html#gardeners">Gardeners</a>
-        <a href="work.html#barbers">Barbers</a>
-        <a href="work.html#music">Music &amp; Lessons</a>
-        <a href="work.html#developers">Developers</a>
-        <a href="work.html" class="menu-all">View All Work</a>
+        <a href='/work#plumbers'>Plumbers</a>
+        <a href='/work#electricians'>Electricians</a>
+        <a href='/work#gardeners'>Gardeners</a>
+        <a href='/work#barbers'>Barbers</a>
+        <a href='/work#music'>Music &amp; Lessons</a>
+        <a href='/work#developers'>Developers</a>
+        <a class='menu-all' href='/work'>View All Work</a>
       </div>
     </div>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a class='nav-link' href='/contact'>Contact</a>
   </nav>
 
   <main id="main">
@@ -127,10 +204,10 @@
 
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Websites for Local Business</p>
+          <p class="eyebrow">Websites for Tradies &amp; Local Business</p>
           <h1 class="hero-title">A website that brings in <em class="u-wavy">real work.</em></h1>
-          <p class="hero-sub">You're brilliant at your trade. We make sure the people searching for it can find you, trust you, and pick up the phone. Clean, fast websites built for local businesses — no jargon, no fuss.</p>
-          <a href="contact.html" class="btn-primary"><span>Get a Free Quote</span></a>
+          <p class="hero-sub">You're brilliant at your trade. We make sure the people searching for it can find you, trust you, and pick up the phone. Clean, fast websites for tradies and small businesses across Australia — no jargon, no fuss.</p>
+          <a class='btn-primary' href='/contact'><span>Get a Free Quote</span></a>
         </div>
 
         <div class="hero-art" aria-hidden="true">
@@ -174,7 +251,7 @@
             <circle class="ac" cx="40" cy="15" r="3"/>
           </svg>
           <h3>Websites &amp; Branding</h3>
-          <p>A sharp, professional website and logo that make customers trust you before they've even called.</p>
+          <p>Professional website design for tradies and small businesses — a sharp site and logo that make customers trust you before they've even called.</p>
         </article>
         <article class="service-card reveal">
           <svg class="service-icon" viewBox="0 0 52 52" aria-hidden="true">
@@ -184,7 +261,7 @@
             <circle class="ac" cx="40" cy="21" r="2.5"/>
           </svg>
           <h3>Photos &amp; Content</h3>
-          <p>Real photos of your work and clear, honest words that show customers exactly what you do.</p>
+          <p>Real photos of your work and clear, honest website copy that shows customers exactly what you do — and helps Google understand it too.</p>
         </article>
         <article class="service-card reveal">
           <svg class="service-icon" viewBox="0 0 52 52" aria-hidden="true">
@@ -192,8 +269,8 @@
             <path class="st" d="M8 20 L26 8 L44 20 M44 20 V36"/>
             <circle class="ac" cx="44" cy="40" r="3.5"/>
           </svg>
-          <h3>Getting You Found</h3>
-          <p>Show up on Google when locals search for your trade — and turn those searches into paying jobs.</p>
+          <h3>SEO &amp; Getting Found</h3>
+          <p>Local SEO for trades: show up on Google and in AI search when people look for your trade — and turn those searches into paying jobs.</p>
         </article>
       </div>
     </section>
@@ -202,16 +279,16 @@
       <div class="work-teaser-inner">
         <p class="eyebrow">Our Work</p>
         <h2 class="section-title" id="work-heading">Websites that work as hard as <em class="u-wavy">you do.</em></h2>
-        <p class="lead">We build for local businesses — the plumbers, barbers, gardeners, and makers people rely on every day. Take a look at what we've built, sorted by trade.</p>
+        <p class="lead">We build for local businesses Australia-wide — the plumbers, barbers, gardeners, and makers people rely on every day. Take a look at what we've built, sorted by trade.</p>
         <div class="teaser-chips">
-          <a class="chip" href="work.html#plumbers">Plumbers</a>
-          <a class="chip" href="work.html#electricians">Electricians</a>
-          <a class="chip" href="work.html#gardeners">Gardeners</a>
-          <a class="chip" href="work.html#barbers">Barbers</a>
-          <a class="chip" href="work.html#music">Music &amp; Lessons</a>
-          <a class="chip" href="work.html#developers">Developers</a>
+          <a class='chip' href='/work#plumbers'>Plumbers</a>
+          <a class='chip' href='/work#electricians'>Electricians</a>
+          <a class='chip' href='/work#gardeners'>Gardeners</a>
+          <a class='chip' href='/work#barbers'>Barbers</a>
+          <a class='chip' href='/work#music'>Music &amp; Lessons</a>
+          <a class='chip' href='/work#developers'>Developers</a>
         </div>
-        <a href="work.html" class="btn-ghost">See Our Work</a>
+        <a class='btn-ghost' href='/work'>See Our Work</a>
       </div>
     </section>
 
@@ -234,6 +311,37 @@
       </div>
     </section>
 
+    <section class="faq light-section reveal" id="faq" aria-labelledby="faq-heading">
+      <p class="eyebrow">Common Questions</p>
+      <h2 class="section-title" id="faq-heading">Straight answers, <em class="u-wavy">no fine print.</em></h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Who does GDB Media build websites for?</summary>
+          <p>Tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers, cafés, music studios and any local business that lives on calls and bookings. If your customers search for what you do, we can build you a site that gets found.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How much does a small business website cost?</summary>
+          <p>Every build is quoted as a fixed price up front, based on what your business actually needs — no hourly surprises and no ongoing lock-in. Start with a <a href="/contact">free quote</a>: tell us about your business and we'll reply within one business day.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you only work with businesses in Melbourne?</summary>
+          <p>No. We're based in Melbourne but work with trades and small businesses Australia-wide. The whole process — from first chat to launch — works just as well remotely.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's included in a website build?</summary>
+          <p>Design, clear customer-focused copy, a mobile-friendly build, fast load times and the SEO fundamentals — page titles, structured data and the keywords your customers actually search for. Photos and branding help are available too.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will my website show up on Google and in AI search?</summary>
+          <p>Every site we build ships with the technical SEO that search engines and AI assistants rely on: fast pages, structured data, sitemaps and content written around what your customers search for. Getting found is a core service, not an add-on.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I own my website?</summary>
+          <p>Yes. Your website is yours to keep — no lock-in contracts, no hostage hosting. We build it, you own it.</p>
+        </details>
+      </div>
+    </section>
+
     <section class="cta-section on-dark reveal" id="contact" aria-labelledby="cta-heading">
       <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="frame-marks" aria-hidden="true">
@@ -242,13 +350,13 @@
       </div>
       <h2 id="cta-heading">Ready for a website that <em class="u-wavy">pulls its weight?</em></h2>
       <p>Tell us about your business and we'll get back to you within one business day — no pressure, no jargon.</p>
-      <a href="contact.html" class="btn-primary"><span>Get a Free Quote</span></a>
+      <a class='btn-primary' href='/contact'><span>Get a Free Quote</span></a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a href="index.html" class="wordmark" aria-label="GDB Media & Marketing — home">
+      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
         <!-- LOGO PLACEHOLDER (footer): same swap as the header -->
         <span class="logo-badge">GDB</span>
         <span class="logo-sub">Media &amp; Marketing</span>
@@ -256,13 +364,13 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
-        <a href="work.html">Our Work</a>
-        <a href="contact.html">Contact</a>
+        <a href='/work'>Our Work</a>
+        <a href='/contact'>Contact</a>
       </nav>
       <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

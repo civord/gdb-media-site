@@ -1,9 +1,17 @@
 # GDB Media & Marketing
 
-> Brand strategy, content production, and campaign creative for ambitious brands.
+> Web design and digital marketing agency building fast, affordable websites for tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers, cafés, music studios and other local trades.
 
-GDB Media & Marketing is a brand strategy and creative agency offering brand strategy, content production, and campaigns & growth services for businesses in Melbourne, Australia.
+GDB Media & Marketing is based in Melbourne, Australia and works with local businesses Australia-wide. Services: website design and branding, website copy and photography guidance, SEO (getting found on Google and in AI search), and social media marketing. Every build is quoted as a fixed price up front, the finished website belongs to the client, and enquiries receive a reply within one business day.
+
+Key facts:
+- Who it's for: tradies and small local businesses (plumbers, electricians, gardeners, barbers, cafés, music studios, and similar)
+- Where: Australia-wide, based in Melbourne VIC
+- Services: website design, branding, content and copywriting, SEO / local search optimisation, social media marketing
+- Pricing: fixed-price quotes, free to request, no lock-in contracts
+- Contact: info@gdbmedia.com.au (replies within one business day)
 
 ## Pages
-- [Home](https://gdbmedia.com.au/): Overview of GDB Media & Marketing's capabilities across brand strategy, content production, and campaigns.
-- [Contact](https://gdbmedia.com.au/contact.html): Get in touch with GDB Media & Marketing.
+- [Home](https://gdbmedia.com.au/): What GDB Media builds, services (websites & branding, photos & content, SEO & getting found), how we work, and FAQ.
+- [Our Work](https://gdbmedia.com.au/work): Portfolio of websites built for local trades, filterable by trade.
+- [Contact](https://gdbmedia.com.au/contact): Get a free, fixed-price website quote — reply within one business day.
