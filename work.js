@@ -55,7 +55,7 @@ const projects = [
     img: null,
     blurb: 'Sample project — replace with a real client build.',
     sample: true
-  }
+  },
 ];
 
 const categoryLabels = {
@@ -63,7 +63,8 @@ const categoryLabels = {
   electricians: 'Electricians',
   gardeners: 'Gardeners',
   barbers: 'Barbers',
-  music: 'Music & Lessons'
+  music: 'Music & Lessons',
+  developers: "Developers"
 };
 
 /* palette rotation for placeholder thumbs */
@@ -131,7 +132,7 @@ function applyFilter(filter) {
 
 function filterFromHash() {
   const hash = location.hash.replace('#', '');
-  const valid = ['plumbers', 'electricians', 'gardeners', 'barbers', 'music'];
+  const valid = ['plumbers', 'electricians', 'gardeners', 'barbers', 'music', 'developers'];
   return valid.includes(hash) ? hash : 'all';
 }
 
