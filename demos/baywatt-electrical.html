@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baywatt Electrical | Licensed Local Electrician, Port Melbourne VIC</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Baywatt Electrical — licensed local electrician servicing Port Melbourne, Albert Park, South Melbourne &amp; Middle Park. Switchboards, power points, EV chargers, safety switches &amp; repairs. 5.0★ on Google. Call Dean on 0400 123 456.">
+<meta name="keywords" content="electrician Port Melbourne, Baywatt Electrical, licensed electrician Port Melbourne VIC, switchboard upgrade Port Melbourne, EV charger installation Port Melbourne">
+
+<meta property="og:title" content="Baywatt Electrical | Licensed Local Electrician">
+<meta property="og:description" content="Licensed local electrician servicing Port Melbourne and the bayside inner south. Switchboards, power points, EV chargers, safety switches, repairs. 5.0★ on Google.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#121821;
+    --navy-deep:#0c1015;
+    --paper:#e9ede9;
+    --paper-2:#dfe5df;
+    --ink:#161b16;
+    --ink-soft:#454f47;
+    --off:#f3f1e9;
+    --amber:#e7a23c;
+    --amber-dim:#a5762a;
+    --copper:#c1754a;
+    --wire-brown:#6b4226;
+    --wire-blue:#2e5c82;
+    --wire-green:#4c7a4f;
+    --line:#c9d0c8;
+    --line-dark:#293240;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk',sans-serif;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono',monospace;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  ::selection{background:var(--amber);color:var(--navy-deep);}
+  :focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- eyebrow / small labels ---------- */
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber-dim);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px;height:2px;background:var(--amber);
+    display:inline-block;
+  }
+  section.dark .eyebrow{color:var(--amber);}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(233,237,233,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:0 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;
+  }
+  .brand-mark{
+    width:34px;height:34px;flex:none;
+  }
+  .brand small{
+    display:block; font-family:'IBM Plex Mono',monospace; font-weight:400;
+    font-size:10.5px; letter-spacing:0.08em; color:var(--ink-soft); text-transform:uppercase;
+  }
+  nav.links{display:flex; gap:32px; align-items:center;}
+  nav.links a{
+    font-size:14.5px; font-weight:500; color:var(--ink); position:relative; padding:4px 0;
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1.5px; background:var(--amber);
+    transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .call-btn{
+    font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:600;
+    background:var(--navy); color:var(--off); padding:11px 20px; border-radius:var(--radius);
+    display:flex; align-items:center; gap:8px; border:1px solid var(--navy);
+    transition:background .2s ease, transform .2s ease;
+  }
+  .call-btn:hover{background:var(--navy-deep); transform:translateY(-1px);}
+  .menu-toggle{display:none; background:none; border:none; font-size:24px; cursor:pointer; color:var(--ink);}
+
+  @media (max-width:860px){
+    nav.links{
+      position:absolute; top:76px; left:0; right:0; background:var(--paper);
+      flex-direction:column; align-items:flex-start; padding:20px 32px 28px;
+      border-bottom:1px solid var(--line); gap:18px;
+      display:none;
+    }
+    nav.links.open{display:flex;}
+    nav.links .call-btn{width:100%; justify-content:center;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--navy);
+    color:var(--off);
+    position:relative;
+    overflow:hidden;
+    background-image:
+      linear-gradient(var(--line-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+    background-size:42px 42px;
+    background-position:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(ellipse 900px 500px at 20% 20%, rgba(231,162,60,0.14), transparent 60%),
+               radial-gradient(ellipse 700px 500px at 85% 80%, rgba(46,92,130,0.18), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1180px; margin:0 auto; padding:96px 32px 88px;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+    position:relative; z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(34px,4.6vw,58px);
+    line-height:1.04;
+    font-weight:700;
+  }
+  .hero h1 .accent{color:var(--amber);}
+  .hero p.lede{
+    margin-top:22px; font-size:18px; line-height:1.6; color:#c7cdc4; max-width:46ch;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--amber); color:var(--navy-deep); font-weight:700;
+    padding:15px 26px; border-radius:var(--radius); font-size:15px;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:transform .2s ease, box-shadow .2s ease;
+    box-shadow:0 0 0 0 rgba(231,162,60,0.5);
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 22px -8px rgba(231,162,60,0.55);}
+  .btn-ghost{
+    border:1px solid #3a4452; color:var(--off); padding:15px 24px; border-radius:var(--radius);
+    font-size:15px; font-weight:500; display:inline-flex; align-items:center; gap:10px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--amber); background:rgba(231,162,60,0.06);}
+
+  .hero-meta{
+    display:flex; gap:26px; margin-top:44px; flex-wrap:wrap;
+  }
+  .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8f988f;}
+  .hero-meta strong{display:block; color:var(--off); font-size:19px; font-family:'Space Grotesk',sans-serif; margin-bottom:2px;}
+
+  /* switchboard graphic */
+  .board{
+    background:#0e131a; border:1px solid #2b3444; border-radius:6px;
+    padding:26px 24px 22px; position:relative;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
+  }
+  .board-top{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:#66707f;
+    letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;
+    border-bottom:1px dashed #29323f; padding-bottom:12px;
+  }
+  .board-top .dot{width:8px;height:8px;border-radius:50%;background:#3ddc73; box-shadow:0 0 8px #3ddc73; display:inline-block; margin-right:6px;}
+  .breakers{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
+  }
+  .breaker{
+    background:#171d26; border:1px solid #2b3444; border-radius:4px;
+    padding:12px 8px 10px; text-align:center;
+  }
+  .switch-track{
+    width:20px; height:36px; margin:0 auto 10px; background:#0a0e13; border-radius:3px;
+    border:1px solid #333f4f; position:relative; overflow:hidden;
+  }
+  .switch-nub{
+    position:absolute; left:2px; right:2px; height:16px; border-radius:2px;
+    background:linear-gradient(180deg,#4a5568,#2c3542);
+    top:2px;
+    animation:flip 4.8s ease-in-out infinite;
+    box-shadow:0 0 0 rgba(231,162,60,0);
+  }
+  .breaker:nth-child(1) .switch-nub{animation-delay:.1s;}
+  .breaker:nth-child(2) .switch-nub{animation-delay:.5s;}
+  .breaker:nth-child(3) .switch-nub{animation-delay:.9s;}
+  .breaker:nth-child(4) .switch-nub{animation-delay:1.3s;}
+  .breaker:nth-child(5) .switch-nub{animation-delay:1.7s;}
+  .breaker:nth-child(6) .switch-nub{animation-delay:2.1s;}
+  .breaker:nth-child(7) .switch-nub{animation-delay:2.5s;}
+  .breaker:nth-child(8) .switch-nub{animation-delay:2.9s;}
+  @keyframes flip{
+    0%,8%{top:2px; background:linear-gradient(180deg,#4a5568,#2c3542); box-shadow:0 0 0 rgba(231,162,60,0);}
+    16%,84%{top:18px; background:linear-gradient(180deg,#f2b653,#c1892f); box-shadow:0 0 10px rgba(231,162,60,0.7);}
+    92%,100%{top:2px; background:linear-gradient(180deg,#4a5568,#2c3542); box-shadow:0 0 0 rgba(231,162,60,0);}
+  }
+  .breaker label{
+    font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:#7d8798; letter-spacing:0.03em;
+    text-transform:uppercase; display:block; line-height:1.3;
+  }
+  .board-foot{
+    margin-top:18px; padding-top:14px; border-top:1px dashed #29323f;
+    display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px; color:#5c6675;
+  }
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr; padding-top:56px;}
+    .board{max-width:420px;}
+  }
+
+  /* ---------- trust bar ---------- */
+  .trust{
+    background:var(--off); border-bottom:1px solid var(--line);
+  }
+  .trust-inner{
+    max-width:1180px; margin:0 auto; padding:20px 32px;
+    display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between; align-items:center;
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:10px; font-size:14px; color:var(--ink-soft);
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .trust-item strong{color:var(--ink); font-family:'Inter',sans-serif; font-weight:600;}
+  .stars{color:var(--amber-dim); letter-spacing:1px;}
+
+  /* ---------- generic section ---------- */
+  section{padding:104px 0; position:relative;}
+  section.tight{padding:88px 0;}
+  section.dark{background:var(--navy); color:var(--off);}
+  section.paper2{background:var(--paper-2);}
+  .section-head{
+    max-width:640px; margin-bottom:56px;
+  }
+  .section-head h2{font-size:clamp(28px,3.4vw,40px); line-height:1.12;}
+  .section-head p{margin-top:16px; font-size:16.5px; line-height:1.65; color:var(--ink-soft);}
+  section.dark .section-head p{color:#b7bfb6;}
+
+  /* wire trace signature */
+  .trace{
+    position:absolute; left:50%; top:0; bottom:0; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
+    transform:translateX(-50%);
+    display:none;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:start;
+  }
+  .about-grid p{font-size:16.5px; line-height:1.75; color:var(--ink-soft); margin-bottom:16px;}
+  .spec-card{
+    background:var(--navy); color:var(--off); border-radius:6px; padding:30px 28px;
+    font-family:'IBM Plex Mono',monospace; font-size:13.5px;
+  }
+  .spec-card h3{
+    font-family:'Space Grotesk',sans-serif; font-size:16px; margin-bottom:20px; color:var(--amber);
+    text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .spec-row{
+    display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #29323f; gap:16px;
+  }
+  .spec-row:last-child{border-bottom:none;}
+  .spec-row span:first-child{color:#8f988f;}
+  .spec-row span:last-child{text-align:right;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ---------- services ---------- */
+  .svc-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+    border:1px solid var(--line);
+  }
+  .svc-card{
+    background:var(--paper); padding:32px 26px; min-height:210px;
+    display:flex; flex-direction:column; gap:14px;
+    transition:background .2s ease;
+  }
+  .svc-card:hover{background:var(--off);}
+  .svc-card svg{width:34px; height:34px; stroke:var(--copper); flex:none;}
+  .svc-card h3{font-size:16.5px; font-weight:600; font-family:'Space Grotesk',sans-serif;}
+  .svc-card p{font-size:14px; line-height:1.55; color:var(--ink-soft);}
+  @media (max-width:920px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- why ---------- */
+  .why-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:36px;
+  }
+  .why-item{border-top:2px solid var(--amber); padding-top:18px;}
+  .why-item .num{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--amber); margin-bottom:10px; display:block;}
+  .why-item h3{font-size:17px; margin-bottom:10px;}
+  .why-item p{font-size:14.5px; line-height:1.6; color:#b7bfb6;}
+  @media (max-width:900px){.why-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+  /* ---------- photo note strip ---------- */
+  .photo-note{
+    border:1px dashed var(--amber-dim); background:var(--off);
+    border-radius:4px; padding:22px 26px; display:flex; gap:18px; align-items:flex-start;
+    margin-top:52px;
+  }
+  .photo-note svg{width:26px;height:26px;stroke:var(--amber-dim); flex:none; margin-top:2px;}
+  .photo-note p{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0;}
+  .photo-note strong{color:var(--ink);}
+
+  /* ---------- reviews ---------- */
+  .rev-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
+  }
+  .rev-card{
+    background:var(--off); border:1px solid var(--line); border-radius:4px; padding:28px 26px;
+    position:relative;
+  }
+  .rev-card::before{
+    content:""; position:absolute; top:0; left:24px; width:34px; height:3px; background:var(--amber);
+  }
+  .rev-stars{color:var(--amber-dim); font-size:13px; margin-bottom:12px; letter-spacing:1px;}
+  .rev-card p.quote{font-size:15.5px; line-height:1.65; color:var(--ink); margin-bottom:16px;}
+  .rev-card .who{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em;
+  }
+  @media (max-width:800px){.rev-grid{grid-template-columns:1fr;}}
+
+  /* ---------- areas ---------- */
+  .area-chips{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; padding:10px 16px;
+    border:1px solid var(--line); border-radius:20px; color:var(--ink-soft); background:var(--off);
+  }
+  .chip.main{border-color:var(--amber-dim); color:var(--ink); font-weight:600;}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; color:var(--ink);
+    gap:20px;
+  }
+  .faq-q .plus{
+    font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--amber-dim); flex:none;
+    transition:transform .25s ease;
+  }
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .3s ease;
+  }
+  .faq-a p{font-size:15px; line-height:1.7; color:var(--ink-soft); padding-bottom:22px; max-width:70ch;}
+
+  /* ---------- contact ---------- */
+  .contact-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch;
+  }
+  .contact-card{
+    background:#171f29; border-radius:6px; padding:36px 32px;
+  }
+  .contact-line{
+    display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #29323f;
+  }
+  .contact-line:last-child{border-bottom:none;}
+  .contact-line svg{width:20px;height:20px; stroke:var(--amber); flex:none;}
+  .contact-line a, .contact-line span{font-size:15.5px;}
+  .contact-line .label{display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8f988f; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px;}
+  .map-frame{
+    border-radius:6px; overflow:hidden; border:1px solid #29323f; min-height:320px;
+  }
+  .map-frame iframe{width:100%; height:100%; min-height:320px; border:0; display:block; filter:grayscale(0.15) contrast(1.05);}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--navy-deep); color:#7d8798; padding:44px 0 30px; font-size:13.5px;
+  }
+  .foot-inner{
+    max-width:1180px; margin:0 auto; padding:0 32px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  }
+  .foot-inner .brand{color:#c7cdc4;}
+  footer a:hover{color:var(--amber);}
+
+  .fixed-call{
+    position:fixed; bottom:20px; right:20px; z-index:200;
+    background:var(--amber); color:var(--navy-deep); font-weight:700;
+    width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px -8px rgba(0,0,0,0.4);
+  }
+  .fixed-call svg{width:24px;height:24px;}
+  @media (min-width:860px){.fixed-call{display:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="32" height="32" rx="3" stroke="#161b16" stroke-width="1.6"/>
+        <path d="M21 9L12 22H19L17 31L28 17H20.5L21 9Z" fill="#e7a23c"/>
+      </svg>
+      <span>Baywatt Electrical<small>Licensed Electrical Contractor</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About Dean</a>
+      <a href="#areas">Areas Covered</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a class="call-btn" href="tel:+61400123456">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0400 123 456
+      </a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Port Melbourne · VIC 3207</div>
+      <h1>Your local switchboard,<br>fixed <span class="accent">on the spot.</span></h1>
+      <p class="lede">Baywatt Electrical is a licensed electrician working Port Melbourne and the bayside inner south. No call centre, no subcontractors — you get Dean, on time, with the job explained plainly and cleaned up before he leaves.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="tel:+61400123456">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 0400 123 456
+        </a>
+        <a class="btn-ghost" href="#contact">
+          Get a quote
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>5.0 ★</strong>Google rating, 5 reviews</div>
+        <div><strong>Mon–Fri</strong>7:00am – 4:30pm</div>
+        <div><strong>Local</strong>Griffin Cres, Port Melbourne</div>
+      </div>
+    </div>
+
+    <div class="board" aria-hidden="true">
+      <div class="board-top"><span><span class="dot"></span>Board status: live</span><span>240V · 1 phase</span></div>
+      <div class="breakers">
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Lights</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Power</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Hot Water</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Oven</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>EV Charger</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Aircon</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Outdoor</label></div>
+        <div class="breaker"><div class="switch-track"><div class="switch-nub"></div></div><label>Safety Sw.</label></div>
+      </div>
+      <div class="board-foot"><span>RCD: TESTED</span><span>PORT MELBOURNE ELECTRICAL</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="stars">★★★★★</span><strong>5.0</strong>&nbsp;on Google (5 reviews)</div>
+    <div class="trust-item">🔌&nbsp;<strong>Licensed</strong>&nbsp;Victorian electrician</div>
+    <div class="trust-item">📍&nbsp;Based in&nbsp;<strong>Port Melbourne</strong></div>
+    <div class="trust-item">🛡️&nbsp;<strong>Insured</strong>&nbsp;&amp; compliant work</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 style="font-size:clamp(26px,3vw,34px); margin-bottom:22px;">Local, licensed, and easy to reach on the phone.</h2>
+      <p>Baywatt Electrical is run by Dean, a licensed electrician based on Griffin Crescent in Port Melbourne. The business covers the everyday electrical work this pocket of Melbourne actually needs — old switchboards in weatherboard cottages, extra power points in renovated warehouse apartments, and the growing list of homes adding EV chargers and split-system air con.</p>
+      <p>There's no dispatch centre and no apprentice sent out to figure it out — you deal directly with Dean, from the first call to the invoice. Jobs are quoted plainly before any work starts, and the site's left clean when it's done.</p>
+      <p>If it needs a licensed electrician's sign-off in Victoria, it's the kind of job this business takes on.</p>
+    </div>
+    <div class="spec-card">
+      <h3>Compliance plate</h3>
+      <div class="spec-row"><span>Business</span><span>Baywatt Electrical</span></div>
+      <div class="spec-row"><span>Operator</span><span>Dean</span></div>
+      <div class="spec-row"><span>REC licence no.</span><span>[ADD REC NUMBER]</span></div>
+      <div class="spec-row"><span>Based</span><span>Griffin Cres, Port Melbourne VIC 3207</span></div>
+      <div class="spec-row"><span>Hours</span><span>Mon–Fri, 7:00–16:30</span></div>
+      <div class="spec-row"><span>Google rating</span><span>5.0 ★ (5 reviews)</span></div>
+      <div class="spec-row"><span>Phone</span><span>0400 123 456</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper2" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What Dean fixes</div>
+      <h2>Electrical work, done to the standard,<br>not just done fast.</h2>
+      <p>From a single dead power point to a full switchboard upgrade — every job is tested and left compliant with AS/NZS wiring rules before Dean drives off.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="8" y2="12"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="16" y1="8" x2="16" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+        <h3>Switchboard upgrades</h3>
+        <p>Old fuse boxes replaced with a modern, safety-switch-protected board — essential for period homes with original wiring.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="10" height="6" rx="1"/><line x1="9.5" y1="9" x2="9.5" y2="5"/><line x1="14.5" y1="9" x2="14.5" y2="5"/><line x1="12" y1="15" x2="12" y2="19"/></svg>
+        <h3>Power points &amp; wiring</h3>
+        <p>New power points, USB outlets and general wiring for renovations, extra appliances or a rearranged room.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Safety switches &amp; RCDs</h3>
+        <p>Installation and testing of safety switches so faults trip the circuit, not the people in the house.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 20V10l6-6 6 6v10"/><path d="M10 20v-6h4v6"/></svg>
+        <h3>Hot water systems</h3>
+        <p>Electrical connection and fault repair for hot water units — from a tripped element to a full swap.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h2l3 3v4h-5"/><circle cx="7.5" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+        <h3>EV charger installation</h3>
+        <p>Home EV charger wiring sized correctly for the circuit — increasingly common across Port Melbourne driveways and garages.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21l1-7H8l5-11-1 7h4l-5 11z"/></svg>
+        <h3>Fault finding &amp; repairs</h3>
+        <p>Tripping circuits, flickering lights or dead outlets diagnosed and fixed — not just patched.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 10c1-4 5-5 8-3-1 4-5 5-8 3z"/><path d="M12 14c-1 4-5 5-8 3 1-4 5-5 8-3z"/><path d="M14 12c4 1 5 5 3 8-4-1-5-5-3-8z"/></svg>
+        <h3>Ceiling fans &amp; lighting</h3>
+        <p>Ceiling fan installs, LED upgrades and outdoor lighting, wired properly the first time.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v6h6"/><path d="M21 21v-6h-6"/><path d="M21 9a9 9 0 0 0-15-6.7L3 5"/><path d="M3 15a9 9 0 0 0 15 6.7L21 19"/></svg>
+        <h3>Rewiring &amp; renovations</h3>
+        <p>Partial or full rewires for older Port Melbourne homes, coordinated around your build timeline.</p>
+      </div>
+    </div>
+
+    <div class="photo-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+      <p><strong>Photo gallery coming soon.</strong> This site is set up with a ready-made spot for real job photos — switchboards, vans, before/afters. Send through a few phone photos from recent jobs and they'll drop straight in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why locals call Dean</div>
+      <h2>What you actually get on the day.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="num">DIRECT</span>
+        <h3>You talk to Dean</h3>
+        <p>No call centre, no relay through an office — you speak to the person doing the work.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">LOCAL</span>
+        <h3>Based in Port Melbourne</h3>
+        <p>Working from Griffin Crescent means fast response across the suburb and no travel surprises on the invoice.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">COMPLIANT</span>
+        <h3>Tested, not guessed</h3>
+        <p>Every job is left tested and compliant with AS/NZS wiring rules — no shortcuts on safety.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">TIDY</span>
+        <h3>Left clean, every time</h3>
+        <p>Customers consistently mention the same thing: on time, no fuss, and tidied up before Dean leaves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Reviews</div>
+      <h2>5.0 stars, straight from Google.</h2>
+      <p>Every review on the Baywatt Electrical Google profile mentions the same three things — on time, no fuss, tidied up. Here's a sample.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Dean showed up on time, worked through the job efficiently, and stayed upbeat the whole way through — an easy, pleasant electrician to deal with.</p>
+        <div class="who">Google review · Baywatt Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Turned up on time, got straight into the job without any fuss, and tidied everything up before leaving. Good value for the work done.</p>
+        <div class="who">Google review · Baywatt Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Prompt, professional, and easy to recommend to anyone needing a reliable local electrician.</p>
+        <div class="who">Google review · Baywatt Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">First-class work and genuinely happy with the result — straightforward, no complaints.</p>
+        <div class="who">Google review · Baywatt Electrical</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper2" id="areas">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Coverage</div>
+      <h2>Based in Port Melbourne. Working the bayside inner south.</h2>
+      <p>Griffin Crescent is home base — most jobs are within a short drive, which keeps response times tight and callout costs down.</p>
+    </div>
+    <div class="area-chips">
+      <span class="chip main">Port Melbourne</span>
+      <span class="chip">Albert Park</span>
+      <span class="chip">South Melbourne</span>
+      <span class="chip">Middle Park</span>
+      <span class="chip">Southbank</span>
+      <span class="chip">Docklands</span>
+      <span class="chip">Fishermans Bend</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions</h2>
+    </div>
+
+    <div class="faq-item open">
+      <button class="faq-q">Are you a licensed electrician?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes — all work is carried out by a licensed Victorian electrician and left compliant with AS/NZS 3000 wiring rules. Licence number available on request and displayed on the invoice.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you charge a call-out fee?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Call and Dean will talk you through pricing for your specific job before anything is booked — no surprise fees added on the day.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Which suburbs do you cover?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Port Melbourne and the surrounding bayside inner south — Albert Park, South Melbourne, Middle Park, Southbank, Docklands and Fishermans Bend. If you're just outside that patch, call and ask.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How old does my switchboard need to be before it's a problem?<span class="plus">+</span></button>
+      <div class="faq-a"><p>It's less about age and more about type — ceramic fuse boards without a safety switch are the main risk, common in homes built before the 1990s. Dean can check yours on-site.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you install EV chargers?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes — home EV charger installation sized to your existing switchboard and circuit capacity, common across Port Melbourne's newer apartment and townhouse builds.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What are your hours?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Monday to Friday, 7:00am to 4:30pm. Closed weekends. Call ahead to lock in a time slot.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Book a job or ask a quick question.</h2>
+      <p>Call is fastest during business hours. Otherwise, drop an email and Dean will get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><span class="label">Phone</span><a href="tel:+61400123456">0400 123 456</a></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <div><span class="label">Email</span><a href="mailto:dean@baywattelectrical.com.au">dean@baywattelectrical.com.au</a></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><span class="label">Based at</span><span>Griffin Crescent, Port Melbourne VIC 3207</span></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><span class="label">Hours</span><span>Mon–Fri, 7:00am – 4:30pm</span></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.16 3.24 1.18-6.88L2 9.24l6.92-1L12 2l3.08 6.24 6.92 1-5.02 4.87 1.18 6.88z"/></svg>
+          <div><span class="label">Google rating</span><span>5.0 ★ — 5 reviews</span></div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <!-- map removed for demo -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span class="brand mono">Baywatt Electrical · REC [ADD NUMBER]</span>
+    <span>Griffin Cres, Port Melbourne VIC 3207 · <a href="tel:+61400123456">0400 123 456</a></span>
+    <span>&copy; <span id="year"></span> Baywatt Electrical</span>
+  </div>
+</footer>
+
+<a class="fixed-call" href="tel:+61400123456" aria-label="Call Baywatt Electrical">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    if(item.classList.contains('open')){ a.style.maxHeight = a.scrollHeight + 'px'; }
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

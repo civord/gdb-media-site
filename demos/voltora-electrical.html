@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltora Electrical | Licensed Electrician, Brunswick West VIC</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Voltora Electrical — licensed local electrician run by Nick, servicing Brunswick West, Brunswick, Coburg, Pascoe Vale &amp; Moonee Ponds. Downlights, ceiling fans, power points, oven circuits, fault finding. 5.0★ on Google. Call 0400 123 456.">
+<meta name="keywords" content="electrician Brunswick West, Voltora Electrical, licensed electrician Brunswick, downlight installation Brunswick West, Nick electrician Melbourne">
+
+<meta property="og:title" content="Voltora Electrical | Licensed Electrician, Brunswick West">
+<meta property="og:description" content="Licensed local electrician run by Nick, servicing Brunswick West and Melbourne's inner north. Downlights, fans, power points, oven circuits, fault finding. 5.0★ on Google, 11 reviews.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --teal:#0e2b27;
+    --teal-2:#123a34;
+    --teal-3:#184a42;
+    --yellow:#f2c230;
+    --yellow-dim:#c79a1f;
+    --paper:#f4f5f0;
+    --white:#ffffff;
+    --ink:#101513;
+    --ink-soft:#4c5652;
+    --line:#d6dad2;
+    --line-dark:#26463f;
+    --red:#c0453a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Work Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Barlow Semi Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  ::selection{background:var(--yellow); color:var(--ink);}
+  :focus-visible{outline:2px solid var(--yellow); outline-offset:3px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--yellow-dim); display:flex; align-items:center; gap:10px; margin-bottom:16px; font-weight:700;
+  }
+  .eyebrow::before{content:"//"; color:var(--yellow);}
+  section.dark .eyebrow{color:var(--yellow);}
+  section.dark .eyebrow::before{color:var(--white);}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:100; background:var(--paper);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:0 32px; height:80px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{width:38px; height:38px; flex:none;}
+  .brand-text{font-family:'Barlow Semi Condensed',sans-serif; font-weight:800; font-size:20px; text-transform:uppercase; line-height:1;}
+  .brand-text small{
+    display:block; font-family:'JetBrains Mono',monospace; font-weight:400; text-transform:none;
+    font-size:11px; letter-spacing:0.02em; color:var(--ink-soft); margin-top:3px;
+  }
+  nav.links{display:flex; gap:30px; align-items:center;}
+  nav.links a{
+    font-family:'Barlow Semi Condensed',sans-serif; font-weight:600; font-size:15px; text-transform:uppercase;
+    letter-spacing:0.03em; position:relative; padding:4px 0;
+  }
+  nav.links a::after{content:""; position:absolute; left:0; bottom:-2px; width:0; height:3px; background:var(--yellow); transition:width .2s;}
+  nav.links a:hover::after{width:100%;}
+  .call-btn{
+    font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:700;
+    background:var(--ink); color:var(--yellow); padding:12px 20px; display:flex; align-items:center; gap:9px;
+    border:2px solid var(--ink); transition:transform .2s;
+  }
+  .call-btn:hover{transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--yellow);}
+  .menu-toggle{display:none; background:none; border:none; font-size:26px; cursor:pointer;}
+  @media (max-width:860px){
+    nav.links{
+      position:absolute; top:80px; left:0; right:0; background:var(--paper); border-bottom:2px solid var(--ink);
+      flex-direction:column; align-items:flex-start; padding:22px 32px 30px; gap:20px; display:none;
+    }
+    nav.links.open{display:flex;}
+    nav.links .call-btn{width:100%; justify-content:center;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--teal); color:var(--white); position:relative; overflow:hidden;
+    border-bottom:6px solid var(--yellow);
+  }
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1180px; margin:0 auto; padding:88px 32px 76px; position:relative; z-index:1;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:50px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(38px,5.4vw,68px); line-height:0.98; font-weight:800;
+  }
+  .hero h1 .accent{color:var(--yellow);}
+  .hero p.lede{
+    margin-top:24px; font-size:18px; line-height:1.6; color:#c8d6d1; max-width:48ch;
+    font-family:'Work Sans',sans-serif; text-transform:none;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--yellow); color:var(--ink); font-weight:700; font-family:'Barlow Semi Condensed',sans-serif;
+    text-transform:uppercase; letter-spacing:0.03em; padding:16px 28px; font-size:16px;
+    display:inline-flex; align-items:center; gap:10px; border:2px solid var(--yellow);
+    transition:transform .2s;
+  }
+  .btn-primary:hover{transform:translate(-3px,-3px); box-shadow:5px 5px 0 var(--white);}
+  .btn-ghost{
+    border:2px solid #3d5c56; color:var(--white); padding:16px 26px; font-size:16px;
+    font-family:'Barlow Semi Condensed',sans-serif; text-transform:uppercase; letter-spacing:0.03em; font-weight:600;
+    display:inline-flex; align-items:center; gap:10px; transition:border-color .2s;
+  }
+  .btn-ghost:hover{border-color:var(--yellow);}
+
+  .stat-strip{display:flex; gap:40px; margin-top:48px; flex-wrap:wrap;}
+  .stat-strip div strong{
+    display:block; font-family:'Barlow Semi Condensed',sans-serif; font-size:30px; font-weight:800; color:var(--yellow);
+  }
+  .stat-strip div span{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#93a8a2; text-transform:uppercase; letter-spacing:0.05em;}
+
+  /* dial gauge signature */
+  .gauge-wrap{display:flex; justify-content:center;}
+  .gauge{
+    width:100%; max-width:340px; background:#0a201c; border:2px solid var(--line-dark);
+    padding:26px 22px 20px; position:relative;
+  }
+  .gauge-head{
+    display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    color:#6f8a83; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:14px;
+  }
+  .gauge svg{width:100%; height:auto; display:block;}
+  .needle{
+    transform-origin:150px 150px;
+    animation:sweep 5s ease-in-out infinite;
+  }
+  @keyframes sweep{
+    0%{transform:rotate(-58deg);}
+    45%{transform:rotate(52deg);}
+    55%{transform:rotate(52deg);}
+    100%{transform:rotate(-58deg);}
+  }
+  .gauge-foot{
+    display:flex; justify-content:space-between; margin-top:12px; padding-top:12px;
+    border-top:1px dashed var(--line-dark); font-family:'JetBrains Mono',monospace; font-size:11px; color:#7d9891;
+  }
+  .gauge-foot strong{color:var(--yellow);}
+
+  @media (max-width:900px){.hero-inner{grid-template-columns:1fr;} .gauge-wrap{margin-top:10px;}}
+
+  /* ---------- trust bar ---------- */
+  .trust{background:var(--white); border-bottom:2px solid var(--ink);}
+  .trust-inner{
+    max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; flex-wrap:wrap; gap:26px;
+    justify-content:space-between; align-items:center; font-family:'JetBrains Mono',monospace; font-size:13.5px;
+  }
+  .trust-item{display:flex; align-items:center; gap:10px; color:var(--ink-soft);}
+  .trust-item strong{color:var(--ink); font-family:'Barlow Semi Condensed',sans-serif; text-transform:uppercase; font-weight:700;}
+  .stars{color:var(--yellow-dim); letter-spacing:1px;}
+
+  /* ---------- sections ---------- */
+  section{padding:100px 0; position:relative;}
+  section.tight{padding:84px 0;}
+  section.dark{background:var(--teal); color:var(--white);}
+  section.line-top{border-top:2px solid var(--ink);}
+  .section-head{max-width:660px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(30px,3.8vw,44px); line-height:1.02; font-weight:800;}
+  .section-head p{margin-top:16px; font-size:16.5px; line-height:1.6; color:var(--ink-soft); font-family:'Work Sans',sans-serif; text-transform:none;}
+  section.dark .section-head p{color:#b9cac4;}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:start;}
+  .about-grid p{font-size:16.5px; line-height:1.75; color:var(--ink-soft); margin-bottom:16px;}
+  .id-card{
+    background:var(--ink); color:var(--paper); padding:0; border:2px solid var(--ink);
+  }
+  .id-card-head{
+    background:var(--yellow); color:var(--ink); padding:16px 24px; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Barlow Semi Condensed',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:0.03em; font-size:15px;
+  }
+  .id-card-body{padding:24px 24px 6px; font-family:'JetBrains Mono',monospace; font-size:13.5px;}
+  .id-row{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #2a3a36; gap:16px;}
+  .id-row:last-child{border-bottom:none;}
+  .id-row span:first-child{color:#8fa39c;}
+  .id-row span:last-child{text-align:right;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ---------- services ---------- */
+  .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--ink); border:2px solid var(--ink);}
+  .svc-card{background:var(--paper); padding:34px 28px; min-height:220px; display:flex; flex-direction:column; gap:14px;}
+  .svc-card svg{width:36px; height:36px; stroke:var(--teal-3); flex:none;}
+  .svc-card h3{font-size:19px; font-weight:700;}
+  .svc-card p{font-size:14.5px; line-height:1.55; color:var(--ink-soft); font-family:'Work Sans',sans-serif; text-transform:none;}
+  @media (max-width:920px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+
+  .photo-note{
+    border:2px dashed var(--yellow-dim); background:var(--white); padding:24px 26px; display:flex; gap:18px;
+    align-items:flex-start; margin-top:48px;
+  }
+  .photo-note svg{width:26px;height:26px;stroke:var(--yellow-dim); flex:none; margin-top:2px;}
+  .photo-note p{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0; font-family:'Work Sans',sans-serif;}
+  .photo-note strong{color:var(--ink);}
+
+  /* ---------- why ---------- */
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--line-dark); border:2px solid var(--line-dark); margin-top:8px;}
+  .why-item{background:var(--teal); padding:28px 24px;}
+  .why-item .tag{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--yellow); margin-bottom:12px; display:block; letter-spacing:0.05em;}
+  .why-item h3{font-size:19px; margin-bottom:10px; font-weight:700;}
+  .why-item p{font-size:14.5px; line-height:1.6; color:#aebfb9; font-family:'Work Sans',sans-serif; text-transform:none;}
+  @media (max-width:900px){.why-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+  /* ---------- reviews ---------- */
+  .rev-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--ink); border:2px solid var(--ink);}
+  .rev-card{background:var(--white); padding:30px 28px;}
+  .rev-stars{color:var(--yellow-dim); font-size:14px; margin-bottom:12px; letter-spacing:1px;}
+  .rev-card p.quote{font-size:15.5px; line-height:1.65; color:var(--ink); margin-bottom:16px; font-family:'Work Sans',sans-serif; text-transform:none;}
+  .rev-card .who{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em;}
+  @media (max-width:800px){.rev-grid{grid-template-columns:1fr;}}
+
+  /* ---------- areas ---------- */
+  .area-chips{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;}
+  .chip{
+    font-family:'JetBrains Mono',monospace; font-size:13px; padding:10px 16px; border:2px solid var(--ink);
+    color:var(--ink-soft); background:var(--white);
+  }
+  .chip.main{background:var(--yellow); color:var(--ink); font-weight:700;}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:2px solid var(--ink);}
+  .faq-item:first-child{border-top:2px solid var(--ink);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:22px 0;
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+    font-family:'Barlow Semi Condensed',sans-serif; font-size:19px; font-weight:700; text-transform:uppercase; color:var(--ink);
+  }
+  .faq-q .plus{font-family:'JetBrains Mono',monospace; font-size:22px; color:var(--yellow-dim); flex:none; transition:transform .25s;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-a p{font-size:15px; line-height:1.7; color:var(--ink-soft); padding-bottom:22px; max-width:70ch; font-family:'Work Sans',sans-serif;}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line-dark); border:2px solid var(--line-dark);}
+  .contact-card{background:var(--teal-2); padding:38px 34px;}
+  .contact-line{display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #2a3a36;}
+  .contact-line:last-child{border-bottom:none;}
+  .contact-line svg{width:20px;height:20px; stroke:var(--yellow); flex:none;}
+  .contact-line a, .contact-line span{font-size:15.5px; font-family:'Work Sans',sans-serif;}
+  .contact-line .label{display:block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#8fa39c; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px;}
+  .map-frame{background:var(--teal-2); min-height:320px;}
+  .map-frame iframe{width:100%; height:100%; min-height:320px; border:0; display:block; filter:grayscale(0.2) contrast(1.05);}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:#7d8f89; padding:40px 0 28px; font-size:13px; font-family:'JetBrains Mono',monospace;}
+  .foot-inner{max-width:1180px; margin:0 auto; padding:0 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .foot-inner .brand-txt{color:#c8d6d1; text-transform:uppercase; font-family:'Barlow Semi Condensed',sans-serif; font-weight:700; letter-spacing:0.03em;}
+  footer a:hover{color:var(--yellow);}
+
+  .fixed-call{
+    position:fixed; bottom:20px; right:20px; z-index:200; background:var(--yellow); color:var(--ink);
+    width:58px; height:58px; display:flex; align-items:center; justify-content:center; border:2px solid var(--ink);
+    box-shadow:4px 4px 0 var(--ink);
+  }
+  .fixed-call svg{width:24px;height:24px;}
+  @media (min-width:860px){.fixed-call{display:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="34" height="34" fill="#0e2b27" stroke="#101513" stroke-width="2"/>
+        <path d="M21 8L11 22H19L17 32L29 17H20.5L21 8Z" fill="#f2c230"/>
+      </svg>
+      <span class="brand-text">Voltora Electrical<small>Licensed Electrical Contractor</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About Nick</a>
+      <a href="#areas">Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a class="call-btn" href="tel:+61400123456">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0400 123 456
+      </a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Brunswick West · VIC 3055</div>
+      <h1>Every job,<br>tested and <span class="accent">signed off.</span></h1>
+      <p class="lede">Voltora Electrical is run by Nick — a licensed electrician working Brunswick West and Melbourne's inner north. Downlights, fans, power points, ovens, faults: quoted straight, done properly, no mess left behind.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="tel:+61400123456">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 0400 123 456
+        </a>
+        <a class="btn-ghost" href="#contact">Get a quote</a>
+      </div>
+      <div class="stat-strip">
+        <div><strong>5.0★</strong><span>Google, 11 reviews</span></div>
+        <div><strong>40+</strong><span>Downlights installed in one job*</span></div>
+        <div><strong>1</strong><span>Electrician on every job — Nick</span></div>
+      </div>
+    </div>
+
+    <div class="gauge-wrap" aria-hidden="true">
+      <div class="gauge">
+        <div class="gauge-head"><span>Load test</span><span>240V AC</span></div>
+        <svg viewBox="0 0 300 190">
+          <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="#1d3f39" stroke-width="14"/>
+          <path d="M30 150 A120 120 0 0 1 150 30" fill="none" stroke="#2a5850" stroke-width="14"/>
+          <path d="M150 30 A120 120 0 0 1 239.18 69.7" fill="none" stroke="#f2c230" stroke-width="14"/>
+          <g class="needle">
+            <line x1="150" y1="150" x2="150" y2="46" stroke="#f4f5f0" stroke-width="3"/>
+            <circle cx="150" cy="150" r="8" fill="#f2c230"/>
+          </g>
+          <text x="150" y="180" text-anchor="middle" fill="#7d9891" font-family="JetBrains Mono, monospace" font-size="11">SAFE OPERATING RANGE</text>
+        </svg>
+        <div class="gauge-foot"><span>Circuit: PASS</span><strong>RCD ✓ TESTED</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="stars">★★★★★</span><strong>5.0</strong>&nbsp;on Google (11 reviews)</div>
+    <div class="trust-item">⚡&nbsp;<strong>Licensed</strong>&nbsp;Victorian electrician</div>
+    <div class="trust-item">📍&nbsp;Based in&nbsp;<strong>Brunswick West</strong></div>
+    <div class="trust-item">🛡️&nbsp;<strong>Insured</strong>&nbsp;&amp; compliant work</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 style="font-size:clamp(28px,3.2vw,36px); margin-bottom:22px; font-weight:800;">One electrician. Every job. No handoffs.</h2>
+      <p style="text-transform:none;">Voltora Electrical is Nick — a licensed electrician based in Brunswick West, working across Melbourne's inner north. The reviews tell the story better than any pitch could: patient with questions, reasonably priced, and the kind of finish that doesn't leave a mess behind.</p>
+      <p style="text-transform:none;">Jobs range from a single new power point to a full downlight retrofit — one recent job covered 8 ceiling fans and 40 downlights in a single visit. Whatever the size, you deal with Nick directly, from the first call to the final test.</p>
+      <p style="text-transform:none;">If it needs a licensed electrician's sign-off in Victoria, it's the kind of job Voltora takes on.</p>
+    </div>
+    <div class="id-card">
+      <div class="id-card-head"><span>Job Card</span><span>Voltora</span></div>
+      <div class="id-card-body">
+        <div class="id-row"><span>Business</span><span>Voltora Electrical Pty Ltd</span></div>
+        <div class="id-row"><span>Electrician</span><span>Nick</span></div>
+        <div class="id-row"><span>REC licence no.</span><span>[ADD REC NUMBER]</span></div>
+        <div class="id-row"><span>Based</span><span>Brunswick West VIC 3055</span></div>
+        <div class="id-row"><span>Hours</span><span>[CONFIRM WITH TOM]</span></div>
+        <div class="id-row"><span>Google rating</span><span>5.0 ★ (11 reviews)</span></div>
+        <div class="id-row"><span>Phone</span><span>0400 123 456</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="line-top" style="background:var(--white);" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What Nick fixes</div>
+      <h2>Residential electrical,<br>done properly.</h2>
+      <p style="text-transform:none;">From one dodgy power point to a full lighting retrofit — every job is tested and left compliant before Nick packs up.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+        <h3>Downlight installation</h3>
+        <p>LED downlight retrofits and new installs — from a single room to a whole-house upgrade.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 10c1-4 5-5 8-3-1 4-5 5-8 3z"/><path d="M12 14c-1 4-5 5-8 3 1-4 5-5 8-3z"/><path d="M14 12c4 1 5 5 3 8-4-1-5-5-3-8z"/></svg>
+        <h3>Ceiling fans</h3>
+        <p>Fan installs and replacements, wired properly and balanced — no wobble, no buzzing.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="10" height="6" rx="1"/><line x1="9.5" y1="9" x2="9.5" y2="5"/><line x1="14.5" y1="9" x2="14.5" y2="5"/><line x1="12" y1="15" x2="12" y2="19"/></svg>
+        <h3>Power points &amp; wiring</h3>
+        <p>New power points, USB outlets and general household wiring for renovations or extra appliances.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+        <h3>Oven &amp; appliance circuits</h3>
+        <p>Dedicated circuits for ovens, cooktops and major appliances, installed to the right rating.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Safety switches &amp; RCDs</h3>
+        <p>Installation and testing so a fault trips the circuit, not the person standing near it.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21l1-7H8l5-11-1 7h4l-5 11z"/></svg>
+        <h3>Fault finding &amp; repairs</h3>
+        <p>Tripping circuits, dead outlets, flickering lights — diagnosed properly, not just patched.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="8" y2="12"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="16" y1="8" x2="16" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+        <h3>Switchboard upgrades</h3>
+        <p>Older fuse boards replaced with modern, safety-switch-protected switchboards.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.5"/></svg>
+        <h3>Outdoor &amp; garden lighting</h3>
+        <p>Weatherproof outdoor lighting circuits, sensor lights and garden lighting runs.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v6h6"/><path d="M21 21v-6h-6"/><path d="M21 9a9 9 0 0 0-15-6.7L3 5"/><path d="M3 15a9 9 0 0 0 15 6.7L21 19"/></svg>
+        <h3>General household electrical</h3>
+        <p>The everyday jobs — a light that won't turn off, a switch that needs replacing, an extra circuit.</p>
+      </div>
+    </div>
+
+    <p class="mono" style="font-size:12px; color:var(--ink-soft); margin-top:14px;">*Based on a customer-reported job (8 fans, 40 downlights). Ask Nick for a quote on jobs of any size.</p>
+
+    <div class="photo-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+      <p><strong>Photo gallery coming soon.</strong> This site has a ready spot for real job photos once Nick sends some through — downlight jobs, switchboards, before/afters. Ten minutes of work to drop them in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why customers rebook</div>
+      <h2>What the reviews keep saying.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="tag">DIRECT</span>
+        <h3>One point of contact</h3>
+        <p>No call centre, no apprentice sent instead — you deal with Nick from quote to invoice.</p>
+      </div>
+      <div class="why-item">
+        <span class="tag">PATIENT</span>
+        <h3>Explains as he goes</h3>
+        <p>Reviewers consistently mention Nick listens to the problem and explains the fix before starting.</p>
+      </div>
+      <div class="why-item">
+        <span class="tag">FAIR</span>
+        <h3>Reasonable, upfront pricing</h3>
+        <p>Quoted before work starts — reviewers cite Voltora as the most competitive quote they received.</p>
+      </div>
+      <div class="why-item">
+        <span class="tag">TIDY</span>
+        <h3>Site left clean</h3>
+        <p>Job sites left tidy on every job, no matter the size — from one point to forty downlights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Reviews</div>
+      <h2>5.0 stars, straight from Google.</h2>
+      <p style="text-transform:none;">Eleven reviews on the Voltora Electrical Google profile — every one names Nick directly. Here's a sample.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Nick installed an oven, outdoor lights, downlights and power points — punctual, reasonably priced, and always leaves the site clean. Recommended without hesitation.</p>
+        <div class="who">Google review · Voltora Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Listens, asks the right questions, does a great job. Handled a big install — eight fans and forty downlights — on time and at a fair price.</p>
+        <div class="who">Google review · Voltora Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Best price found for the job, delivered with great service. Extremely happy with the result and the whole experience.</p>
+        <div class="who">Google review · Voltora Electrical</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="quote">Efficient, no-fuss, and happy to share honest advice when asked. Professional from start to finish.</p>
+        <div class="who">Google review · Voltora Electrical</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);" class="line-top" id="areas">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:28px;">
+      <div class="eyebrow">Coverage</div>
+      <h2>Based in Brunswick West. Working the inner north.</h2>
+      <p style="text-transform:none;">Most jobs are a short drive from home base, which keeps response times tight.</p>
+    </div>
+    <div class="area-chips">
+      <span class="chip main">Brunswick West</span>
+      <span class="chip">Brunswick</span>
+      <span class="chip">Brunswick East</span>
+      <span class="chip">Coburg</span>
+      <span class="chip">Pascoe Vale</span>
+      <span class="chip">Moonee Ponds</span>
+      <span class="chip">Essendon</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions</h2>
+    </div>
+
+    <div class="faq-item open">
+      <button class="faq-q">Are you a licensed electrician?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes — all work is carried out by a licensed Victorian electrician and left compliant with AS/NZS 3000 wiring rules. Licence number available on request and shown on the invoice.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you charge a call-out fee?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Call and Nick will talk through pricing for your specific job before anything's booked — no surprise fees on the day.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you handle a big job in one visit?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes — one job on record covered 8 ceiling fans and 40 downlights in a single visit. Bigger jobs just need a bit more notice to schedule.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Which suburbs do you cover?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Brunswick West and the surrounding inner north — Brunswick, Brunswick East, Coburg, Pascoe Vale, Moonee Ponds and Essendon. Just outside that? Call and ask.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What are your hours?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Call to check current availability — hours vary and are confirmed directly with Nick when you book.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Book a job or ask a quick question.</h2>
+      <p style="text-transform:none;">Call is fastest. Otherwise, drop an email and Nick will get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><span class="label">Phone</span><a href="tel:+61400123456">0400 123 456</a></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <div><span class="label">Email</span><a href="mailto:nick@voltoraelectrical.com.au">nick@voltoraelectrical.com.au</a></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><span class="label">Based at</span><span>Brunswick West VIC 3055</span></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><span class="label">Hours</span><span>Confirm with Nick on booking</span></div>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.16 3.24 1.18-6.88L2 9.24l6.92-1L12 2l3.08 6.24 6.92 1-5.02 4.87 1.18 6.88z"/></svg>
+          <div><span class="label">Google rating</span><span>5.0 ★ — 11 reviews</span></div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <!-- map removed for demo -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span class="brand-txt">Voltora Electrical · REC [ADD NUMBER]</span>
+    <span>Brunswick West VIC 3055 · <a href="tel:+61400123456">0400 123 456</a></span>
+    <span>&copy; <span id="year"></span> Voltora Electrical Pty Ltd</span>
+  </div>
+</footer>
+
+<a class="fixed-call" href="tel:+61400123456" aria-label="Call Voltora Electrical">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    if(item.classList.contains('open')){ a.style.maxHeight = a.scrollHeight + 'px'; }
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
