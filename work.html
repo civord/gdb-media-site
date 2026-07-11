@@ -33,361 +33,318 @@
 <!-- Structured data: portfolio page -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": "https://gdbmedia.com.au/work#page",
-      "name": "Our Work — Websites for Local Trades",
-      "url": "https://gdbmedia.com.au/work",
-      "inLanguage": "en-AU",
-      "about": {"@id": "https://gdbmedia.com.au/#business"},
-      "description": "Portfolio of websites built by GDB Media & Marketing for tradies and small businesses across Australia."
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gdbmedia.com.au/"},
-        {"@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://gdbmedia.com.au/work"}
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "name": "Websites built by GDB Media & Marketing",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "WebSite",
-            "name": "Suburban Rhythm Music Studio",
-            "url": "https://suburbanrhythm.com.au",
-            "description": "Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking."
-          }
-        }
-      ]
-    }
-  ]
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "CollectionPage",
+"@id": "https://gdbmedia.com.au/work#page",
+"name": "Our Work — Websites for Local Trades",
+"url": "https://gdbmedia.com.au/work",
+"inLanguage": "en-AU",
+"about": {"@id": "https://gdbmedia.com.au/#business"},
+"description": "Portfolio of websites built by GDB Media & Marketing for tradies and small businesses across Australia."
+},
+{
+"@type": "BreadcrumbList",
+"itemListElement": [
+{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gdbmedia.com.au/"},
+{"@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://gdbmedia.com.au/work"}
+]
+},
+{
+"@type": "ItemList",
+"name": "Websites built by GDB Media & Marketing",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"item": {
+"@type": "WebSite",
+"name": "Suburban Rhythm Music Studio",
+"url": "https://suburbanrhythm.com.au",
+"description": "Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking."
+}
+}
+]
+}
+]
 }
 </script>
 </head>
 <body>
 
-  <a href="#main" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <nav class="nav-side nav-left" aria-label="Primary">
-        <a class='nav-link' href='/#services'>Services</a>
-        <a class='nav-link' href='/#approach'>Approach</a>
-      </nav>
+<header class="site-header">
+<div class="header-inner">
+<nav class="nav-side nav-left" aria-label="Primary">
+<a class='nav-link' href='/#services'>Services</a>
+<a class='nav-link' href='/#approach'>Approach</a>
+</nav>
 
-      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
-        <!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
-        <span class="logo-badge">GDB</span>
-        <span class="logo-sub">Media &amp; Marketing</span>
-      </a>
+<a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
+<!-- LOGO PLACEHOLDER: replace with the new logo <img> when ready -->
+<span class="logo-badge">GDB</span>
+<span class="logo-sub">Media &amp; Marketing</span>
+</a>
 
-      <nav class="nav-side nav-right" aria-label="Secondary">
-        <div class="dropdown" data-dropdown>
-          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenu">
-            Our Work <span class="caret" aria-hidden="true"></span>
-          </button>
-          <div class="dropdown-menu" id="workMenu">
-            <a href="#plumbers">Plumbers</a>
-            <a href="#electricians">Electricians</a>
-            <a href="#gardeners">Gardeners</a>
-            <a href="#barbers">Barbers</a>
-            <a href="#music">Music &amp; Lessons</a>
-            <a href="#developers">Developers</a>
-            <a href="#all" class="menu-all">View All Work</a>
-          </div>
-        </div>
-        <a class='nav-link' href='/contact'>Contact</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+<nav class="nav-side nav-right" aria-label="Secondary">
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenu">
+Our Work <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="workMenu">
+<a href="#plumbers">Plumbers</a>
+<a href="#electricians">Electricians</a>
+<a href="#gardeners">Gardeners</a>
+<a href="#barbers">Barbers</a>
+<a href="#music">Music &amp; Lessons</a>
+<a href="#developers">Developers</a>
+<a href="#all" class="menu-all">View All Work</a>
+</div>
+</div>
+<a class='nav-link' href='/contact'>Contact</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+<span></span><span></span><span></span>
+</button>
+</nav>
+</div>
+</header>
 
-  <nav class="mobile-nav" id="mobileNav">
-    <button class="nav-close" id="navClose" aria-label="Close menu">
-      <span></span><span></span>
-    </button>
-    <a class='nav-link' href='/#services'>Services</a>
-    <a class='nav-link' href='/#approach'>Approach</a>
-    <div class="dropdown" data-dropdown>
-      <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
-        Our Work <span class="caret" aria-hidden="true"></span>
-      </button>
-      <div class="dropdown-menu" id="workMenuMobile">
-        <a href="#plumbers">Plumbers</a>
-        <a href="#electricians">Electricians</a>
-        <a href="#gardeners">Gardeners</a>
-        <a href="#barbers">Barbers</a>
-        <a href="#music">Music &amp; Lessons</a>
-        <a href="#developers">Developers</a>
-        <a href="#all" class="menu-all">View All Work</a>
-      </div>
-    </div>
-    <a class='nav-link' href='/contact'>Contact</a>
-  </nav>
+<nav class="mobile-nav" id="mobileNav">
+<button class="nav-close" id="navClose" aria-label="Close menu">
+<span></span><span></span>
+</button>
+<a class='nav-link' href='/#services'>Services</a>
+<a class='nav-link' href='/#approach'>Approach</a>
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
+Our Work <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="workMenuMobile">
+<a href="#plumbers">Plumbers</a>
+<a href="#electricians">Electricians</a>
+<a href="#gardeners">Gardeners</a>
+<a href="#barbers">Barbers</a>
+<a href="#music">Music &amp; Lessons</a>
+<a href="#developers">Developers</a>
+<a href="#all" class="menu-all">View All Work</a>
+</div>
+</div>
+<a class='nav-link' href='/contact'>Contact</a>
+</nav>
 
-  <main id="main">
-    <section class="page-head on-dark">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="page-head-inner">
-        <p class="eyebrow">Our Work</p>
-        <h1>Built for local businesses, <em class="u-wavy">by trade</em>.</h1>
-        <p>Every business below is someone's livelihood. We treat their website the same way they treat their work — done properly, built to last, and easy for their customers to use. From tradie websites to studio booking pages, filter by trade to see what we'd build for yours.</p>
-      </div>
-    </section>
+<main id="main">
+<section class="page-head on-dark">
+<div class="hero-grid-bg" aria-hidden="true"></div>
+<div class="page-head-inner">
+<p class="eyebrow">Our Work</p>
+<h1>Built for local businesses, <em class="u-wavy">by trade</em>.</h1>
+<p>Every business below is someone's livelihood. We treat their website the same way they treat their work — done properly, built to last, and easy for their customers to use. From tradie websites to studio booking pages, filter by trade to see what we'd build for yours.</p>
+</div>
+</section>
 
-    <section class="work-section">
-      <div class="filter-bar" role="group" aria-label="Filter projects by trade">
-        <button class="filter-chip" data-filter="all" aria-pressed="true">All Work</button>
-        <button class="filter-chip" data-filter="plumbers" aria-pressed="false">Plumbers</button>
-        <button class="filter-chip" data-filter="electricians" aria-pressed="false">Electricians</button>
-        <button class="filter-chip" data-filter="gardeners" aria-pressed="false">Gardeners</button>
-        <button class="filter-chip" data-filter="barbers" aria-pressed="false">Barbers</button>
-        <button class="filter-chip" data-filter="music" aria-pressed="false">Music &amp; Lessons</button>
-        <button class="filter-chip" data-filter="developers" aria-pressed="false">Developers</button>
-      </div>
+<section class="work-section">
+<div class="filter-bar" role="group" aria-label="Filter projects by trade">
+<button class="filter-chip" data-filter="all" aria-pressed="true">All Work</button>
+<button class="filter-chip" data-filter="plumbers" aria-pressed="false">Plumbers</button>
+<button class="filter-chip" data-filter="electricians" aria-pressed="false">Electricians</button>
+<button class="filter-chip" data-filter="gardeners" aria-pressed="false">Gardeners</button>
+<button class="filter-chip" data-filter="barbers" aria-pressed="false">Barbers</button>
+<button class="filter-chip" data-filter="music" aria-pressed="false">Music &amp; Lessons</button>
+<button class="filter-chip" data-filter="developers" aria-pressed="false">Developers</button>
+</div>
 
-      <p id="workCount" class="visually-hidden" aria-live="polite"></p>
+<p id="workCount" class="visually-hidden" aria-live="polite"></p>
 
-      <!-- Cards are static HTML so search engines and AI crawlers can read them.
-           work.js only handles filtering. TO ADD A CLIENT: copy a card, update
-           the text, swap the placeholder SVG for <img src="images/work/name.jpg"
-           alt="Screenshot of the … website" loading="lazy"> -->
-      <div class="work-grid" id="workGrid">
+<!-- Cards are static HTML so search engines and AI crawlers can read them.
+work.js only handles filtering. TO ADD A CLIENT: copy a card, update
+the text, swap the placeholder SVG for <img src="images/work/name.jpg"
+alt="Screenshot of the … website" loading="lazy"> -->
+<div class="work-grid" id="workGrid">
 
-        <article class="work-card" data-category="music">
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Suburban Rhythm Music Studio">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#219ebc" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#219ebc">SR</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">MUSIC &amp; LESSONS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Music &amp; Lessons</span>
-            <h3>Suburban Rhythm Music Studio</h3>
-            <p>Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking.</p>
-            <a class="work-link" href="https://suburbanrhythm.com.au" target="_blank" rel="noopener">Visit site ↗</a>
-          </div>
-        </article>
+<article class="work-card" data-category="music">
+<div class="work-thumb">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Suburban Rhythm Music Studio">
+<rect width="400" height="300" fill="#f7fafc"/>
+<rect width="400" height="34" fill="#023047"/>
+<circle cx="18" cy="17" r="5" fill="#fb8500"/>
+<circle cx="36" cy="17" r="5" fill="#ffb703"/>
+<circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+<rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+<rect x="30" y="64" width="340" height="150" rx="10" fill="#219ebc" opacity="0.16"/>
+<text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#219ebc">SR</text>
+<text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">MUSIC &amp; LESSONS</text>
+<rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+<rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+</svg>
+</div>
+<div class="work-body">
+<span class="cat-tag">Music &amp; Lessons</span>
+<h3>Suburban Rhythm Music Studio</h3>
+<p>Four-page site for a Melbourne drum teacher — interactive drum kit, lesson info, and easy booking.</p>
+<a class="work-link" href="https://suburbanrhythm.com.au" target="_blank" rel="noopener">Visit site ↗</a>
+</div>
+</article>
 
-        <article class="work-card" data-category="plumbers">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Callister Plumbing &amp; Gas">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#fb8500" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#fb8500">CP</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">PLUMBERS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Plumbers</span>
-            <h3>Callister Plumbing &amp; Gas</h3>
-            <p>Full plumbing &amp; gas fitting site — services, photo gallery of real jobs, reviews and quote form. Built Melbourne-wide.</p>
-            <a class="work-link" href="/demos/callister-plumbing.html">View demo ↗</a>
-          </div>
-        </article>
+<article class="work-card" data-category="plumbers">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<img src="images/work/callister-plumbing.jpg" alt="Homepage preview of the Callister Plumbing &amp; Gas demo website" loading="lazy" width="800" height="600">
+</div>
+<div class="work-body">
+<span class="cat-tag">Plumbers</span>
+<h3>Callister Plumbing &amp; Gas</h3>
+<p>Full plumbing &amp; gas fitting site — services, photo gallery of real jobs, reviews and quote form. Built Melbourne-wide.</p>
+<a class="work-link" href="/demos/callister-plumbing.html">View demo ↗</a>
+</div>
+</article>
 
-        <article class="work-card" data-category="plumbers">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for T Walker Plumbing">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#219ebc" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#219ebc">TW</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">PLUMBERS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Plumbers</span>
-            <h3>T Walker Plumbing</h3>
-            <p>20+ years-experience plumber site — gas fitting, hot water, drains and bathroom renos with upfront-pricing messaging.</p>
-          </div>
-        </article>
+<article class="work-card" data-category="plumbers">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for T Walker Plumbing">
+<rect width="400" height="300" fill="#f7fafc"/>
+<rect width="400" height="34" fill="#023047"/>
+<circle cx="18" cy="17" r="5" fill="#fb8500"/>
+<circle cx="36" cy="17" r="5" fill="#ffb703"/>
+<circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+<rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+<rect x="30" y="64" width="340" height="150" rx="10" fill="#219ebc" opacity="0.16"/>
+<text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#219ebc">TW</text>
+<text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">PLUMBERS</text>
+<rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+<rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+</svg>
+</div>
+<div class="work-body">
+<span class="cat-tag">Plumbers</span>
+<h3>T Walker Plumbing</h3>
+<p>20+ years-experience plumber site — gas fitting, hot water, drains and bathroom renos with upfront-pricing messaging.</p>
+</div>
+</article>
 
-        <article class="work-card" data-category="electricians">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Baywatt Electrical">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#8ecae6" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#8ecae6">BE</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">ELECTRICIANS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Electricians</span>
-            <h3>Baywatt Electrical</h3>
-            <p>Local sole-trader electrician site — licence up front, service areas, reviews and FAQ. No call centre, one-tap call.</p>
-            <a class="work-link" href="/demos/baywatt-electrical.html">View demo ↗</a>
-          </div>
-        </article>
+<article class="work-card" data-category="electricians">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<img src="images/work/baywatt-electrical.jpg" alt="Homepage preview of the Baywatt Electrical demo website" loading="lazy" width="800" height="600">
+</div>
+<div class="work-body">
+<span class="cat-tag">Electricians</span>
+<h3>Baywatt Electrical</h3>
+<p>Local sole-trader electrician site — licence up front, service areas, reviews and FAQ. No call centre, one-tap call.</p>
+<a class="work-link" href="/demos/baywatt-electrical.html">View demo ↗</a>
+</div>
+</article>
 
-        <article class="work-card" data-category="electricians">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Voltora Electrical">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#023047" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#023047">VE</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">ELECTRICIANS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Electricians</span>
-            <h3>Voltora Electrical</h3>
-            <p>Inner-north electrician site — downlights, fans, switchboards and fault-finding, every job tested and signed off.</p>
-            <a class="work-link" href="/demos/voltora-electrical.html">View demo ↗</a>
-          </div>
-        </article>
+<article class="work-card" data-category="electricians">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<img src="images/work/voltora-electrical.jpg" alt="Homepage preview of the Voltora Electrical demo website" loading="lazy" width="800" height="600">
+</div>
+<div class="work-body">
+<span class="cat-tag">Electricians</span>
+<h3>Voltora Electrical</h3>
+<p>Inner-north electrician site — downlights, fans, switchboards and fault-finding, every job tested and signed off.</p>
+<a class="work-link" href="/demos/voltora-electrical.html">View demo ↗</a>
+</div>
+</article>
 
-        <article class="work-card" data-category="gardeners">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Fernstone Landscapes">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">FL</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">GARDENERS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Gardeners</span>
-            <h3>Fernstone Landscapes</h3>
-            <p>Landscaping &amp; concrete site — project galleries, service areas and an Instagram-first enquiry flow for a visual trade.</p>
-            <a class="work-link" href="/demos/fernstone-landscapes.html">View demo ↗</a>
-          </div>
-        </article>
-        <article class="work-card" data-category="developers">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Belair Buidlers">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">DV</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">DEVELOPERS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Developers</span>
-            <h3>Belair Builders</h3>
-            <p>Architecturally designed homes and renovations real across Melbourne's inner east</p>
-            <a class="work-link" href="/demos/belair-builders.html">View demo ↗</a>
-          </div>
-        </article>
-        
-        <article class="work-card" data-category="developers">
-          <span class="sample-badge">Demo</span>
-          <div class="work-thumb">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Alina Homes">
-              <rect width="400" height="300" fill="#f7fafc"/>
-              <rect width="400" height="34" fill="#023047"/>
-              <circle cx="18" cy="17" r="5" fill="#fb8500"/>
-              <circle cx="36" cy="17" r="5" fill="#ffb703"/>
-              <circle cx="54" cy="17" r="5" fill="#8ecae6"/>
-              <rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
-              <rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
-              <text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">DV</text>
-              <text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">DEVELOPERS</text>
-              <rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
-              <rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
-            </svg>
-          </div>
-          <div class="work-body">
-            <span class="cat-tag">Developers</span>
-            <h3>Alina Homes</h3>
-            <p>We build custom homes, knockdown rebuilds and townhouses across Melbourne, with a display office in Lynbrook servicing the south-east and surrounding suburbs.</p>
-            <a class="work-link" href="/demos/alina-homes.html">View demo ↗</a>
-          </div>
-        </article>
-      </div>
-      <p class="work-empty" id="workEmpty">No projects in this category yet — they're coming. In the meantime, <a class='work-link' href='/contact'>yours could be the first</a>.</p>
+<article class="work-card" data-category="gardeners">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<img src="images/work/fernstone-landscapes.jpg" alt="Homepage preview of the Fernstone Landscapes demo website" loading="lazy" width="800" height="600">
+</div>
+<div class="work-body">
+<span class="cat-tag">Gardeners</span>
+<h3>Fernstone Landscapes</h3>
+<p>Landscaping &amp; concrete site — project galleries, service areas and an Instagram-first enquiry flow for a visual trade.</p>
+<a class="work-link" href="/demos/fernstone-landscapes.html">View demo ↗</a>
+</div>
+</article>
 
-      <div class="work-outro">
-        <h2 class="work-outro-title">What every GDB build includes</h2>
-        <p>Whatever the trade, every website we build for a local business ships with the same foundations: mobile-first design that works on the phone in your customer's pocket, fast load times, clear calls to action, and the on-page SEO — titles, structured data and locally-searched keywords — that helps you show up on Google and in AI search results. We write the copy with you, so it sounds like your business and answers the questions your customers actually ask.</p>
-        <p>Don't see your trade here yet? That list keeps growing — cafés, cleaners, landscapers, mechanics, tutors and more. <a href="/contact">Tell us about your business</a> and we'll show you exactly what your website could look like, with a fixed-price quote and no obligation.</p>
-      </div>
-    </section>
-  </main>
+<article class="work-card" data-category="developers">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Belair Builders">
+<rect width="400" height="300" fill="#f7fafc"/>
+<rect width="400" height="34" fill="#023047"/>
+<circle cx="18" cy="17" r="5" fill="#fb8500"/>
+<circle cx="36" cy="17" r="5" fill="#ffb703"/>
+<circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+<rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+<rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
+<text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">BB</text>
+<text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">DEVELOPERS</text>
+<rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+<rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+</svg>
+</div>
+<div class="work-body">
+<span class="cat-tag">Developers</span>
+<h3>Belair Builders</h3>
+<p>Architecturally designed homes and renovations across Melbourne's inner east.</p>
+<a class="work-link" href="/demos/belair-builders.html">View demo ↗</a>
+</div>
+</article>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
-        <span class="logo-badge">GDB</span>
-        <span class="logo-sub">Media &amp; Marketing</span>
-      </a>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href='/#services'>Services</a>
-        <a href='/#approach'>Approach</a>
-        <a href='/work'>Our Work</a>
-        <a href='/plumbers'>For Plumbers</a>
-        <a href='/contact'>Contact</a>
-      </nav>
-      <p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
-    </div>
-  </footer>
+<article class="work-card" data-category="developers">
+<span class="sample-badge">Demo</span>
+<div class="work-thumb">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder preview for Alina Homes">
+<rect width="400" height="300" fill="#f7fafc"/>
+<rect width="400" height="34" fill="#023047"/>
+<circle cx="18" cy="17" r="5" fill="#fb8500"/>
+<circle cx="36" cy="17" r="5" fill="#ffb703"/>
+<circle cx="54" cy="17" r="5" fill="#8ecae6"/>
+<rect x="90" y="10" width="220" height="14" rx="7" fill="rgba(142,202,230,0.35)"/>
+<rect x="30" y="64" width="340" height="150" rx="10" fill="#ffb703" opacity="0.16"/>
+<text x="200" y="150" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffb703">AH</text>
+<text x="200" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" letter-spacing="3" fill="#023047" opacity="0.65">DEVELOPERS</text>
+<rect x="30" y="238" width="200" height="12" rx="6" fill="rgba(2,48,71,0.12)"/>
+<rect x="30" y="260" width="140" height="12" rx="6" fill="rgba(2,48,71,0.08)"/>
+</svg>
+</div>
+<div class="work-body">
+<span class="cat-tag">Developers</span>
+<h3>Alina Homes</h3>
+<p>We build custom homes, knockdown rebuilds and townhouses across Melbourne, with a display office in Lynbrook servicing the south-east and surrounding suburbs.</p>
+<a class="work-link" href="/demos/alina-homes.html">View demo ↗</a>
+</div>
+</article>
+</div>
+<p class="work-empty" id="workEmpty">No projects in this category yet — they're coming. In the meantime, <a class='work-link' href='/contact'>yours could be the first</a>.</p>
 
-  <script src="script.js" defer></script>
-  <script src="work.js" defer></script>
+<div class="work-outro">
+<h2 class="work-outro-title">What every GDB build includes</h2>
+<p>Whatever the trade, every website we build for a local business ships with the same foundations: mobile-first design that works on the phone in your customer's pocket, fast load times, clear calls to action, and the on-page SEO — titles, structured data and locally-searched keywords — that helps you show up on Google and in AI search results. We write the copy with you, so it sounds like your business and answers the questions your customers actually ask.</p>
+<p>Don't see your trade here yet? That list keeps growing — cafés, cleaners, landscapers, mechanics, tutors and more. <a href="/contact">Tell us about your business</a> and we'll show you exactly what your website could look like, with a fixed-price quote and no obligation.</p>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
+<span class="logo-badge">GDB</span>
+<span class="logo-sub">Media &amp; Marketing</span>
+</a>
+<nav class="footer-nav" aria-label="Footer">
+<a href='/#services'>Services</a>
+<a href='/#approach'>Approach</a>
+<a href='/work'>Our Work</a>
+<a href='/plumbers'>Plumbers</a>
+<a href='/electricians'>Electricians</a>
+<a href='/gardeners'>Gardeners</a>
+<a href='/barbers'>Barbers</a>
+<a href='/music'>Music</a>
+<a href='/contact'>Contact</a>
+</nav>
+<p class="copyright">© 2026 GDB Media &amp; Marketing. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="script.js" defer></script>
+<script src="work.js" defer></script>
 </body>
 </html>
