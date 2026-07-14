@@ -12,4 +12,4 @@
 .svc-grid li::before{content:"";flex:none;width:7px;height:7px;margin-top:.45rem;border-radius:2px;background:var(--orange);transform:rotate(45deg)}
 .svc-intro{margin-top:1.3rem;color:var(--ink-soft);font-size:.98rem;max-width:70ch;line-height:1.7}
 /* --- navbar logo monogram --- */
-.logo-monogram{height:40px;width:auto;flex:none;display:block}
+.logo-monogram{height:80px;width:auto;flex:none;display:block}
