@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suburban Rhythm Music Studio — Preview</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SUBURBAN RHYTHM MUSIC STUDIO — v2
+   Warm/rustic "wood & skin" palette, pushed deeper.
+   Signature: the site is playable — drum pads + groove lab.
+   ============================================================ */
+
+/* ---- Design tokens: change these to re-skin the whole site ---- */
+:root {
+  /* Palette */
+  --parchment:    #F6EFE3;
+  --parchment-2:  #EDE1CB;
+  --walnut:       #241812;   /* primary text / dark sections */
+  --walnut-deep:  #170E09;   /* darkest — hero-contrast panels */
+  --walnut-soft:  #55412F;   /* secondary text */
+  --amber:        #B4692A;
+  --amber-deep:   #8F4E1B;
+  --brass:        #CE9E52;
+  --cream-line:   #DECDB2;
+  --on-dark:      #F2E8D8;
+  --on-dark-soft: rgba(242, 232, 216, 0.72);
+
+  /* Type */
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body:    "Inter", system-ui, -apple-system, sans-serif;
+
+  --space-1: 0.5rem;  --space-2: 1rem;  --space-3: 1.5rem;
+  --space-4: 2.5rem;  --space-5: 4rem;  --space-6: 6.5rem;
+
+  --maxw: 1160px;
+  --radius: 6px;
+
+  /* subtle paper grain for dark sections (inline SVG noise) */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  font-family: var(--body);
+  color: var(--walnut);
+  background: var(--parchment);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--amber-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font-family: inherit; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-3); }
+.section { padding: var(--space-6) 0; }
+.section--alt { background: var(--parchment-2); }
+.section--dark {
+  background: var(--walnut) var(--grain);
+  color: var(--on-dark);
+}
+.section--dark h2, .section--dark h3 { color: var(--on-dark); }
+.center { text-align: center; }
+
+/* ---- Typography ---- */
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; color: var(--walnut); }
+h1 { font-size: clamp(2.8rem, 6.5vw, 5rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); letter-spacing: -0.015em; }
+h3 { font-size: 1.4rem; line-height: 1.2; }
+.accent-i { font-style: italic; font-weight: 400; color: var(--amber); }
+.section--dark .accent-i { color: var(--brass); }
+
+.eyebrow {
+  font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--amber-deep); font-weight: 600; margin-bottom: var(--space-2);
+  display: inline-flex; align-items: center; gap: 0.6rem;
+}
+.eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--amber); }
+.section--dark .eyebrow { color: var(--brass); }
+.section--dark .eyebrow::before { background: var(--brass); }
+
+.lead { font-size: 1.18rem; color: var(--walnut-soft); max-width: 58ch; }
+.section--dark .lead, .section--dark p { color: var(--on-dark-soft); }
+
+/* ---- Beat marks (signature motif) ---- */
+.beats { display: flex; align-items: center; gap: 0.6rem; }
+.beats span { width: 9px; height: 9px; border-radius: 50%; background: var(--cream-line); }
+.beats span.on { background: var(--amber); }
+.beats--pulse span.on { animation: pulse 1.7s ease-in-out infinite; }
+.beats--pulse span.on:nth-child(2) { animation-delay: 0.425s; }
+.beats--pulse span.on:nth-child(3) { animation-delay: 0.85s; }
+.beats--pulse span.on:nth-child(4) { animation-delay: 1.275s; }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); background: var(--amber); }
+  50% { transform: scale(1.55); background: var(--brass); }
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block; font-weight: 600; font-size: 1rem;
+  padding: 0.9rem 1.9rem; border-radius: var(--radius);
+  border: 2px solid transparent; cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn--primary { background: var(--amber); color: #FFF8ED; box-shadow: 0 8px 22px rgba(143, 78, 27, 0.32); }
+.btn--primary:hover { background: var(--amber-deep); box-shadow: 0 12px 28px rgba(143, 78, 27, 0.38); }
+.btn--ghost { background: transparent; color: var(--walnut); border-color: var(--walnut); }
+.btn--ghost:hover { background: var(--walnut); color: var(--parchment); }
+.section--dark .btn--ghost, .cta-strip .btn--ghost { color: var(--on-dark); border-color: var(--on-dark); }
+.section--dark .btn--ghost:hover, .cta-strip .btn--ghost:hover { background: var(--on-dark); color: var(--walnut); }
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246, 239, 227, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cream-line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+.brand {
+  font-family: var(--display); font-weight: 600; font-size: 1.3rem;
+  color: var(--walnut); letter-spacing: -0.01em; text-decoration: none;
+  display: flex; flex-direction: column; line-height: 1.1;
+}
+.brand:hover { text-decoration: none; }
+.brand .brand-mark { color: var(--amber); }
+.brand .brand-sub {
+  font-family: var(--body); font-weight: 600; font-size: 0.6rem;
+  letter-spacing: 0.34em; text-transform: uppercase; color: var(--amber-deep); margin-top: 2px;
+}
+.nav-links { display: flex; align-items: center; gap: var(--space-3); list-style: none; }
+.nav-links a {
+  color: var(--walnut-soft); font-weight: 500; font-size: 0.98rem; text-decoration: none;
+  padding-bottom: 3px; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--walnut); border-color: var(--amber); text-decoration: none; }
+.nav-cta { margin-left: var(--space-2); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.6rem; color: var(--walnut); line-height: 1; }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 78px; left: 0; right: 0;
+    flex-direction: column; align-items: flex-start; gap: 0;
+    background: var(--parchment); border-bottom: 1px solid var(--cream-line);
+    padding: var(--space-2) var(--space-3);
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+  }
+  .nav-links.open { max-height: 440px; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 0.85rem 0; width: 100%; border-bottom: 1px solid var(--cream-line); }
+  .nav-cta { margin: var(--space-2) 0; }
+}
+
+/* ============================================================
+   HOME HERO — the playable kit
+   ============================================================ */
+.hero {
+  position: relative; overflow: hidden;
+  padding: var(--space-6) 0;
+  background:
+    radial-gradient(1100px 520px at 78% -10%, rgba(206, 158, 82, 0.2), transparent 62%),
+    var(--parchment);
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-5); align-items: center; }
+.hero h1 { margin-bottom: var(--space-3); }
+.hero .lead { margin-bottom: var(--space-3); }
+.hero-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
+
+.free-badge {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  background: var(--walnut); color: var(--on-dark);
+  font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;
+  padding: 0.45rem 1rem; border-radius: 100px; margin-bottom: var(--space-3);
+}
+.free-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brass); animation: pulse 1.7s ease-in-out infinite; }
+
+/* The kit: four playable pads */
+.kit-wrap { text-align: center; }
+.kit {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3); max-width: 420px; margin: 0 auto;
+}
+.pad {
+  position: relative; aspect-ratio: 1; border-radius: 50%;
+  border: 12px solid var(--walnut);
+  background: radial-gradient(circle at 38% 32%, #FCF6E9, #EFE3CC 62%, #E0CDAC);
+  box-shadow: inset 0 0 34px rgba(36, 24, 18, 0.16), 0 18px 34px rgba(23, 14, 9, 0.22);
+  cursor: pointer; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.35rem;
+  transition: transform 0.08s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.pad:active { transform: scale(0.97); }
+.pad:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; }
+.pad .pad-name { font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--walnut); }
+.pad .key {
+  font-size: 0.72rem; font-weight: 600; color: var(--walnut-soft);
+  border: 1.5px solid var(--cream-line); border-radius: 5px; padding: 0.05rem 0.5rem;
+  background: rgba(255, 252, 244, 0.7); letter-spacing: 0.06em;
+}
+/* hit ripple */
+.pad::after {
+  content: ""; position: absolute; inset: -12px; border-radius: 50%;
+  border: 3px solid var(--brass); opacity: 0; pointer-events: none;
+}
+.pad.hit { animation: padhit 0.22s ease; }
+.pad.hit::after { animation: ripple 0.45s ease-out; }
+@keyframes padhit { 0% { transform: scale(1); } 35% { transform: scale(0.94); } 100% { transform: scale(1); } }
+@keyframes ripple { 0% { opacity: 0.9; transform: scale(0.95); } 100% { opacity: 0; transform: scale(1.22); } }
+
+.kit-caption { margin-top: var(--space-3); font-size: 0.95rem; color: var(--walnut-soft); min-height: 1.6em; }
+.kit-caption strong { color: var(--amber-deep); }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+  .kit { max-width: 340px; }
+  .pad { border-width: 9px; }
+}
+
+/* ============================================================
+   TAPE LOOP — marquee strip of what lessons cover
+   ============================================================ */
+.tape { background: var(--walnut-deep) var(--grain); overflow: hidden; padding: 1.1rem 0; border-block: 1px solid rgba(206, 158, 82, 0.25); }
+.tape-track { display: flex; width: max-content; animation: tape 26s linear infinite; }
+.tape span {
+  font-family: var(--display); font-style: italic; font-size: 1.15rem;
+  color: var(--brass); white-space: nowrap; padding: 0 1.4rem;
+  display: inline-flex; align-items: center; gap: 2.8rem;
+}
+.tape span::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex: none; }
+@keyframes tape { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .tape-track { animation: none; } }
+
+/* ============================================================
+   EDITORIAL ROWS (replaces card grids)
+   ============================================================ */
+.rows { border-top: 1px solid var(--cream-line); }
+.row {
+  display: grid; grid-template-columns: 110px 1fr 1.3fr; gap: var(--space-4);
+  align-items: start; padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--cream-line);
+}
+.row .beats { margin-top: 0.9rem; }
+.row h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.row p { color: var(--walnut-soft); }
+.row:hover .beats span.on { animation: pulse 0.9s ease-in-out; }
+@media (max-width: 860px) {
+  .row { grid-template-columns: 1fr; gap: var(--space-1); padding: var(--space-3) 0; }
+}
+
+/* ============================================================
+   PETER PREVIEW (dark editorial band)
+   ============================================================ */
+.peter-band { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-5); align-items: center; }
+.portrait-ph {
+  aspect-ratio: 4 / 5; border-radius: var(--radius);
+  background:
+    repeating-linear-gradient(45deg, rgba(206,158,82,0.08), rgba(206,158,82,0.08) 12px, transparent 12px, transparent 24px),
+    linear-gradient(160deg, #2E1F15, #1C110A);
+  border: 1px solid rgba(206, 158, 82, 0.3);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  color: var(--on-dark-soft); font-size: 0.9rem; padding: var(--space-3);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--space-3); }
+.chip {
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.03em;
+  color: var(--brass); border: 1px solid rgba(206, 158, 82, 0.45);
+  border-radius: 100px; padding: 0.35rem 0.9rem;
+}
+@media (max-width: 860px) { .peter-band { grid-template-columns: 1fr; gap: var(--space-4); } }
+
+/* ============================================================
+   BIG PULL QUOTE
+   ============================================================ */
+.bigquote { position: relative; max-width: 52ch; margin: 0 auto; text-align: center; padding-top: var(--space-4); }
+.bigquote::before {
+  content: "\201C"; position: absolute; top: -0.35em; left: 50%; transform: translateX(-50%);
+  font-family: var(--display); font-size: 7rem; line-height: 1; color: var(--brass); opacity: 0.55;
+}
+.bigquote blockquote {
+  font-family: var(--display); font-style: italic; font-weight: 400;
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.3; color: var(--walnut);
+}
+.bigquote cite { display: block; margin-top: var(--space-2); font-style: normal; font-weight: 600; color: var(--amber-deep); font-size: 0.95rem; }
+
+/* ============================================================
+   CTA STRIP
+   ============================================================ */
+.cta-strip { background: var(--walnut-deep) var(--grain); color: var(--on-dark); text-align: center; }
+.cta-strip h2 { color: var(--on-dark); }
+.cta-strip p { color: var(--on-dark-soft); max-width: 52ch; margin: var(--space-2) auto var(--space-3); }
+.cta-strip .beats { justify-content: center; margin-bottom: var(--space-3); }
+.cta-strip .beats span { background: rgba(242, 232, 216, 0.2); }
+.cta-strip .beats span.on { background: var(--brass); }
+
+/* ============================================================
+   ABOUT — magazine feature
+   ============================================================ */
+.article-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-5); align-items: start; }
+.article-rail { position: sticky; top: 110px; display: grid; gap: var(--space-3); }
+.facts { border-top: 2px solid var(--walnut); }
+.facts dt {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-weight: 600; color: var(--amber-deep); padding-top: var(--space-2);
+}
+.facts dd { padding-bottom: var(--space-2); border-bottom: 1px solid var(--cream-line); font-weight: 500; }
+.article { font-size: 1.12rem; color: var(--walnut-soft); }
+.article > p { margin-bottom: var(--space-3); max-width: 62ch; }
+.article > p:first-of-type::first-letter {
+  font-family: var(--display); font-size: 4.6em; line-height: 0.78;
+  float: left; padding: 0.08em 0.12em 0 0; color: var(--amber); font-weight: 600;
+}
+.article .inline-quote {
+  font-family: var(--display); font-style: italic; font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.3; color: var(--walnut);
+  border-left: 3px solid var(--amber); padding: 0.3rem 0 0.3rem var(--space-3);
+  margin: var(--space-4) 0;
+}
+@media (max-width: 860px) {
+  .article-grid { grid-template-columns: 1fr; }
+  .article-rail { position: static; }
+}
+
+/* ============================================================
+   LESSONS — the measure (4-beat session flow)
+   ============================================================ */
+.measure { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); position: relative; }
+.measure::before {
+  content: ""; position: absolute; top: 26px; left: 6%; right: 6%;
+  height: 2px; background: var(--cream-line);
+}
+.beat-step { position: relative; padding-top: 56px; }
+.beat-step .count {
+  position: absolute; top: 0; left: 0;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--parchment); border: 2px solid var(--amber);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 600; font-size: 1.4rem; color: var(--amber-deep);
+}
+.beat-step h3 { margin-bottom: 0.4rem; }
+.beat-step p { color: var(--walnut-soft); font-size: 0.98rem; }
+@media (max-width: 860px) {
+  .measure { grid-template-columns: 1fr; gap: var(--space-3); }
+  .measure::before { top: 8%; bottom: 4%; left: 26px; right: auto; width: 2px; height: auto; }
+  .beat-step { padding-top: 0; padding-left: 76px; min-height: 56px; }
+}
+
+/* ============================================================
+   GROOVE LAB — the step sequencer
+   ============================================================ */
+.lab {
+  background: var(--walnut-deep) var(--grain);
+  border-radius: 12px; padding: var(--space-4);
+  color: var(--on-dark); box-shadow: 0 30px 60px rgba(23, 14, 9, 0.35);
+}
+.lab-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
+.lab-title { font-family: var(--display); font-size: 1.5rem; color: var(--on-dark); }
+.lab-transport { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.lab-play {
+  background: var(--amber); color: #FFF8ED; border: none; cursor: pointer;
+  font-weight: 600; font-size: 0.95rem; padding: 0.6rem 1.4rem; border-radius: 100px;
+  transition: background 0.2s;
+}
+.lab-play:hover { background: var(--amber-deep); }
+.lab-play:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
+.lab-tempo { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--on-dark-soft); }
+.lab-tempo input[type="range"] { accent-color: var(--amber); width: 130px; }
+.lab-row { display: grid; grid-template-columns: 92px repeat(8, 1fr); gap: 8px; align-items: center; margin-bottom: 10px; }
+.lab-row-name { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brass); }
+.cell {
+  aspect-ratio: 1; max-height: 52px; border-radius: 8px; border: 1px solid rgba(206, 158, 82, 0.3);
+  background: rgba(242, 232, 216, 0.06); cursor: pointer; transition: background 0.12s, transform 0.12s;
+}
+.cell:hover { background: rgba(206, 158, 82, 0.22); }
+.cell:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.cell[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); box-shadow: 0 4px 14px rgba(180, 105, 42, 0.5); }
+.cell.now { transform: scale(1.12); border-color: var(--on-dark); }
+.lab-note { margin-top: var(--space-3); font-size: 0.9rem; color: var(--on-dark-soft); }
+@media (max-width: 680px) {
+  .lab { padding: var(--space-3); }
+  .lab-row { grid-template-columns: 64px repeat(8, 1fr); gap: 5px; }
+  .lab-row-name { font-size: 0.66rem; }
+}
+
+/* ============================================================
+   PRICING ROWS
+   ============================================================ */
+.lessons-list { display: grid; gap: var(--space-3); }
+.lesson {
+  display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3);
+  align-items: center; background: var(--parchment);
+  border: 1px solid var(--cream-line); border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.lesson:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(36, 24, 18, 0.12); }
+.lesson--feature { border: 2px solid var(--amber); background: #FCF5E7; }
+.lesson-tag { font-family: var(--display); font-size: 1.6rem; color: var(--amber); font-weight: 600; min-width: 2.5ch; }
+.lesson-body h3 { margin-bottom: 0.2rem; }
+.lesson-body p { color: var(--walnut-soft); font-size: 0.97rem; }
+.lesson-price { font-family: var(--display); font-size: 1.5rem; color: var(--walnut); white-space: nowrap; text-align: right; }
+.lesson-price small { display: block; font-family: var(--body); font-size: 0.75rem; color: var(--walnut-soft); font-weight: 400; }
+@media (max-width: 640px) {
+  .lesson { grid-template-columns: auto 1fr; }
+  .lesson-price { grid-column: 2; text-align: left; margin-top: var(--space-1); }
+}
+
+/* ============================================================
+   FAQ — working accordion (native <details>)
+   ============================================================ */
+.faq { border-top: 1px solid var(--cream-line); }
+.faq details { border-bottom: 1px solid var(--cream-line); }
+.faq summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-3); padding: var(--space-3) 0;
+  font-family: var(--display); font-weight: 600; font-size: 1.25rem; color: var(--walnut);
+  transition: color 0.2s;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--amber-deep); }
+.faq summary:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+.faq .faq-icon {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  border: 2px solid var(--amber); color: var(--amber-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--body); font-size: 1.3rem; font-weight: 500; line-height: 1;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.faq details[open] .faq-icon { transform: rotate(45deg); background: var(--amber); color: #FFF8ED; }
+.faq .faq-body { padding: 0 0 var(--space-3); color: var(--walnut-soft); max-width: 65ch; }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.step { position: relative; padding-left: 64px; }
+.step .count {
+  position: absolute; left: 0; top: 0; width: 46px; height: 46px; border-radius: 50%;
+  border: 2px solid var(--brass); color: var(--brass);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 600; font-size: 1.2rem;
+}
+.step h3 { font-size: 1.15rem; color: var(--on-dark); margin-bottom: 0.3rem; }
+.step p { font-size: 0.95rem; }
+@media (max-width: 780px) { .steps { grid-template-columns: 1fr; gap: var(--space-3); } }
+
+.contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); }
+.field { margin-bottom: var(--space-3); }
+.field label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 0.4rem; color: var(--walnut); }
+.field input, .field select, .field textarea {
+  width: 100%; font-family: var(--body); font-size: 1rem;
+  padding: 0.85rem 1rem; border: 1px solid var(--cream-line); border-radius: var(--radius);
+  background: #FFFDF8; color: var(--walnut); transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px rgba(180, 105, 42, 0.16);
+}
+.field textarea { resize: vertical; min-height: 130px; }
+.form-note { font-size: 0.85rem; color: var(--walnut-soft); margin-top: var(--space-2); }
+.honeypot { position: absolute; left: -9999px; opacity: 0; }
+.form-status { padding: var(--space-2); border-radius: var(--radius); margin-top: var(--space-2); font-size: 0.95rem; display: none; }
+.form-status.show { display: block; }
+.form-status.success { background: #E4EAD9; color: #3B5323; border: 1px solid #C3D0A8; }
+.form-status.error { background: #F0DCCF; color: #8A3B1D; border: 1px solid #E0BBA0; }
+
+.contact-detail { display: grid; gap: var(--space-3); align-content: start; }
+.contact-item { display: grid; grid-template-columns: auto 1fr; gap: var(--space-2); align-items: start; }
+.contact-item .beats { margin-top: 0.45rem; }
+.contact-item .ci-label { font-weight: 600; color: var(--amber-deep); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.contact-item a { color: var(--walnut); }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: var(--space-4); } }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer { background: var(--walnut-deep) var(--grain); color: var(--on-dark-soft); padding: var(--space-5) 0 var(--space-3); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4); }
+.site-footer h4 { font-family: var(--display); color: var(--on-dark); font-size: 1.1rem; margin-bottom: var(--space-2); font-weight: 600; }
+.site-footer .brand { color: var(--on-dark); margin-bottom: var(--space-2); }
+.site-footer .brand-sub { color: var(--brass); }
+.site-footer ul { list-style: none; display: grid; gap: 0.5rem; }
+.site-footer a { color: var(--on-dark-soft); }
+.site-footer a:hover { color: var(--brass); text-decoration: none; }
+.footer-bottom {
+  border-top: 1px solid rgba(242, 232, 216, 0.14); padding-top: var(--space-3);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2);
+  font-size: 0.85rem; color: rgba(242, 232, 216, 0.5);
+}
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr; gap: var(--space-3); } }
+
+/* ---- Page hero (interior pages) ---- */
+.page-hero {
+  padding: var(--space-6) 0 var(--space-5); text-align: center;
+  background: radial-gradient(900px 400px at 50% -20%, rgba(206, 158, 82, 0.18), transparent 62%), var(--parchment);
+}
+.page-hero .lead { margin: var(--space-2) auto 0; }
+
+/* ---- Scroll reveal ---- */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+
+.preview-ribbon {
+  background: var(--walnut-deep); color: var(--brass);
+  font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: center; padding: 0.55rem 1rem; font-weight: 600;
+}
+.page { display: none; }
+
+</style>
+</head>
+<body>
+  <div class="preview-ribbon">
+    Preview &middot; Suburban Rhythm Music Studio &middot; use the menu to explore &middot; turn sound on and hit the pads
+  </div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#home" class="brand" data-nav>
+        <span>Suburban <span class="brand-mark">Rhythm</span></span>
+        <span class="brand-sub">Music Studio</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#home" data-nav>Home</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#lessons" data-nav>Lessons</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn--primary" data-nav>Book free lesson</a></li>
+      </ul>
+    </div>
+  </header>
+
+<div class="page" id="page-home" data-page="home">
+<!-- ============ HERO: the playable kit ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="free-badge"><span class="dot"></span> First lesson free</span>
+        <h1>Learn the drums, <span class="accent-i">at your own tempo.</span></h1>
+        <p class="lead">Personalised drum lessons in Melbourne with Peter — a qualified drummer and music educator teaching all ages and levels from his home studio.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn--primary">Book your free lesson</a>
+          <a href="#lessons" class="btn btn--ghost">Lessons &amp; pricing</a>
+        </div>
+      </div>
+      <div class="kit-wrap">
+        <div class="kit">
+          <button class="pad" type="button" data-drum="kick" data-key="a" aria-label="Play kick drum">
+            <span class="pad-name">Kick</span><span class="key">A</span>
+          </button>
+          <button class="pad" type="button" data-drum="snare" data-key="s" aria-label="Play snare drum">
+            <span class="pad-name">Snare</span><span class="key">S</span>
+          </button>
+          <button class="pad" type="button" data-drum="hat" data-key="d" aria-label="Play hi-hat">
+            <span class="pad-name">Hi-hat</span><span class="key">D</span>
+          </button>
+          <button class="pad" type="button" data-drum="tom" data-key="f" aria-label="Play tom">
+            <span class="pad-name">Tom</span><span class="key">F</span>
+          </button>
+        </div>
+        <p class="kit-caption">Go on — hit them. <strong>Sound on.</strong> (Or use the A&nbsp;S&nbsp;D&nbsp;F keys.)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAPE LOOP ============ -->
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>Warm-ups</span><span>Rudiments</span><span>Groove development</span><span>Timing</span><span>Creativity</span><span>Songs you love</span><span>All ages</span><span>All levels</span>
+      <span>Warm-ups</span><span>Rudiments</span><span>Groove development</span><span>Timing</span><span>Creativity</span><span>Songs you love</span><span>All ages</span><span>All levels</span>
+    </div>
+  </div>
+
+  <!-- ============ WHY HERE: editorial rows ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal" style="max-width: 62ch; margin-bottom: 2.5rem;">
+        <span class="eyebrow">Why learn here</span>
+        <h2>Built around <span class="accent-i">you,</span> not a fixed syllabus</h2>
+      </div>
+      <div class="rows">
+        <div class="row reveal">
+          <div class="beats" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+          <h3>Every age, every level</h3>
+          <p>Complete beginners finding their first groove, kids building coordination and confidence, adults finally learning the instrument they always wanted to — and experienced players refining technique, timing, and creativity. Each lesson meets you exactly where you are.</p>
+        </div>
+        <div class="row reveal">
+          <div class="beats" aria-hidden="true"><span></span><span class="on"></span><span></span><span></span></div>
+          <h3>A qualified teacher, one-to-one</h3>
+          <p>Peter holds a Diploma of Music and teaches every session personally from his home studio. His approach pairs solid foundations — warm-ups, rudiments, groove — with the music you&rsquo;re actually passionate about.</p>
+        </div>
+        <div class="row reveal">
+          <div class="beats" aria-hidden="true"><span></span><span></span><span class="on"></span><span></span></div>
+          <h3>Disciplined <em>and</em> fun</h3>
+          <p>Peter&rsquo;s core belief: structure and enjoyment aren&rsquo;t opposites. Lessons stay motivating because progress is real and the music is yours — that&rsquo;s what keeps students inspired and coming back.</p>
+        </div>
+        <div class="row reveal">
+          <div class="beats" aria-hidden="true"><span></span><span></span><span></span><span class="on"></span></div>
+          <h3>The first lesson is free</h3>
+          <p>Sit at the kit, meet Peter, play a beat, and see how it feels — before spending a cent. No pressure, no strings attached. If it clicks, you&rsquo;ll know.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PETER BAND (dark) ============ -->
+  <section class="section section--dark">
+    <div class="wrap peter-band">
+      <div class="portrait-ph reveal">
+        Photo placeholder — a warm portrait of Peter at his kit. This is the single highest-impact asset to add.
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Meet your teacher</span>
+        <h2>The drummer behind <span class="accent-i">Suburban Rhythm</span></h2>
+        <p class="lead" style="margin-top: 1rem;">Peter is a passionate drummer and music educator based in Melbourne. His goal with every student is the same: build strong foundations, keep it genuinely enjoyable, and help you grow in confidence behind the kit.</p>
+        <div class="chips">
+          <span class="chip">Diploma of Music</span>
+          <span class="chip">Melbourne home studio</span>
+          <span class="chip">All ages &amp; levels</span>
+          <span class="chip">One-to-one lessons</span>
+        </div>
+        <p style="margin-top: 2rem;"><a href="#about" class="btn btn--ghost">Read Peter&rsquo;s story</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="bigquote reveal">
+        <blockquote>[Placeholder — a real student or parent review goes here. Facebook recommendations are a good source.]</blockquote>
+        <cite>[Student or parent name]</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA STRIP ============ -->
+  <section class="section cta-strip">
+    <div class="wrap">
+      <div class="beats beats--pulse" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      <h2>Ready to play your <span class="accent-i">first beat?</span></h2>
+      <p>Book a free first lesson at the studio and see how good it feels behind a real kit. No experience needed — just curiosity.</p>
+      <a href="#contact" class="btn btn--primary">Book your free lesson</a>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-about" data-page="about">
+<section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">About</span>
+      <h1>Meet <span class="accent-i">Peter.</span></h1>
+      <p class="lead">Drummer, educator, and the reason discipline and fun belong in the same lesson.</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE ARTICLE ============ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap article-grid">
+
+      <div class="article-rail reveal">
+        <div class="portrait-ph" style="border-color: var(--cream-line); color: var(--walnut-soft); background: repeating-linear-gradient(45deg, var(--parchment-2), var(--parchment-2) 12px, #E5D6BC 12px, #E5D6BC 24px);">
+          Photo placeholder — a portrait of Peter, ideally mid-lesson or at his kit.
+        </div>
+        <dl class="facts">
+          <dt>Teaches</dt><dd>Drum kit — all ages &amp; levels</dd>
+          <dt>Qualification</dt><dd>Diploma of Music</dd>
+          <dt>Where</dt><dd>Home studio, [suburb] Melbourne</dd>
+          <dt>Format</dt><dd>One-to-one, personalised</dd>
+          <dt>First lesson</dt><dd>Free</dd>
+        </dl>
+      </div>
+
+      <div class="article reveal">
+        <p>Peter is a passionate drummer and music educator based in Melbourne, teaching personalised drum lessons from his home studio. He holds a Diploma of Music, and he brings the same focus to every student who walks in: build strong foundational skills, and make sure the lesson is something you look forward to all week.</p>
+        <p>That second part matters more than people expect. Plenty of students have tried an instrument before and drifted away — not because they lacked ability, but because the lessons ground them down. Peter&rsquo;s answer is to tailor every session to the individual. Complete beginners start with the fundamentals of timing and coordination; experienced players dig into refining technique, feel, and creativity. Nobody gets a photocopy of someone else&rsquo;s lesson.</p>
+        <div class="inline-quote">Learning an instrument should be both disciplined <em>and</em> fun — solid technique, paired with the music you&rsquo;re passionate about.</div>
+        <p>A typical session moves like a bar of music: warm-ups to loosen up, rudiments to build vocabulary, groove development to turn technique into feel, and then songs — the music <em>you</em> actually love, which is what keeps progress structured and inspiring at the same time.</p>
+        <p>The goal, in the end, is bigger than beats and fills. It&rsquo;s a student who grows in confidence, stays inspired, and reaches their full potential — whether that means playing along to favourite records at home, joining a band, or just having a corner of the week that&rsquo;s completely theirs.</p>
+        <p style="margin-top: 2.5rem;"><a href="#contact" class="btn btn--primary">Book a free lesson with Peter</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TEACHING BELIEFS (dark) ============ -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="reveal" style="max-width: 62ch; margin-bottom: 2.5rem;">
+        <span class="eyebrow">How Peter teaches</span>
+        <h2>Three beliefs behind <span class="accent-i">every lesson</span></h2>
+      </div>
+      <div class="rows" style="border-color: rgba(206,158,82,0.3);">
+        <div class="row reveal" style="border-color: rgba(206,158,82,0.3);">
+          <div class="beats" aria-hidden="true"><span class="on" style="background: var(--brass);"></span><span style="background: rgba(242,232,216,0.18);"></span><span style="background: rgba(242,232,216,0.18);"></span><span style="background: rgba(242,232,216,0.18);"></span></div>
+          <h3>Foundations first</h3>
+          <p>Warm-ups, rudiments, and groove work aren&rsquo;t box-ticking — they&rsquo;re the vocabulary everything else is built from. Get them right early, patiently, and the rest comes faster.</p>
+        </div>
+        <div class="row reveal" style="border-color: rgba(206,158,82,0.3);">
+          <div class="beats" aria-hidden="true"><span style="background: rgba(242,232,216,0.18);"></span><span class="on" style="background: var(--brass);"></span><span style="background: rgba(242,232,216,0.18);"></span><span style="background: rgba(242,232,216,0.18);"></span></div>
+          <h3>Your music is the fuel</h3>
+          <p>Every lesson works toward songs the student genuinely loves. Passion isn&rsquo;t a distraction from discipline — it&rsquo;s what makes discipline sustainable.</p>
+        </div>
+        <div class="row reveal" style="border-color: rgba(206,158,82,0.3);">
+          <div class="beats" aria-hidden="true"><span style="background: rgba(242,232,216,0.18);"></span><span style="background: rgba(242,232,216,0.18);"></span><span class="on" style="background: var(--brass);"></span><span style="background: rgba(242,232,216,0.18);"></span></div>
+          <h3>Confidence is the real outcome</h3>
+          <p>Technique serves something bigger: a student who trusts themselves behind the kit, stays inspired, and keeps growing long after the lesson ends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta-strip" style="background: var(--walnut);">
+    <div class="wrap">
+      <h2>Come and meet Peter — <span class="accent-i">free</span></h2>
+      <p>The best way to know if it&rsquo;s a fit is to sit down and play. Your first lesson costs nothing.</p>
+      <a href="#contact" class="btn btn--primary">Book your free lesson</a>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-lessons" data-page="lessons">
+<section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Lessons &amp; pricing</span>
+      <h1>Every lesson, <span class="accent-i">tailored to you</span></h1>
+      <p class="lead">Structured enough to build real technique, personal enough to stay inspiring — and it all starts with a free first lesson.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE MEASURE: how a session flows ============ -->
+  <section class="section" style="padding-top: var(--space-4);">
+    <div class="wrap">
+      <div class="reveal" style="max-width: 62ch; margin-bottom: 3.5rem;">
+        <span class="eyebrow">How a session flows</span>
+        <h2>Four beats to <span class="accent-i">every lesson</span></h2>
+        <p class="lead" style="margin-top: 0.8rem;">Like a bar of 4/4, each session moves through four parts — from fundamentals to the music you love.</p>
+      </div>
+      <div class="measure">
+        <div class="beat-step reveal">
+          <div class="count">1</div>
+          <h3>Warm-ups</h3>
+          <p>Loosen up, connect with the kit, and get hands and feet talking to each other.</p>
+        </div>
+        <div class="beat-step reveal">
+          <div class="count">2</div>
+          <h3>Rudiments</h3>
+          <p>The vocabulary of drumming — stick control and patterns that make everything else possible.</p>
+        </div>
+        <div class="beat-step reveal">
+          <div class="count">3</div>
+          <h3>Groove development</h3>
+          <p>Timing, feel, and creativity — turning technique into beats that actually groove.</p>
+        </div>
+        <div class="beat-step reveal">
+          <div class="count">4</div>
+          <h3>Songs you love</h3>
+          <p>Apply it all to the music you&rsquo;re passionate about — the part that keeps you coming back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GROOVE LAB ============ -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="reveal center" style="max-width: 62ch; margin: 0 auto 2.5rem;">
+        <span class="eyebrow" style="justify-content: center;">Try it right now</span>
+        <h2>The <span class="accent-i">Groove Lab</span></h2>
+        <p class="lead" style="margin: 0.8rem auto 0;">Building a beat like this is exactly the kind of thing you&rsquo;ll do in your first lessons. Toggle the steps, press play — sound on.</p>
+      </div>
+      <div class="lab reveal">
+        <div class="lab-head">
+          <div class="lab-title">Build your first groove</div>
+          <div class="lab-transport">
+            <button class="lab-play" type="button">&#9654; Play</button>
+            <label class="lab-tempo">Tempo
+              <input type="range" min="70" max="140" value="100" aria-label="Tempo in beats per minute">
+              <output>100 bpm</output>
+            </label>
+          </div>
+        </div>
+        <div class="lab-rows"></div>
+        <p class="lab-note">We&rsquo;ve set up a classic rock beat to get you started — change it, break it, make it yours. That&rsquo;s the lesson.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal" style="max-width: 62ch; margin-bottom: 2.5rem;">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple options, <span class="accent-i">no surprises</span></h2>
+        <p class="lead" style="margin-top: 0.8rem;"><em>[Placeholder pricing — confirm real amounts, durations, and options with Peter before launch.]</em></p>
+      </div>
+      <div class="lessons-list">
+
+        <div class="lesson lesson--feature reveal">
+          <div class="lesson-tag">&starf;</div>
+          <div class="lesson-body">
+            <h3>Free first lesson</h3>
+            <p>A full introductory session at the studio. Meet Peter, sit at the kit, and decide with zero pressure.</p>
+          </div>
+          <div class="lesson-price">Free<small>[30&ndash;45 min]</small></div>
+        </div>
+
+        <div class="lesson reveal">
+          <div class="lesson-tag">&bull;</div>
+          <div class="lesson-body">
+            <h3>Single lesson</h3>
+            <p>A one-off session — perfect for a taster beyond the free lesson, or an occasional top-up.</p>
+          </div>
+          <div class="lesson-price">$[00]<small>per lesson</small></div>
+        </div>
+
+        <div class="lesson reveal">
+          <div class="lesson-tag">&bull; &bull;</div>
+          <div class="lesson-body">
+            <h3>Weekly lessons</h3>
+            <p>The steady groove. A regular weekly slot is where real, lasting progress happens.</p>
+          </div>
+          <div class="lesson-price">$[00]<small>per week</small></div>
+        </div>
+
+        <div class="lesson reveal">
+          <div class="lesson-tag">&bull; &bull; &bull;</div>
+          <div class="lesson-body">
+            <h3>Lesson block (save more)</h3>
+            <p>Book a block of [X] lessons up front at a reduced rate — the best value for committed learners.</p>
+          </div>
+          <div class="lesson-price">$[00]<small>for [X] lessons</small></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (working accordion) ============ -->
+  <section class="section section--alt">
+    <div class="wrap" style="max-width: 820px;">
+      <div class="reveal" style="margin-bottom: 2rem;">
+        <span class="eyebrow">Before you book</span>
+        <h2>Common <span class="accent-i">questions</span></h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Do I need my own drum kit? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Not for lessons — you&rsquo;ll play on a full kit at Peter&rsquo;s studio. When you&rsquo;re ready to practise at home, Peter can advise on options for any budget and space, from practice pads to electronic kits.</div>
+        </details>
+        <details>
+          <summary>I&rsquo;m a complete beginner. Is that okay? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">It&rsquo;s more than okay — it&rsquo;s the most common starting point. Lessons are tailored to your level from day one, and beginners are playing real beats in the very first session.</div>
+        </details>
+        <details>
+          <summary>What ages do you teach? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">All ages and levels are welcome. [Confirm with Peter the youngest age he takes — e.g. from age 6 through adults of any age.]</div>
+        </details>
+        <details>
+          <summary>Where are lessons held? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">At Peter&rsquo;s home studio in [suburb], Melbourne. [Add parking / public transport notes if useful.]</div>
+        </details>
+        <details>
+          <summary>How does the free first lesson work? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Book through the contact page and Peter will arrange a time. It&rsquo;s a full lesson, not a sales pitch — you&rsquo;ll play, get a feel for how Peter teaches, and decide from there. No cost, no obligation.</div>
+        </details>
+        <details>
+          <summary>How do I pay? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">[Confirm with Peter — cash, bank transfer, etc.]</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta-strip">
+    <div class="wrap">
+      <div class="beats beats--pulse" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      <h2>Start with the <span class="accent-i">free lesson</span></h2>
+      <p>No commitment, no cost. Book your first session and see how it feels.</p>
+      <a href="#contact" class="btn btn--primary">Book your free lesson</a>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-contact" data-page="contact">
+<section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Book your <span class="accent-i">free lesson</span></h1>
+      <p class="lead">Fill in the form and Peter will be in touch to find a time that suits you. No cost, no obligation.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT HAPPENS NEXT (dark band) ============ -->
+  <section class="section section--dark" style="padding: var(--space-5) 0;">
+    <div class="wrap">
+      <div class="steps">
+        <div class="step reveal">
+          <div class="count">1</div>
+          <h3>You send the form</h3>
+          <p>Takes a minute. Tell Peter a little about who&rsquo;s learning and what music you&rsquo;re into.</p>
+        </div>
+        <div class="step reveal">
+          <div class="count">2</div>
+          <h3>Peter gets in touch</h3>
+          <p>He&rsquo;ll reply to arrange a time for your free first lesson that fits your week.</p>
+        </div>
+        <div class="step reveal">
+          <div class="count">3</div>
+          <h3>You sit at the kit</h3>
+          <p>A full lesson, on a real kit, completely free. Then you decide — no pressure either way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM + DETAILS ============ -->
+  <section class="section">
+    <div class="wrap contact-grid">
+
+      <div class="reveal">
+        <form id="contact-form">
+          <!-- Web3Forms access key: create a free one at web3forms.com (use Peter's email)
+               and replace PASTE-YOUR-WEB3FORMS-KEY-HERE below. -->
+          <input type="hidden" name="access_key" value="PASTE-YOUR-WEB3FORMS-KEY-HERE">
+          <input type="hidden" name="subject" value="New free-lesson enquiry — Suburban Rhythm website">
+          <input type="hidden" name="from_name" value="Suburban Rhythm website">
+
+          <label class="honeypot">Don&rsquo;t fill this in
+            <input type="checkbox" name="botcheck">
+          </label>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="First and last name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="So Peter can call to arrange a time">
+          </div>
+
+          <div class="field">
+            <label for="who">Who are lessons for?</label>
+            <select id="who" name="who">
+              <option>Myself</option>
+              <option>My child</option>
+              <option>Someone else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="level">Current level</label>
+            <select id="level" name="level">
+              <option>Complete beginner</option>
+              <option>Some experience</option>
+              <option>Returning after a break</option>
+              <option>Intermediate / advanced</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Anything you&rsquo;d like Peter to know?</label>
+            <textarea id="message" name="message" placeholder="Goals, favourite music, questions, preferred days/times&hellip;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Send &amp; book free lesson</button>
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          <p class="form-note">Your details are only used to arrange your lesson. No spam, ever.</p>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Other ways to reach Peter</span>
+        <h2 style="margin-bottom: 1.5rem;">Prefer to just <span class="accent-i">say hello?</span></h2>
+        <div class="contact-detail">
+          <div class="contact-item">
+            <div class="beats" aria-hidden="true"><span class="on"></span></div>
+            <div>
+              <div class="ci-label">Email</div>
+              <a href="mailto:hello@example.com">[Email address]</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="beats" aria-hidden="true"><span class="on"></span></div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <a href="tel:+000000000">[Phone number]</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="beats" aria-hidden="true"><span class="on"></span></div>
+            <div>
+              <div class="ci-label">Facebook</div>
+              <a href="#">Suburban Rhythm Music Studio [link the page]</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="beats" aria-hidden="true"><span class="on"></span></div>
+            <div>
+              <div class="ci-label">Where</div>
+              <span>Home studio in [suburb], Melbourne VIC</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="beats" aria-hidden="true"><span class="on"></span></div>
+            <div>
+              <div class="ci-label">Hours</div>
+              <span>[e.g. Mon&ndash;Sat, afternoons &amp; evenings]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand" data-nav>
+            <span>Suburban <span class="brand-mark">Rhythm</span></span>
+            <span class="brand-sub">Music Studio</span>
+          </a>
+          <p>Personalised drum lessons in Melbourne for all ages and levels. First lesson free.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home" data-nav>Home</a></li>
+            <li><a href="#about" data-nav>About</a></li>
+            <li><a href="#lessons" data-nav>Lessons</a></li>
+            <li><a href="#contact" data-nav>Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="mailto:hello@example.com">[Email address]</a></li>
+            <li><a href="tel:+000000000">[Phone number]</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Suburban Rhythm Music Studio. All rights reserved.</span>
+        <span>Melbourne, VIC [add suburb]</span>
+      </div>
+    </div>
+  </footer>
+<script>
+/* Suburban Rhythm — playable drums.
+   All sounds are synthesized with the Web Audio API (no samples, no assets).
+   Audio only ever starts from a user gesture (click/tap/keypress). */
+function initDrums() {
+  'use strict';
+
+  /* ---------- Tiny drum synth ---------- */
+  var ctx = null;
+  function audio() {
+    if (!ctx) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      ctx = new AC();
+    }
+    if (ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+  function noiseBuffer(c) {
+    var b = c.createBuffer(1, c.sampleRate * 0.2, c.sampleRate);
+    var d = b.getChannelData(0);
+    for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    return b;
+  }
+  var sounds = {
+    kick: function () {
+      var c = audio(); if (!c) return;
+      var t = c.currentTime;
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(150, t);
+      o.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+      g.gain.setValueAtTime(1, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.32);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + 0.34);
+    },
+    snare: function () {
+      var c = audio(); if (!c) return;
+      var t = c.currentTime;
+      var n = c.createBufferSource(); n.buffer = noiseBuffer(c);
+      var f = c.createBiquadFilter(); f.type = 'highpass'; f.frequency.value = 1400;
+      var g = c.createGain();
+      g.gain.setValueAtTime(0.7, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.18);
+      n.connect(f); f.connect(g); g.connect(c.destination);
+      n.start(t); n.stop(t + 0.2);
+      var o = c.createOscillator(), og = c.createGain();
+      o.type = 'triangle';
+      o.frequency.setValueAtTime(210, t);
+      o.frequency.exponentialRampToValueAtTime(120, t + 0.1);
+      og.gain.setValueAtTime(0.5, t);
+      og.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+      o.connect(og); og.connect(c.destination);
+      o.start(t); o.stop(t + 0.13);
+    },
+    hat: function () {
+      var c = audio(); if (!c) return;
+      var t = c.currentTime;
+      var n = c.createBufferSource(); n.buffer = noiseBuffer(c);
+      var f = c.createBiquadFilter(); f.type = 'highpass'; f.frequency.value = 7500;
+      var g = c.createGain();
+      g.gain.setValueAtTime(0.32, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.055);
+      n.connect(f); f.connect(g); g.connect(c.destination);
+      n.start(t); n.stop(t + 0.07);
+    },
+    tom: function () {
+      var c = audio(); if (!c) return;
+      var t = c.currentTime;
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(190, t);
+      o.frequency.exponentialRampToValueAtTime(85, t + 0.2);
+      g.gain.setValueAtTime(0.85, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + 0.32);
+    }
+  };
+
+  /* ---------- Hero pads ---------- */
+  var pads = document.querySelectorAll('.pad');
+  var caption = document.querySelector('.kit-caption');
+  var hits = 0;
+  function hitPad(pad) {
+    var s = pad.getAttribute('data-drum');
+    if (sounds[s]) { try { sounds[s](); } catch (e) { /* audio unavailable */ } }
+    pad.classList.remove('hit');
+    void pad.offsetWidth; /* restart animation */
+    pad.classList.add('hit');
+    hits++;
+    if (caption && hits === 10) {
+      caption.innerHTML = 'Not bad at all. Imagine that on a <strong>real kit</strong> \u2014 your first lesson is free.';
+    }
+  }
+  pads.forEach(function (pad) {
+    if (pad.dataset.bound) { return; }
+    pad.dataset.bound = '1';
+    pad.addEventListener('click', function () { hitPad(pad); });
+  });
+  if (pads.length && !window.__srPadKeys) {
+    window.__srPadKeys = true;
+    var keymap = {};
+    pads.forEach(function (pad) {
+      var k = (pad.getAttribute('data-key') || '').toLowerCase();
+      if (k) keymap[k] = pad;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.repeat) return;
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      var pad = keymap[e.key.toLowerCase()];
+      if (pad) hitPad(pad);
+    });
+  }
+
+  /* ---------- Groove Lab (step sequencer) ---------- */
+  var lab = document.querySelector('.lab');
+  if (!lab) return;
+
+  var ROWS = [
+    { name: 'Hi-hat', sound: 'hat',   seed: [1, 1, 1, 1, 1, 1, 1, 1] },
+    { name: 'Snare',  sound: 'snare', seed: [0, 0, 1, 0, 0, 0, 1, 0] },
+    { name: 'Kick',   sound: 'kick',  seed: [1, 0, 0, 0, 1, 1, 0, 0] }
+  ];
+  var STEPS = 8;
+  var grid = [];
+
+  var rowsHost = lab.querySelector('.lab-rows');
+  rowsHost.innerHTML = '';
+  ROWS.forEach(function (row, r) {
+    var el = document.createElement('div');
+    el.className = 'lab-row';
+    var name = document.createElement('div');
+    name.className = 'lab-row-name';
+    name.textContent = row.name;
+    el.appendChild(name);
+    grid[r] = [];
+    for (var s = 0; s < STEPS; s++) {
+      var cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'cell';
+      cell.setAttribute('aria-pressed', row.seed[s] ? 'true' : 'false');
+      cell.setAttribute('aria-label', row.name + ', step ' + (s + 1));
+      cell.addEventListener('click', (function (c) {
+        return function () {
+          var on = c.getAttribute('aria-pressed') === 'true';
+          c.setAttribute('aria-pressed', on ? 'false' : 'true');
+        };
+      })(cell));
+      el.appendChild(cell);
+      grid[r][s] = cell;
+    }
+    rowsHost.appendChild(el);
+  });
+
+  var playBtn = lab.querySelector('.lab-play');
+  playBtn.replaceWith(playBtn.cloneNode(true));
+  playBtn = lab.querySelector('.lab-play');
+  var tempoInput = lab.querySelector('.lab-tempo input');
+  tempoInput.replaceWith(tempoInput.cloneNode(true));
+  tempoInput = lab.querySelector('.lab-tempo input');
+  var tempoOut = lab.querySelector('.lab-tempo output');
+  if (window.__srLabTimer) { clearInterval(window.__srLabTimer); window.__srLabTimer = null; }
+  var playing = false, timer = null, step = 0;
+
+  function stepMs() {
+    var bpm = parseInt(tempoInput.value, 10) || 100;
+    return (60000 / bpm) / 2; /* 8th notes */
+  }
+  function tick() {
+    for (var r = 0; r < ROWS.length; r++) {
+      grid[r].forEach(function (c) { c.classList.remove('now'); });
+      grid[r][step].classList.add('now');
+      if (grid[r][step].getAttribute('aria-pressed') === 'true') {
+        try { sounds[ROWS[r].sound](); } catch (e) { /* audio unavailable */ }
+      }
+    }
+    step = (step + 1) % STEPS;
+  }
+  function start() {
+    if (!audio()) return;
+    playing = true; step = 0;
+    playBtn.textContent = '\u25A0 Stop';
+    tick();
+    timer = setInterval(tick, stepMs());
+    window.__srLabTimer = timer;
+  }
+  function stop() {
+    playing = false;
+    clearInterval(timer);
+    window.__srLabTimer = null;
+    playBtn.textContent = '\u25B6 Play';
+    grid.forEach(function (row) { row.forEach(function (c) { c.classList.remove('now'); }); });
+  }
+  playBtn.addEventListener('click', function () { playing ? stop() : start(); });
+  tempoInput.addEventListener('input', function () {
+    tempoOut.textContent = tempoInput.value + ' bpm';
+    if (playing) { clearInterval(timer); timer = setInterval(tick, stepMs()); }
+  });
+}
+</script>
+<script>
+/* Contact form submission via Web3Forms.
+   To activate: create a free key at https://web3forms.com and paste it
+   into the access_key hidden input in contact.html (marked PASTE-KEY-HERE). */
+function initContact() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  if (form.dataset.bound) { return; }
+  form.dataset.bound = '1';
+  var status = document.getElementById('form-status');
+
+  function show(type, msg) {
+    status.className = 'form-status show ' + type;
+    status.textContent = msg;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Honeypot: if the hidden field is filled, silently drop (it's a bot)
+    if (form.querySelector('input[name="botcheck"]').checked) return;
+
+    var key = form.querySelector('input[name="access_key"]').value;
+    if (!key || key.indexOf('PASTE') !== -1) {
+      show('error', 'The form isn\u2019t connected yet. In the meantime, email us directly and we\u2019ll get straight back to you.');
+      return;
+    }
+
+    var btn = form.querySelector('button[type="submit"]');
+    var original = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Sending\u2026';
+
+    var data = new FormData(form);
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+      .then(function (r) { return r.json(); })
+      .then(function (json) {
+        if (json.success) {
+          show('success', 'Thanks \u2014 your message is on its way. Peter will be in touch soon to arrange your free first lesson.');
+          form.reset();
+        } else {
+          show('error', 'Something went wrong sending that. Please email us directly and we\u2019ll sort it out.');
+        }
+      })
+      .catch(function () {
+        show('error', 'Couldn\u2019t reach the server. Please email us directly and we\u2019ll get right back to you.');
+      })
+      .finally(function () { btn.disabled = false; btn.textContent = original; });
+  });
+}
+</script>
+<script>
+/* Shared site behaviour: mobile nav + scroll reveal */
+(function () {
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  var links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close menu when a link is tapped (mobile)
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { links.classList.remove('open'); });
+    });
+  }
+
+  // Scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && reveals.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+
+</script>
+<script>
+
+(function () {
+  var pages = document.querySelectorAll('.page');
+  function show(name) {
+    var found = false;
+    pages.forEach(function (p) {
+      var on = p.getAttribute('data-page') === name;
+      p.style.display = on ? 'block' : 'none';
+      if (on) { found = true; }
+    });
+    if (!found) {
+      name = 'home';
+      document.getElementById('page-home').style.display = 'block';
+    }
+    document.querySelectorAll('.nav-links a[data-nav]').forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + name);
+    });
+    window.scrollTo(0, 0);
+    var vis = document.getElementById('page-' + name);
+    if (vis) { vis.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); }); }
+    try { initDrums(); } catch (e) {}
+    try { initContact(); } catch (e) {}
+    var links = document.querySelector('.nav-links');
+    if (links) { links.classList.remove('open'); }
+  }
+  function route() { show((location.hash || '#home').replace('#', '')); }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+
+</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
