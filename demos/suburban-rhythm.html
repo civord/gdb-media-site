@@ -623,6 +623,61 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 
+/* ============================================================
+   CONTACT / BOOKING HUB
+   ============================================================ */
+.badge {
+  display: inline-block; vertical-align: middle;
+  font-family: var(--body); font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--amber); color: #FFF8ED;
+  border-radius: 100px; padding: 0.22rem 0.7rem; margin-left: 0.5rem;
+}
+
+/* light variant of the numbered steps */
+.steps--light .step .count { border-color: var(--amber); color: var(--amber-deep); }
+.steps--light .step h3 { color: var(--walnut); }
+.steps--light .step p { color: var(--walnut-soft); }
+
+/* ---- Big call/email actions in the hero ---- */
+.reach {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+  justify-content: center; margin-top: var(--space-3);
+}
+.reach .btn { display: inline-flex; align-items: center; gap: 0.6rem; }
+.btn--call { font-size: 1.15rem; padding: 1rem 2.2rem; }
+.btn--call .num { font-family: var(--display); letter-spacing: 0.01em; }
+
+/* ---- Three ways to book ---- */
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.way {
+  background: var(--parchment); border: 1px solid var(--cream-line);
+  border-radius: var(--radius); padding: var(--space-4) var(--space-3);
+  text-align: center; text-decoration: none; color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  display: flex; flex-direction: column; align-items: center;
+}
+.way:hover {
+  text-decoration: none; transform: translateY(-4px);
+  border-color: var(--amber); box-shadow: 0 16px 34px rgba(36, 24, 18, 0.12);
+}
+.way--primary { border: 2px solid var(--amber); background: #FCF5E7; }
+.way .way-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 2px solid var(--amber); color: var(--amber-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: var(--space-2);
+}
+.way--primary .way-icon { background: var(--amber); color: #FFF8ED; border-color: var(--amber); }
+.way h3 { margin-bottom: 0.3rem; }
+.way .way-detail {
+  font-family: var(--display); font-size: 1.25rem; color: var(--walnut);
+  margin: 0.2rem 0 0.4rem; word-break: break-word;
+}
+.way p { color: var(--walnut-soft); font-size: 0.94rem; }
+@media (max-width: 860px) { .ways { grid-template-columns: 1fr; } }
+
+
 
 .preview-ribbon {
   background: var(--walnut-deep); color: var(--brass);
@@ -635,7 +690,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
 </head>
 <body>
   <div class="preview-ribbon">
-    Preview &middot; Suburban Rhythm Music Studio &middot; use the menu to explore &middot; turn sound on and hit the pads
+    Preview &middot; Suburban Rhythm Music Studio &middot; use the menu to explore &middot; sound on for the pads
   </div>
   <header class="site-header">
     <div class="wrap nav">
@@ -739,7 +794,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
         <p class="lead" style="margin-top: 1rem;">Peter is a passionate drummer and music educator based in Melbourne. His goal with every student is the same: build strong foundations, keep it genuinely enjoyable, and help you grow in confidence behind the kit.</p>
         <div class="chips">
           <span class="chip">Diploma of Music</span>
-          <span class="chip">Melbourne home studio</span>
+          <span class="chip">Thomastown home studio</span>
           <span class="chip">All ages &amp; levels</span>
           <span class="chip">One-to-one lessons</span>
         </div>
@@ -754,7 +809,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
       <div class="reveal" style="max-width: 62ch; margin-bottom: 2.5rem;">
         <span class="eyebrow">The studio</span>
         <h2>Where you&rsquo;ll <span class="accent-i">actually play</span></h2>
-        <p class="lead" style="margin-top: 0.8rem;">A dedicated teaching room in Peter&rsquo;s Melbourne home, built around a full Roland electronic kit — comfortable, consistent, and neighbour-friendly whatever the hour.</p>
+        <p class="lead" style="margin-top: 0.8rem;">A dedicated teaching room in Peter&rsquo;s Thomastown home, built around a full Roland electronic kit — comfortable, consistent, and neighbour-friendly whatever the hour.</p>
       </div>
 
       <div class="studio">
@@ -819,7 +874,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
     <div class="wrap">
       <div class="beats beats--pulse" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
       <h2>Ready to play your <span class="accent-i">first beat?</span></h2>
-      <p>Book a free first lesson at the studio and see how good it feels behind the kit. No experience needed — just curiosity.</p>
+      <p>Book a free 30-minute discovery class at the studio and see how good it feels behind the kit. No experience needed — just curiosity.</p>
       <a href="#contact" class="btn btn--primary">Book your free lesson</a>
     </div>
   </section>
@@ -845,9 +900,10 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
         <dl class="facts">
           <dt>Teaches</dt><dd>Drum kit — all ages &amp; levels</dd>
           <dt>Qualification</dt><dd>Diploma of Music</dd>
-          <dt>Where</dt><dd>Home studio, [suburb] Melbourne</dd>
+          <dt>Where</dt><dd>Home studio, Thomastown, Melbourne</dd>
           <dt>Format</dt><dd>One-to-one, personalised</dd>
-          <dt>First lesson</dt><dd>Free</dd>
+          <dt>Lessons</dt><dd>30 minutes, one-to-one</dd>
+          <dt>First lesson</dt><dd>Free discovery class</dd>
         </dl>
       </div>
 
@@ -894,7 +950,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
   <section class="section cta-strip" style="background: var(--walnut);">
     <div class="wrap">
       <h2>Come and meet Peter — <span class="accent-i">free</span></h2>
-      <p>The best way to know if it&rsquo;s a fit is to sit down and play. Your first lesson costs nothing.</p>
+      <p>The best way to know if it&rsquo;s a fit is to sit down and play. Your first 30-minute discovery class costs nothing.</p>
       <a href="#contact" class="btn btn--primary">Book your free lesson</a>
     </div>
   </section>
@@ -993,45 +1049,38 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
       <div class="reveal" style="max-width: 62ch; margin-bottom: 2.5rem;">
         <span class="eyebrow">Pricing</span>
         <h2>Simple options, <span class="accent-i">no surprises</span></h2>
-        <p class="lead" style="margin-top: 0.8rem;"><em>[Placeholder pricing — confirm real amounts, durations, and options with Peter before launch.]</em></p>
+        <p class="lead" style="margin-top: 0.8rem;">Lessons are sold as prepaid packs: buy a pack once, then book your 30-minute lessons with Peter as you go. Each lesson uses one credit, and credits stay valid for 12 months.</p>
       </div>
       <div class="lessons-list">
 
         <div class="lesson lesson--feature reveal">
           <div class="lesson-tag">&starf;</div>
           <div class="lesson-body">
-            <h3>Free first lesson</h3>
-            <p>A full introductory session at the studio. Meet Peter, sit at the kit, and decide with zero pressure.</p>
+            <h3>Free Discovery Class</h3>
+            <p>Your no-cost introduction: a full 30-minute lesson at the studio. Meet Peter, sit at the kit, and decide with zero pressure. One per new student.</p>
           </div>
-          <div class="lesson-price">Free<small>[30&ndash;45 min]</small></div>
+          <div class="lesson-price">Free<small>30 minutes</small></div>
         </div>
 
         <div class="lesson reveal">
           <div class="lesson-tag">&bull;</div>
           <div class="lesson-body">
-            <h3>Single lesson</h3>
-            <p>A one-off session — perfect for a taster beyond the free lesson, or an occasional top-up.</p>
+            <h3>6-lesson pack</h3>
+            <p>Six 30-minute lessons, booked with Peter to suit your week. Credits stay valid for 12 months.</p>
           </div>
-          <div class="lesson-price">$[00]<small>per lesson</small></div>
+          <div class="lesson-price">$240<small>$40 per lesson</small></div>
         </div>
 
         <div class="lesson reveal">
           <div class="lesson-tag">&bull; &bull;</div>
           <div class="lesson-body">
-            <h3>Weekly lessons</h3>
-            <p>The steady groove. A regular weekly slot is where real, lasting progress happens.</p>
+            <h3>12-lesson pack <span class="badge">Best value</span></h3>
+            <p>Twelve 30-minute lessons — the steady weekly groove where real progress happens. Credits stay valid for 12 months.</p>
           </div>
-          <div class="lesson-price">$[00]<small>per week</small></div>
+          <div class="lesson-price">$450<small>$37.50 per lesson</small></div>
         </div>
 
-        <div class="lesson reveal">
-          <div class="lesson-tag">&bull; &bull; &bull;</div>
-          <div class="lesson-body">
-            <h3>Lesson block (save more)</h3>
-            <p>Book a block of [X] lessons up front at a reduced rate — the best value for committed learners.</p>
-          </div>
-          <div class="lesson-price">$[00]<small>for [X] lessons</small></div>
-        </div>
+        <p class="center reveal" style="margin-top: 1.5rem;"><a href="#contact" class="btn btn--primary">Get in touch to book</a></p>
 
       </div>
     </div>
@@ -1059,15 +1108,19 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
         </details>
         <details>
           <summary>Where are lessons held? <span class="faq-icon" aria-hidden="true">+</span></summary>
-          <div class="faq-body">At Peter&rsquo;s home studio in [suburb], Melbourne. [Add parking / public transport notes if useful.]</div>
+          <div class="faq-body">At Peter&rsquo;s home studio, 4 Rochester Dr, Thomastown VIC 3074 — in Melbourne&rsquo;s north. [Add parking / public transport notes if useful.]</div>
         </details>
         <details>
           <summary>How does the free first lesson work? <span class="faq-icon" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Book through the contact page and Peter will arrange a time. It&rsquo;s a full lesson, not a sales pitch — you&rsquo;ll play, get a feel for how Peter teaches, and decide from there. No cost, no obligation.</div>
+          <div class="faq-body">It&rsquo;s a full 30-minute lesson, free for every new student. Call, text or email Peter and he&rsquo;ll arrange a time. It&rsquo;s a real session, not a sales pitch — you&rsquo;ll play, get a feel for how he teaches, and decide from there. No cost, no obligation.</div>
+        </details>
+        <details>
+          <summary>How do I book a lesson? <span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Directly with Peter — give him a call or a text, or send an email or message through the contact page. Tell him the days and times that suit you and he&rsquo;ll confirm a slot. If nothing is free right away, he&rsquo;ll let you know as soon as something opens up.</div>
         </details>
         <details>
           <summary>How do I pay? <span class="faq-icon" aria-hidden="true">+</span></summary>
-          <div class="faq-body">[Confirm with Peter — cash, bank transfer, etc.]</div>
+          <div class="faq-body">Lessons are bought as prepaid packs — 6 lessons for $240 or 12 for $450 — arranged directly with Peter. [Confirm accepted payment methods: cash, bank transfer, etc.] Each 30-minute lesson uses one credit from your pack, and credits are valid for 12 months.</div>
         </details>
       </div>
     </div>
@@ -1078,7 +1131,7 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
     <div class="wrap">
       <div class="beats beats--pulse" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
       <h2>Start with the <span class="accent-i">free lesson</span></h2>
-      <p>No commitment, no cost. Book your first session and see how it feels.</p>
+      <p>No commitment, no cost. Get in touch to arrange your free 30-minute discovery class.</p>
       <a href="#contact" class="btn btn--primary">Book your free lesson</a>
     </div>
   </section>
@@ -1087,9 +1140,44 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
 <div class="page" id="page-contact" data-page="contact">
 <section class="page-hero">
     <div class="wrap">
-      <span class="eyebrow">Contact</span>
+      <span class="eyebrow">Book a lesson</span>
       <h1>Book your <span class="accent-i">free lesson</span></h1>
-      <p class="lead">Fill in the form and Peter will be in touch to find a time that suits you. No cost, no obligation.</p>
+      <p class="lead">Booking is simple — give Peter a call or send a message, and he&rsquo;ll find a time that suits you. No cost for your first 30-minute lesson, and no obligation after it.</p>
+      <div class="reach">
+        <a href="tel:+61410848057" class="btn btn--primary btn--call">&#9742; <span class="num">0410 848 057</span></a>
+        <a href="#enquiry" class="btn btn--ghost">Send a message instead</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THREE WAYS TO BOOK ============ -->
+  <section class="section" style="padding: var(--space-5) 0;">
+    <div class="wrap">
+      <div class="reveal" style="max-width: 62ch; margin-bottom: 2rem;">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Three ways to <span class="accent-i">reach Peter</span></h2>
+        <p class="lead" style="margin-top: 0.8rem;">Every lesson is booked personally — so you&rsquo;re talking to the teacher himself, not a booking system.</p>
+      </div>
+      <div class="ways">
+        <a class="way way--primary reveal" href="tel:+61410848057">
+          <span class="way-icon" aria-hidden="true">&#9742;</span>
+          <h3>Call or text</h3>
+          <div class="way-detail">0410 848 057</div>
+          <p>The quickest way to lock in a time. Call or send a text and Peter will get straight back to you.</p>
+        </a>
+        <a class="way reveal" href="mailto:suburbanrhythmms@gmail.com">
+          <span class="way-icon" aria-hidden="true">&#9993;</span>
+          <h3>Email</h3>
+          <div class="way-detail">suburbanrhythmms@gmail.com</div>
+          <p>Prefer to write? Send a note with who the lessons are for and the days that suit you.</p>
+        </a>
+        <a class="way reveal" href="#enquiry">
+          <span class="way-icon" aria-hidden="true">&#9998;</span>
+          <h3>Send a message</h3>
+          <div class="way-detail">Enquiry form</div>
+          <p>Fill in the short form below and Peter will reply to arrange your free first lesson.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1099,18 +1187,18 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
       <div class="steps">
         <div class="step reveal">
           <div class="count">1</div>
-          <h3>You send the form</h3>
-          <p>Takes a minute. Tell Peter a little about who&rsquo;s learning and what music you&rsquo;re into.</p>
+          <h3>You get in touch</h3>
+          <p>Call, text, email, or send the form — whichever suits. Mention who&rsquo;s learning and which days work for you.</p>
         </div>
         <div class="step reveal">
           <div class="count">2</div>
-          <h3>Peter gets in touch</h3>
-          <p>He&rsquo;ll reply to arrange a time for your free first lesson that fits your week.</p>
+          <h3>Peter confirms a time</h3>
+          <p>He&rsquo;ll come back with the slots he has open and lock in your free first lesson.</p>
         </div>
         <div class="step reveal">
           <div class="count">3</div>
           <h3>You sit at the kit</h3>
-          <p>A full lesson at the studio kit, completely free. Then you decide — no pressure either way.</p>
+          <p>A full 30-minute lesson at the studio, completely free. Then you decide — no pressure either way.</p>
         </div>
       </div>
     </div>
@@ -1118,9 +1206,11 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
 
   <!-- ============ FORM + DETAILS ============ -->
   <section class="section">
-    <div class="wrap contact-grid">
+    <div class="wrap contact-grid" id="enquiry">
 
       <div class="reveal">
+        <span class="eyebrow">Send a message</span>
+        <h2 style="margin-bottom: 1.5rem;">Tell Peter what you&rsquo;re <span class="accent-i">after</span></h2>
         <form id="contact-form">
           <!-- Web3Forms access key: create a free one at web3forms.com (use Peter's email)
                and replace PASTE-YOUR-WEB3FORMS-KEY-HERE below. -->
@@ -1178,35 +1268,36 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
       </div>
 
       <div class="reveal">
-        <span class="eyebrow">Other ways to reach Peter</span>
-        <h2 style="margin-bottom: 1.5rem;">Prefer to just <span class="accent-i">say hello?</span></h2>
+        <span class="eyebrow">Studio details</span>
+        <h2 style="margin-bottom: 1.5rem;">Where to <span class="accent-i">find us</span></h2>
         <div class="contact-detail">
           <div class="contact-item">
             <div class="beats" aria-hidden="true"><span class="on"></span></div>
             <div>
               <div class="ci-label">Email</div>
-              <a href="mailto:hello@example.com">[Email address]</a>
+              <a href="mailto:suburbanrhythmms@gmail.com">suburbanrhythmms@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="beats" aria-hidden="true"><span class="on"></span></div>
             <div>
               <div class="ci-label">Phone</div>
-              <a href="tel:+000000000">[Phone number]</a>
+              <a href="tel:+61410848057">0410 848 057</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="beats" aria-hidden="true"><span class="on"></span></div>
             <div>
               <div class="ci-label">Facebook</div>
-              <a href="#">Suburban Rhythm Music Studio [link the page]</a>
+              <a href="https://www.facebook.com/profile.php?id=61584864433061" target="_blank" rel="noopener">Suburban Rhythm Music Studio</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="beats" aria-hidden="true"><span class="on"></span></div>
             <div>
-              <div class="ci-label">Where</div>
-              <span>Home studio in [suburb], Melbourne VIC</span>
+              <div class="ci-label">Studio address</div>
+              <span>4 Rochester Dr<br>Thomastown VIC 3074</span>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=4+Rochester+Dr%2C+Thomastown+VIC+3074" target="_blank" rel="noopener" style="display:inline-block; margin-top:0.35rem; font-size:0.9rem; font-weight:600;">Open in Google Maps &rarr;</a>
             </div>
           </div>
           <div class="contact-item">
@@ -1239,21 +1330,21 @@ h3 { font-size: 1.4rem; line-height: 1.2; }
             <li><a href="#home" data-nav>Home</a></li>
             <li><a href="#about" data-nav>About</a></li>
             <li><a href="#lessons" data-nav>Lessons</a></li>
-            <li><a href="#contact" data-nav>Contact</a></li>
+                <li><a href="#contact" data-nav>Contact</a></li>
           </ul>
         </div>
         <div>
           <h4>Get in touch</h4>
           <ul>
-            <li><a href="mailto:hello@example.com">[Email address]</a></li>
-            <li><a href="tel:+000000000">[Phone number]</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="mailto:suburbanrhythmms@gmail.com">suburbanrhythmms@gmail.com</a></li>
+            <li><a href="tel:+61410848057">0410 848 057</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61584864433061" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>&copy; <span id="year"></span> Suburban Rhythm Music Studio. All rights reserved.</span>
-        <span>Melbourne, VIC [add suburb]</span>
+        <span>Thomastown, Melbourne VIC</span>
       </div>
     </div>
   </footer>
@@ -1541,7 +1632,6 @@ function initContact() {
   }
 })();
 
-/* Studio scene hotspots */
 function initScene() {
   var scene = document.querySelector('.scene');
   var note = document.getElementById('scene-note');
