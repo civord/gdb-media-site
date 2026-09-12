@@ -43,7 +43,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "Organization",
       "@id": "https://gdbmedia.com.au/#business",
       "name": "GDB Media & Marketing",
       "description": "Web design and digital marketing agency building fast, affordable websites for tradies and small businesses across Australia.",
@@ -51,42 +51,84 @@
       "email": "info@gdbmedia.com.au",
       "telephone": "+61430389724",
       "image": "https://gdbmedia.com.au/images/og-image.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Melbourne",
-        "addressRegion": "VIC",
-        "addressCountry": "AU"
-      },
       "areaServed": {
         "@type": "Country",
         "name": "Australia"
       },
-      "priceRange": "$$",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer enquiries",
         "email": "info@gdbmedia.com.au",
         "availableLanguage": "English"
       },
-      "serviceType": ["Web Design", "Website Design for Tradies", "Small Business Websites", "SEO", "Digital Marketing", "Social Media Marketing", "Branding", "Content Production"],
-      "knowsAbout": ["Web Design for Tradespeople", "Local Business Marketing", "Small Business Websites", "Search Engine Optimisation", "Local SEO for Trades"],
+      "serviceType": [
+        "Web Design",
+        "Website Design for Tradies",
+        "Small Business Websites",
+        "SEO",
+        "Digital Marketing",
+        "Social Media Marketing",
+        "Branding",
+        "Content Production"
+      ],
+      "knowsAbout": [
+        "Web Design for Tradespeople",
+        "Local Business Marketing",
+        "Small Business Websites",
+        "Search Engine Optimisation",
+        "Local SEO for Trades"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & Branding", "description": "Custom websites and logos for tradies and small businesses."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photos & Content", "description": "Photography guidance and clear website copy that shows customers what you do."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO & Getting Found", "description": "Local SEO so your business shows up on Google and in AI search when customers look for your trade."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing", "description": "Social media setup and content for local businesses — profiles that match your website and posts that bring in work."}}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Design & Branding",
+              "description": "Custom websites and logos for tradies and small businesses."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Photos & Content",
+              "description": "Photography guidance and clear website copy that shows customers what you do."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO & Getting Found",
+              "description": "Local SEO so your business shows up on Google and in AI search when customers look for your trade."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Marketing",
+              "description": "Social media setup and content for local businesses — profiles that match your website and posts that bring in work."
+            }
+          }
         ]
-      }
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61592230862081",
+        "https://www.instagram.com/gdbmedia.au/"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://gdbmedia.com.au/#website",
       "url": "https://gdbmedia.com.au/",
       "name": "GDB Media & Marketing",
-      "publisher": {"@id": "https://gdbmedia.com.au/#business"},
+      "publisher": {
+        "@id": "https://gdbmedia.com.au/#business"
+      },
       "inLanguage": "en-AU"
     },
     {
@@ -96,32 +138,50 @@
         {
           "@type": "Question",
           "name": "Who does GDB Media build websites for?",
-          "acceptedAnswer": {"@type": "Answer", "text": "GDB Media & Marketing builds websites for tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers, cafés, music studios and any local business that lives on calls and bookings."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GDB Media & Marketing builds websites for tradies and small businesses across Australia — plumbers, electricians, gardeners, barbers, cafés, music studios and any local business that lives on calls and bookings."
+          }
         },
         {
           "@type": "Question",
           "name": "How much does a website cost for a small business in Australia?",
-          "acceptedAnswer": {"@type": "Answer", "text": "The average cost of website design for a small business in Australia varies wildly because agencies charge hourly — GDB Media doesn't. Every build is quoted as one fixed price up front, based on what your business actually needs, with no ongoing lock-in. Start with a free quote and you'll know your exact number before any work starts."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average cost of website design for a small business in Australia varies wildly because agencies charge hourly — GDB Media doesn't. Every build is quoted as one fixed price up front, based on what your business actually needs, with no ongoing lock-in. Start with a free quote and you'll know your exact number before any work starts."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you only work with businesses in Melbourne?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No. GDB Media is based in Melbourne but works with trades and small businesses Australia-wide. The whole process — from first chat to launch — works just as well remotely."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GDB Media is based in Melbourne but works with trades and small businesses Australia-wide. The whole process — from first chat to launch — works just as well remotely."
+          }
         },
         {
           "@type": "Question",
           "name": "What's included in a website build?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Design, clear customer-focused copy, mobile-friendly build, fast load times and the SEO fundamentals — page titles, structured data and keywords your customers actually search for. Photos and branding help are available too."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Design, clear customer-focused copy, mobile-friendly build, fast load times and the SEO fundamentals — page titles, structured data and keywords your customers actually search for. Photos and branding help are available too."
+          }
         },
         {
           "@type": "Question",
           "name": "Will my website show up on Google and in AI search?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Every site we build ships with the technical SEO that search engines and AI assistants rely on: fast pages, structured data, sitemaps and content written around what your customers search for. Getting found is a core service, not an add-on."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every site we build ships with the technical SEO that search engines and AI assistants rely on: fast pages, structured data, sitemaps and content written around what your customers search for. Getting found is a core service, not an add-on."
+          }
         },
         {
           "@type": "Question",
           "name": "Do I own my website?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your website is yours to keep — no lock-in contracts, no hostage hosting. We build it, you own it."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your website is yours to keep — no lock-in contracts, no hostage hosting. We build it, you own it."
+          }
         }
       ]
     }
