@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     PRIMARY SEO
+     ============================================================ -->
+<title>Thornwick Build Co. | Architectural & Custom Home Builders, Melbourne</title>
+<meta name="description" content="Thornwick Build Co. construct complex, architecturally designed homes and renovations across Melbourne's inner-eastern suburbs — Hawthorn, Kew, Camberwell, Balwyn and Boroondara. Established 1990. Working closely with architects, interior designers and owners.">
+<meta name="keywords" content="architectural builder Melbourne, custom home builder Melbourne, luxury home builder, architecturally designed homes, home renovations Melbourne, extensions, builder Hawthorn, builder Kew, builder Camberwell, Boroondara builder, heritage renovation">
+<link rel="canonical" href="https://gdbmedia.com.au/demos/thornwick-build.html">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Thornwick Build Co.">
+<meta name="geo.region" content="AU-VIC">
+<meta name="geo.placename" content="Melbourne">
+
+<!-- ============================================================
+     OPEN GRAPH (Facebook, LinkedIn, iMessage link previews)
+     ============================================================ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thornwick Build Co.">
+<meta property="og:title" content="Thornwick Build Co. | Architectural & Custom Home Builders, Melbourne">
+<meta property="og:description" content="Complex, architecturally designed homes and renovations across Melbourne's inner-east. Building alongside architects and owners since 1990.">
+<meta property="og:url" content="https://gdbmedia.com.au/demos/thornwick-build.html">
+<meta property="og:locale" content="en_AU">
+<!-- [SET BEFORE LAUNCH] absolute URL to a share image, ideally 1200x630 -->
+<meta property="og:image" content="https://thornwickbuild.com.au/images/hero-house.webp">
+<meta property="og:image:alt" content="An architecturally designed Melbourne home built by Thornwick Build Co.">
+
+<!-- ============================================================
+     TWITTER / X CARD
+     ============================================================ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thornwick Build Co. | Architectural & Custom Home Builders, Melbourne">
+<meta name="twitter:description" content="Complex, architecturally designed homes and renovations across Melbourne's inner-east. Building since 1990.">
+<meta name="twitter:image" content="https://thornwickbuild.com.au/images/hero-house.webp">
+
+<!-- ============================================================
+     STRUCTURED DATA (schema.org) — this is what Google rich
+     results AND AI crawlers read. The single highest-value SEO
+     element on the page. Update sameAs/address when available.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://thornwickbuild.com.au/#business",
+  "name": "Thornwick Build Co.",
+  "description": "Builders of complex, architecturally designed residential homes and renovations across Melbourne, working closely with architects, interior designers and clients.",
+  "url": "https://thornwickbuild.com.au/",
+  "telephone": "+61-3-5550-0142",
+  "email": "hello@thornwickbuild.com.au",
+  "foundingDate": "1990",
+  "priceRange": "$$$$",
+  "image": "https://thornwickbuild.com.au/images/hero-house.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Melbourne",
+    "addressRegion": "VIC",
+    "addressCountry": "AU"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Melbourne" },
+    { "@type": "Place", "name": "Hawthorn" },
+    { "@type": "Place", "name": "Kew" },
+    { "@type": "Place", "name": "Camberwell" },
+    { "@type": "Place", "name": "Balwyn" },
+    { "@type": "Place", "name": "Boroondara" }
+  ],
+  "knowsAbout": [
+    "Architecturally designed homes",
+    "Custom home building",
+    "Residential renovations",
+    "Home extensions",
+    "Heritage and period home construction"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New architectural home construction" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential renovations and extensions" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bespoke joinery and fine detail work" } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>/* ============================================================
+   THORNWICK BUILD CO. — stylesheet
+   Palette 3 (greyscale) + single warm amber accent.
+   Structure: dark "workshop" sections, light "finished" sections.
+   ============================================================ */
+
+:root {
+  /* Structural greyscale — Palette 3 */
+  --carbon:    #212529;
+  --gunmetal:  #343a40;
+  --iron:      #495057;
+  --slate:     #6c757d;
+  --pale:      #adb5bd;
+  --line:      #ced4da;
+  --alabaster: #dee2e6;
+  --platinum:  #e9ecef;
+  --snow:      #f8f9fa;
+  --white:     #ffffff;
+
+  /* Single warm accent — the work-light glow */
+  --amber:      #c8873f;
+  --amber-soft: #d9a05f;
+  --amber-deep: #a86a28;
+
+  /* Type */
+  --display: "Fraunces", Georgia, serif;
+  --body:    "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Rhythm */
+  --maxw: 1200px;
+  --gut: clamp(1.25rem, 4vw, 3rem);
+  --sp: clamp(4rem, 9vw, 8rem);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--body);
+  color: var(--gunmetal);
+  background: var(--snow);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--gut);
+}
+
+/* ---------- Type scale ---------- */
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; }
+.eyebrow {
+  font-family: var(--body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 28px; height: 1px;
+  background: var(--amber);
+  display: inline-block;
+}
+.eyebrow.on-dark { color: var(--amber-soft); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.15rem var(--gut);
+  transition: background .4s var(--ease), padding .4s var(--ease), box-shadow .4s var(--ease);
+}
+.nav.scrolled {
+  background: rgba(248,249,250,0.92);
+  backdrop-filter: blur(10px);
+  padding-block: 0.85rem;
+  box-shadow: 0 1px 0 rgba(33,37,41,0.08);
+}
+.brand {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: var(--snow);
+  transition: color .4s var(--ease);
+}
+.brand b { font-weight: 600; }
+.brand .est { font-family: var(--body); font-size: 0.62rem; letter-spacing: 0.2em; color: var(--pale); display:block; margin-top: 2px; }
+.nav.scrolled .brand { color: var(--carbon); }
+.nav.scrolled .brand .est { color: var(--slate); }
+
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 500; color: var(--snow);
+  transition: color .3s var(--ease); position: relative;
+}
+.nav-links a::after {
+  content:""; position:absolute; left:0; bottom:-4px; height:1px; width:0;
+  background: var(--amber); transition: width .3s var(--ease);
+}
+.nav-links a:hover::after { width: 100%; }
+.nav.scrolled .nav-links a { color: var(--iron); }
+.nav-links a.nav-cta {
+  border: 1px solid rgba(248,249,250,0.35);
+  padding: 0.5rem 1.1rem; border-radius: 2px;
+  transition: all .3s var(--ease);
+}
+.nav-links a.nav-cta:hover { background: var(--amber); border-color: var(--amber); color: var(--carbon); }
+.nav-links a.nav-cta::after { display: none; }
+.nav.scrolled .nav-links a.nav-cta { border-color: var(--line); color: var(--carbon); }
+.nav.scrolled .nav-links a.nav-cta:hover { background: var(--amber); border-color: var(--amber); }
+
+.nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 30px; height: 22px; position: relative; }
+.nav-toggle span { position:absolute; left:0; height:2px; width:100%; background: var(--snow); transition: all .3s var(--ease); }
+.nav-toggle span:nth-child(1){ top:0; } .nav-toggle span:nth-child(2){ top:10px; } .nav-toggle span:nth-child(3){ top:20px; }
+.nav.scrolled .nav-toggle span { background: var(--carbon); }
+
+/* ============================================================
+   HERO — the blueprint coming into focus
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: flex-end;
+  background: var(--carbon);
+  color: var(--snow);
+  overflow: hidden;
+  padding-bottom: clamp(3rem, 8vh, 6rem);
+}
+/* photo layer — real hero image with dark gradient wash for text legibility */
+.hero-media {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(22,24,27,0.72) 0%, rgba(22,24,27,0.55) 45%, rgba(22,24,27,0.92) 100%),
+    radial-gradient(120% 90% at 82% 6%, rgba(200,135,63,0.22), transparent 52%),
+    url("img/thornwick-01.webp");
+  background-size: cover, cover, cover;
+  background-position: center, center, center 30%;
+}
+/* animated blueprint grid */
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(222,226,230,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(222,226,230,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
+  opacity: 0; transition: opacity 1.6s var(--ease);
+}
+.hero.drawn .hero-grid { opacity: 1; }
+
+.hero-lines { position: absolute; inset: 0; pointer-events: none; }
+.hero-lines line, .hero-lines rect, .hero-lines path {
+  stroke: var(--amber); stroke-width: 1; fill: none; opacity: 0.5;
+  stroke-dasharray: 1200; stroke-dashoffset: 1200;
+}
+.hero.drawn .hero-lines line,
+.hero.drawn .hero-lines rect,
+.hero.drawn .hero-lines path { animation: draw 2.4s var(--ease) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.hero-content { position: relative; z-index: 2; max-width: 760px; }
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  margin: 1.4rem 0 1.5rem;
+}
+.hero h1 em { font-style: italic; color: var(--amber-soft); }
+.hero .lede {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--alabaster);
+  max-width: 52ch; line-height: 1.55;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+
+.hero-meta {
+  position: absolute; right: var(--gut); bottom: clamp(3rem,8vh,6rem); z-index: 2;
+  text-align: right; display: none;
+}
+@media (min-width: 900px){ .hero-meta { display: block; } }
+.hero-meta .num { font-family: var(--display); font-size: 3rem; color: var(--snow); line-height: 1; }
+.hero-meta .lbl { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pale); margin-top: .4rem; }
+
+/* reveal-on-load for hero text */
+.hero [data-rise] { opacity: 0; transform: translateY(24px); }
+.hero.drawn [data-rise] { animation: rise .9s var(--ease) forwards; }
+.hero.drawn [data-rise="2"] { animation-delay: .12s; }
+.hero.drawn [data-rise="3"] { animation-delay: .24s; }
+.hero.drawn [data-rise="4"] { animation-delay: .36s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: var(--body); font-size: 0.92rem; font-weight: 600;
+  padding: 0.95rem 1.6rem; border-radius: 2px; cursor: pointer;
+  transition: all .3s var(--ease); border: 1px solid transparent;
+}
+.btn-primary { background: var(--amber); color: var(--carbon); }
+.btn-primary:hover { background: var(--amber-soft); transform: translateY(-2px); }
+.btn-ghost { border-color: rgba(222,226,230,0.35); color: var(--snow); }
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber-soft); }
+.btn-dark { background: var(--carbon); color: var(--snow); }
+.btn-dark:hover { background: var(--gunmetal); transform: translateY(-2px); }
+.btn .arr { transition: transform .3s var(--ease); }
+.btn:hover .arr { transform: translateX(4px); }
+
+/* ============================================================
+   SECTION SCAFFOLD
+   ============================================================ */
+section { padding-block: var(--sp); }
+.section-head { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section-head h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin: 1rem 0 1rem; }
+.section-head p { color: var(--slate); font-size: 1.08rem; }
+
+/* reveal on scroll */
+[data-reveal] { opacity: 0; transform: translateY(30px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+[data-reveal].in { opacity: 1; transform: none; }
+
+/* ============================================================
+   INTRO / POSITIONING (light)
+   ============================================================ */
+.intro { background: var(--snow); }
+.intro-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem,5vw,4rem); align-items: start; }
+@media (min-width: 860px){ .intro-grid { grid-template-columns: 1.1fr 0.9fr; } }
+.intro-lead { font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.35; color: var(--carbon); }
+.intro-lead em { color: var(--amber-deep); font-style: italic; }
+.intro-body p { color: var(--iron); margin-bottom: 1.1rem; }
+.intro-body p:last-child { margin-bottom: 0; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: clamp(3rem,6vw,4.5rem); border-top: 1px solid var(--line); padding-top: 2.5rem; }
+.stat .n { font-family: var(--display); font-size: clamp(2rem,4vw,2.8rem); color: var(--carbon); line-height: 1; }
+.stat .n b { color: var(--amber); font-weight: 400; }
+.stat .l { font-size: 0.82rem; color: var(--slate); margin-top: 0.6rem; letter-spacing: 0.04em; }
+
+/* ============================================================
+   CAPABILITIES
+   ============================================================ */
+.caps { background: var(--platinum); }
+.cap-list { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+.cap {
+  display: grid; grid-template-columns: auto 1fr; gap: 1.5rem;
+  padding: 2rem 0; border-bottom: 1px solid var(--line);
+  transition: padding-left .4s var(--ease);
+}
+@media (min-width: 720px){ .cap { grid-template-columns: 3.5rem 1fr 1fr; gap: 2rem; } }
+.cap:hover { padding-left: 0.75rem; }
+.cap .idx { font-family: var(--display); font-size: 1.1rem; color: var(--amber-deep); padding-top: 0.3rem; }
+.cap h3 { font-size: 1.5rem; color: var(--carbon); }
+.cap p { color: var(--iron); font-size: 0.98rem; }
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.projects { background: var(--carbon); color: var(--snow); }
+.projects .section-head h2 { color: var(--snow); }
+.projects .section-head p { color: var(--pale); }
+.proj-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 760px){ .proj-grid { grid-template-columns: repeat(2, 1fr); } }
+.proj {
+  position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 2px;
+  background: linear-gradient(135deg, #2a2e33, #16181b);
+  cursor: pointer; border: 1px solid rgba(222,226,230,0.08);
+}
+.proj--feature { grid-column: 1 / -1; aspect-ratio: 16/8; }
+.proj img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform .8s var(--ease), filter .5s var(--ease);
+  filter: saturate(0.92) brightness(0.94);
+}
+.proj:hover img { transform: scale(1.04); filter: saturate(1) brightness(1); }
+.proj-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 1.5rem; background: linear-gradient(0deg, rgba(15,16,18,0.92) 8%, rgba(15,16,18,0.35) 60%, transparent);
+  transform: translateY(8px); opacity: 0.95; transition: all .4s var(--ease);
+}
+.proj:hover .proj-cap { transform: none; opacity: 1; }
+.proj-cap .k { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber-soft); }
+.proj-cap h3 { font-size: 1.35rem; margin-top: 0.35rem; color: var(--snow); }
+.proj::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  box-shadow: inset 0 0 0 1px rgba(200,135,63,0); transition: box-shadow .4s var(--ease);
+}
+.proj:hover::after { box-shadow: inset 0 0 0 1px rgba(200,135,63,0.6); }
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.process { background: var(--snow); }
+.steps { display: grid; grid-template-columns: 1fr; gap: 0; }
+@media (min-width: 760px){ .steps { grid-template-columns: repeat(4, 1fr); } }
+.step { padding: 2rem 0; border-top: 2px solid var(--carbon); }
+@media (min-width: 760px){ .step { padding: 2rem 1.5rem 2rem 0; } }
+.step .s { font-family: var(--display); font-size: 0.9rem; color: var(--amber-deep); letter-spacing: 0.1em; }
+.step h3 { font-size: 1.25rem; margin: 0.8rem 0 0.6rem; color: var(--carbon); }
+.step p { font-size: 0.95rem; color: var(--iron); }
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.cta-band { background: var(--gunmetal); color: var(--snow); text-align: center; }
+.cta-band h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 1.2rem; }
+.cta-band p { color: var(--alabaster); max-width: 46ch; margin: 0 auto 2rem; }
+.cta-band .actions { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+.cta-band .phone {
+  font-family: var(--display); font-size: 1.15rem; color: var(--amber-soft);
+  letter-spacing: 0.01em; transition: color .3s var(--ease);
+}
+.cta-band .phone:hover { color: var(--amber); }
+.cta-band .phone .lbl { display: block; font-family: var(--body); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.35rem; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer { background: var(--carbon); color: var(--pale); padding-block: clamp(3rem,6vw,4.5rem) 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(222,226,230,0.1); }
+@media (min-width: 760px){ .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+.footer .brand { color: var(--snow); font-size: 1.5rem; }
+.footer h4 { font-family: var(--body); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); margin-bottom: 1rem; }
+.footer a { color: var(--alabaster); display: block; padding: 0.3rem 0; transition: color .3s var(--ease); }
+.footer a:hover { color: var(--amber-soft); }
+.footer-note { color: var(--slate); }
+.footer p.blurb { color: var(--pale); max-width: 40ch; margin-top: 1rem; font-size: 0.95rem; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; font-size: 0.82rem; color: var(--slate); }
+
+/* ============================================================
+   RESPONSIVE NAV
+   ============================================================ */
+@media (max-width: 780px){
+  .nav-toggle { display: block; z-index: 101; }
+  .nav-links {
+    position: fixed; inset: 0; background: var(--carbon);
+    flex-direction: column; justify-content: center; gap: 2rem;
+    transform: translateX(100%); transition: transform .4s var(--ease);
+  }
+  .nav-links.open { transform: none; }
+  .nav-links a, .nav.scrolled .nav-links a { color: var(--snow); font-size: 1.3rem; }
+  .nav.open .nav-toggle span { background: var(--snow); }
+  .nav.open .nav-toggle span:nth-child(1){ transform: rotate(45deg); top:10px; }
+  .nav.open .nav-toggle span:nth-child(2){ opacity: 0; }
+  .nav.open .nav-toggle span:nth-child(3){ transform: rotate(-45deg); top:10px; }
+}
+
+/* ============================================================
+   MOBILE REFINEMENTS
+   Tighten vertical rhythm, rebalance type, fix hero on short
+   screens. Everything above is desktop-first; this tunes small.
+   ============================================================ */
+@media (max-width: 640px){
+  :root { --sp: 3.75rem; }              /* less dead space between sections */
+
+  body { font-size: 16px; }
+
+  /* Hero: let it size to content instead of forcing full 100vh,
+     which cramped the headline against the nav on short phones */
+  .hero { min-height: 88svh; align-items: center; padding-top: 6rem; }
+  .hero-media { background-position: center, center, center 40%; }
+  .hero h1 { font-size: clamp(2.1rem, 10vw, 2.9rem); margin: 1rem 0 1.1rem; }
+  .hero .lede { font-size: 1.02rem; line-height: 1.5; }
+  .hero-actions { margin-top: 1.75rem; gap: 0.75rem; }
+  .hero-actions .btn { flex: 1 1 auto; justify-content: center; }  /* full-width, tappable */
+  .eyebrow { font-size: 0.68rem; letter-spacing: 0.16em; }
+  .eyebrow::before { width: 18px; }
+
+  /* Section heads breathe less, read tighter */
+  .section-head { margin-bottom: 2rem; }
+  .section-head h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .section-head p { font-size: 1rem; }
+
+  /* Intro: lead no longer oversized; stacks with clear gap */
+  .intro-lead { font-size: 1.25rem !important; line-height: 1.4; }
+  .intro-grid { gap: 1.75rem; }
+  .stats { grid-template-columns: 1fr; gap: 1.25rem; padding-top: 1.75rem; margin-top: 2.5rem; }
+  .stat { display: flex; align-items: baseline; gap: 0.9rem; }
+  .stat .n { font-size: 2rem; }
+  .stat .l { margin-top: 0; }
+
+  /* Capabilities: the 3-col row collapses to a clean stacked card */
+  .cap { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem 0; }
+  .cap:hover { padding-left: 0; }        /* no hover-shift on touch */
+  .cap .idx { padding-top: 0; }
+  .cap h3 { font-size: 1.3rem; }
+
+  /* Projects: feature card no longer ultra-wide letterbox on phone */
+  .proj-grid { gap: 1rem; }
+  .proj--feature { aspect-ratio: 4/3; }
+  .proj { aspect-ratio: 4/3; }
+  .proj-cap { padding: 1.1rem; }
+  .proj-cap h3 { font-size: 1.2rem; }
+  .proj img { filter: none; }            /* full brightness on small screens */
+
+  /* Process: numbered steps read as a tight vertical list */
+  .step { padding: 1.4rem 0; border-top-width: 1px; }
+  .step h3 { margin: 0.5rem 0 0.4rem; }
+
+  /* CTA */
+  .cta-band .actions .btn { width: 100%; justify-content: center; max-width: 320px; }
+
+  /* Footer stacks with real separation */
+  .footer-grid { gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; }
+}
+
+/* very small phones */
+@media (max-width: 380px){
+  .hero h1 { font-size: 2rem; }
+  .brand { font-size: 1.15rem; }
+}
+
+
+.skip-link {
+  position: absolute; left: 0; top: -50px; z-index: 200;
+  background: var(--carbon); color: var(--snow);
+  padding: 0.7rem 1.2rem; font-size: 0.9rem; font-weight: 600;
+  transition: top .2s var(--ease);
+}
+.skip-link:focus { top: 0; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  [data-reveal], .hero [data-rise] { opacity: 1 !important; transform: none !important; }
+  .hero-grid { opacity: 1 !important; }
+  .hero-lines line, .hero-lines rect, .hero-lines path { stroke-dashoffset: 0 !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- GDB Media: back-to-work pill (injected) -->
+<style>
+  .gdb-back-pill{position:fixed;top:18px;left:18px;z-index:2147483000;display:inline-flex;align-items:center;gap:.6rem;padding:.6rem .95rem .6rem .75rem;font-family:'Fraunces',serif;text-decoration:none;line-height:1;background:rgba(33,37,41,0.92);color:#f8f9fa;border:1px solid #c8873f;border-radius:999px;box-shadow:0 10px 28px -12px rgba(0,0,0,.45);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);transition:transform .25s ease,box-shadow .25s ease,padding .25s ease}
+  .gdb-back-pill:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(0,0,0,.45)}
+  .gdb-back-pill .gdb-arrow{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#c8873f;color:#212529;flex:none;transition:transform .25s ease}
+  .gdb-back-pill:hover .gdb-arrow{transform:translateX(-3px)}
+  .gdb-back-pill .gdb-txt{display:flex;flex-direction:column;gap:.15rem}
+  .gdb-back-pill .gdb-kicker{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#c8873f;opacity:.95}
+  .gdb-back-pill .gdb-main{font-size:.82rem;font-weight:600;letter-spacing:.01em;color:#f8f9fa}
+  @media (max-width:640px){.gdb-back-pill .gdb-txt{display:none}.gdb-back-pill{padding:.5rem}}
+  @media (prefers-reduced-motion:reduce){.gdb-back-pill,.gdb-back-pill .gdb-arrow{transition:none}}
+</style>
+<a class="gdb-back-pill" href="https://gdbmedia.com.au/work#developers" aria-label="Back to GDB Media — our work">
+  <span class="gdb-arrow" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+  <span class="gdb-txt"><span class="gdb-kicker">GDB Media</span><span class="gdb-main">Back to our work</span></span>
+</a>
+<!-- /GDB Media back-to-work pill -->
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand"><b>THORNWICK</b> BUILD CO. <span class="est">MELBOURNE · EST. 1990</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
+    <a href="#process">Process</a>
+    <a href="#contact" class="nav-cta">Start a project</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-media"></div>
+  <div class="hero-grid"></div>
+  <svg class="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <line x1="0" y1="620" x2="1440" y2="620"/>
+    <line x1="960" y1="0" x2="960" y2="900"/>
+    <rect x="1010" y="180" width="300" height="220"/>
+    <path d="M1010 400 L1160 300 L1310 400"/>
+    <line x1="1010" y1="440" x2="1310" y2="440"/>
+  </svg>
+
+  <div class="wrap hero-content">
+    <span class="eyebrow on-dark" data-rise="1">Melbourne · Architectural building since 1990</span>
+    <h1 data-rise="2">The drawing is<br>the easy part.<br><em>We build the rest.</em></h1>
+    <p class="lede" data-rise="3">Thornwick Build Co. makes architecturally designed homes and renovations real across Melbourne's inner east — the tricky details, the tight sites, the joinery that has to be perfect. Handed a drawing, we return a home that outlasts the people who commissioned it.</p>
+    <div class="hero-actions" data-rise="4">
+      <a href="#work" class="btn btn-primary">See our work <span class="arr">→</span></a>
+      <a href="#contact" class="btn btn-ghost">Talk to us</a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="num">30+</div>
+    <div class="lbl">Years on the tools</div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- INTRO / POSITIONING -->
+<section class="intro" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Who we are</span>
+      <h2>A builder that reads plans the way architects draw them.</h2>
+    </div>
+    <div class="intro-grid">
+      <p class="intro-lead">Most homes are built <em>close enough</em> to the drawing. Ours are built to it — the shadow lines land, the levels run true, and the parts you can't see are done as carefully as the parts you can.</p>
+      <div class="intro-body" data-reveal>
+        <p>Thornwick Build Co. specialise in the construction of complex, architecturally designed residential homes and renovations across Melbourne — with much of our work in the inner-eastern suburbs of Hawthorn, Kew, Camberwell, Balwyn and the wider Boroondara area. It's a highly specialised field, and it's the only work we do.</p>
+        <p>Our expertise lies in working closely with architects, interior designers and clients — delivering the outcome everyone set out to achieve. That collaboration is where the difference shows: fewer surprises on site, and a finished home that matches the intent it started with. <span data-heritage>On period homes and sites under a heritage overlay, that early, careful approach matters even more.</span></p>
+        <p>Established in 1990, we're a custom home builder Melbourne owners trust with their most demanding projects — passionate about what we do and proud to deliver to the highest quality possible. We'd be glad to be part of your residential project, and this is a look at the work that speaks for us.</p>
+      </div>
+    </div>
+
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="n"><b>30</b>+</div><div class="l">Years building in Melbourne</div></div>
+      <div class="stat"><div class="n">100<b>%</b></div><div class="l">Architecturally led projects</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Team, drawing to handover</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="caps">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we take on</span>
+      <h2>Work that rewards being done properly.</h2>
+      <p>Three kinds of project where a careful builder makes all the difference.</p>
+    </div>
+    <div class="cap-list">
+      <div class="cap" data-reveal>
+        <div class="idx">01</div>
+        <h3>New architectural homes</h3>
+        <p>Ground-up custom homes built from detailed architectural documentation, where structure, finish and the ideas behind them all have to hold together.</p>
+      </div>
+      <div class="cap" data-reveal>
+        <div class="idx">02</div>
+        <h3>Renovations &amp; extensions</h3>
+        <p>Additions and reworks to existing Melbourne homes — including period properties and heritage-overlay sites that demand judgement, problem-solving and respect for what's already there.</p>
+      </div>
+      <div class="cap" data-reveal>
+        <div class="idx">03</div>
+        <h3>Fine detail & joinery</h3>
+        <p>The bespoke, made-to-measure work that separates a good build from a great one. Cabinetry, stairs, and the details people run their hands along.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-dark">Selected work</span>
+      <h2>Homes we're glad to put our name to.</h2>
+      <p>A closer look at what we build — architecturally designed homes and renovations across Melbourne's inner-eastern suburbs.</p>
+    </div>
+    <div class="proj-grid" id="projGrid"><!-- rendered from the projects[] array in script.js --></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How we work</span>
+      <h2>No surprises. That's the whole promise.</h2>
+      <p>A build should feel like a straight line, even when the work isn't. Here's the shape of ours.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal>
+        <div class="s">STEP 01</div>
+        <h3>Sit down early</h3>
+        <p>We come in while the drawings are still warm, so buildability and budget are part of the conversation — not a shock later.</p>
+      </div>
+      <div class="step" data-reveal>
+        <div class="s">STEP 02</div>
+        <h3>Price it honestly</h3>
+        <p>A clear, detailed cost you can trust, with the assumptions spelled out. No vague allowances that balloon on site.</p>
+      </div>
+      <div class="step" data-reveal>
+        <div class="s">STEP 03</div>
+        <h3>Build it right</h3>
+        <p>One accountable team on site, tidy trades, and regular updates so you always know exactly where things stand.</p>
+      </div>
+      <div class="step" data-reveal>
+        <div class="s">STEP 04</div>
+        <h3>Hand it over</h3>
+        <p>A finished home that matches the drawings, and a builder who's still there if you need anything after the keys change hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <span class="eyebrow on-dark" style="justify-content:center; margin-bottom:1rem;">Start a project</span>
+    <h2>Have a set of plans? Let's talk.</h2>
+    <p>Whether it's a fresh design or a renovation you've been sitting on, the earliest conversation is the most useful one. Bring us the drawings — or just the idea.</p>
+    <div class="actions">
+      <a href="tel:+61355500142" class="btn btn-primary">Call the office <span class="arr">→</span></a>
+      <a href="tel:+61355500142" class="phone"><span class="lbl">Or dial direct</span>03 5550 0142</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><b>THORNWICK</b> BUILD CO.</div>
+        <p class="blurb">Architecturally designed homes and renovations, built properly, in Melbourne since 1990.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#process">Process</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="tel:+61355500142">03 5550 0142</a>
+        <a href="mailto:hello@thornwickbuild.com.au">hello@thornwickbuild.com.au</a>
+        <span class="footer-note" style="display:block; padding-top:.3rem;">Melbourne, Victoria</span>
+        <!-- [OPTIONAL] add street address above if Thornwick wants one listed -->
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Thornwick Build Co.. Registered building practitioner.</span>
+      <span>Melbourne, Australia</span>
+    </div>
+  </div>
+</footer>
+
+<script>/* Thornwick Build Co. — interactions */
+
+/* ============================================================
+   PROJECTS DATA
+   One object = one project. To add a project, add an object.
+   `cover` shows on the grid now. `gallery` is ready for phase 2
+   (project detail view / lightbox) — fill it with more photos
+   per project and the detail view can be switched on without
+   touching this structure.
+   NOTE: name + suburb + type are EDITABLE — replace with the
+   real project details from Thornwick when you have them.
+   ============================================================ */
+const projects = [
+  {
+    name: "Courtyard House",           // [EDIT] real project name
+    suburb: "Melbourne",               // [EDIT] real suburb
+    type: "New home",
+    cover: "img/thornwick-02.webp",
+    feature: true,                     // renders as the wide top card
+    gallery: [ "img/thornwick-02.webp" ]   // add interior/exterior later
+  },
+  {
+    name: "Dusk House",
+    suburb: "Melbourne",
+    type: "New home",
+    cover: "img/thornwick-01.webp",
+    gallery: [ "img/thornwick-01.webp" ]
+  },
+  {
+    name: "Zinc Residence",
+    suburb: "Melbourne",
+    type: "Renovation & addition",
+    cover: "img/thornwick-03.webp",
+    gallery: [ "img/thornwick-03.webp" ]
+  },
+  {
+    name: "Garden Residence",
+    suburb: "Melbourne",
+    type: "New home",
+    cover: "img/thornwick-04.webp",
+    gallery: [ "img/thornwick-04.webp" ]
+  },
+  {
+    name: "Stone & Render House",
+    suburb: "Melbourne",
+    type: "New home",
+    cover: "img/thornwick-05.webp",
+    gallery: [ "img/thornwick-05.webp" ]
+  },
+  {
+    name: "Slate House",
+    suburb: "Melbourne",
+    type: "New home",
+    cover: "img/thornwick-06.webp",
+    gallery: [ "img/thornwick-06.webp" ]
+  }
+];
+
+const grid = document.getElementById('projGrid');
+if (grid) {
+  grid.innerHTML = projects.map(p => `
+    <article class="proj${p.feature ? ' proj--feature' : ''}" data-reveal>
+      <img src="${p.cover}" alt="${p.name} — ${p.type} by Thornwick Build Co." loading="lazy" width="1200" height="800">
+      <div class="proj-cap">
+        <span class="k">${p.suburb} · ${p.type}</span>
+        <h3>${p.name}</h3>
+      </div>
+    </article>
+  `).join('');
+}
+
+// Current year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Hero draw-in on load
+const hero = document.querySelector('.hero');
+requestAnimationFrame(() => setTimeout(() => hero.classList.add('drawn'), 120));
+
+// Nav: solid background after scroll
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile menu
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  nav.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+});
+links.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    links.classList.remove('open');
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  })
+);
+
+// Scroll reveals
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
