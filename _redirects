@@ -22,9 +22,19 @@
 /social-media /digital-marketing 301!
 /social-media.html /digital-marketing 301!
 
-# keep the new pages extensionless too
+# keep every trade page extensionless
 /websites/website-design-for-plumbers.html /websites/website-design-for-plumbers 301!
 /websites/website-design-for-electricians.html /websites/website-design-for-electricians 301!
 /websites/website-design-for-gardeners.html /websites/website-design-for-gardeners 301!
 /websites/website-design-for-barbers.html /websites/website-design-for-barbers 301!
 /websites/website-design-for-music-studios.html /websites/website-design-for-music-studios 301!
+/websites/website-design-for-concreters.html /websites/website-design-for-concreters 301!
+/websites/website-design-for-roofers.html /websites/website-design-for-roofers 301!
+/websites/website-design-for-carpenters.html /websites/website-design-for-carpenters 301!
+/websites/website-design-for-builders.html /websites/website-design-for-builders 301!
+/websites/website-design-for-tilers.html /websites/website-design-for-tilers 301!
+/websites/website-design-for-plasterers.html /websites/website-design-for-plasterers 301!
+/websites/website-design-for-painters.html /websites/website-design-for-painters 301!
+/websites/website-design-for-cleaners.html /websites/website-design-for-cleaners 301!
+/websites/website-design-for-surveyors.html /websites/website-design-for-surveyors 301!
+/websites/website-design-for-scaffolders.html /websites/website-design-for-scaffolders 301!
