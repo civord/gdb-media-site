@@ -1,13 +1,30 @@
-# Netlify redirects — collapse duplicate .html URLs to canonical extensionless URLs
+# Extensionless canonicals
+/index.html / 301!
 /contact.html /contact 301!
 /work.html /work 301!
-/plumbers.html /plumbers 301!
-/electricians.html /electricians 301!
-/gardeners.html /gardeners 301!
-/barbers.html /barbers 301!
-/music.html /music 301!
 /websites.html /websites 301!
 /seo.html /seo 301!
 /digital-marketing.html /digital-marketing 301!
-/social-media.html /social-media 301!
-/index.html / 301!
+
+# 2026-09-14 restructure: trade pages moved under /websites/
+/plumbers /websites/website-design-for-plumbers 301!
+/plumbers.html /websites/website-design-for-plumbers 301!
+/electricians /websites/website-design-for-electricians 301!
+/electricians.html /websites/website-design-for-electricians 301!
+/gardeners /websites/website-design-for-gardeners 301!
+/gardeners.html /websites/website-design-for-gardeners 301!
+/barbers /websites/website-design-for-barbers 301!
+/barbers.html /websites/website-design-for-barbers 301!
+/music /websites/website-design-for-music-studios 301!
+/music.html /websites/website-design-for-music-studios 301!
+
+# social media folded into digital marketing
+/social-media /digital-marketing 301!
+/social-media.html /digital-marketing 301!
+
+# keep the new pages extensionless too
+/websites/website-design-for-plumbers.html /websites/website-design-for-plumbers 301!
+/websites/website-design-for-electricians.html /websites/website-design-for-electricians 301!
+/websites/website-design-for-gardeners.html /websites/website-design-for-gardeners 301!
+/websites/website-design-for-barbers.html /websites/website-design-for-barbers 301!
+/websites/website-design-for-music-studios.html /websites/website-design-for-music-studios 301!
