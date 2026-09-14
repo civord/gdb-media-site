@@ -14,3 +14,5 @@
 /* --- navbar logo monogram --- */
 .logo-monogram{height:80px;width:auto;flex:none;display:block}
 .nav-left .dropdown-menu{right:auto;left:-0.5rem}
+.approach-image.is-blueprint{background:var(--navy);display:flex;align-items:center;justify-content:center;padding:7%}
+.approach-image .trade-blueprint{width:100%;height:100%;animation:none}
