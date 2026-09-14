@@ -13,3 +13,4 @@
 .svc-intro{margin-top:1.3rem;color:var(--ink-soft);font-size:.98rem;max-width:70ch;line-height:1.7}
 /* --- navbar logo monogram --- */
 .logo-monogram{height:80px;width:auto;flex:none;display:block}
+.nav-left .dropdown-menu{right:auto;left:-0.5rem}

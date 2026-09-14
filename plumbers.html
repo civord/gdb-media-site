@@ -108,64 +108,82 @@
   <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-header">
-    <div class="header-inner">
-      <nav class="nav-side nav-left" aria-label="Primary">
-        <a class='nav-link' href='/#services'>Services</a>
-        <a class='nav-link' href='/#approach'>Approach</a>
-      </nav>
+<div class="header-inner">
+<nav class="nav-side nav-left" aria-label="Primary">
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="websitesMenu">
+Websites <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="websitesMenu">
+<a href='/plumbers'>Plumbers</a>
+<a href='/electricians'>Electricians</a>
+<a href='/gardeners'>Gardeners</a>
+<a href='/barbers'>Barbers</a>
+<a href='/music'>Music &amp; Lessons</a>
+<a class='menu-all' href='/websites'>All Websites</a>
+</div>
+</div>
+<a class='nav-link' href='/seo'>SEO</a>
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="marketingMenu">
+Digital Marketing <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="marketingMenu">
+<a href='/social-media'>Social Media</a>
+<a class='menu-all' href='/digital-marketing'>All Digital Marketing</a>
+</div>
+</div>
+</nav>
 
-      <a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
-        <img src="images/gdb-logo-final-transparent.png" alt="GDB Media & Marketing" class="logo-monogram" width="40" height="40">
-        <span class="logo-sub">Media &amp; Marketing</span>
-      </a>
+<a aria-label='GDB Media & Marketing — home' class='wordmark' href='/'>
+<img src="images/gdb-logo-final-transparent.png" alt="GDB Media & Marketing" class="logo-monogram" width="40" height="40">
+<span class="logo-sub">Media &amp; Marketing</span>
+</a>
 
-      <nav class="nav-side nav-right" aria-label="Secondary">
-        <div class="dropdown" data-dropdown>
-          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenu">
-            Our Work <span class="caret" aria-hidden="true"></span>
-          </button>
-          <div class="dropdown-menu" id="workMenu">
-            <a href='/work#plumbers'>Plumbers</a>
-            <a href='/work#electricians'>Electricians</a>
-            <a href='/work#gardeners'>Gardeners</a>
-            <a href='/work#barbers'>Barbers</a>
-            <a href='/work#music'>Music &amp; Lessons</a>
-            <a class='menu-all' href='/work'>View All Work</a>
-          </div>
-        </div>
-        <a class='nav-link call-link' href='tel:0430389724' aria-label='Call GDB Media on 0430 389 724'>0430 389 724</a>
-        <a class='nav-link' href='/contact'>Contact</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+<nav class="nav-side nav-right" aria-label="Secondary">
+<a class='nav-link' href='/work'>Our Work</a>
+<a class='nav-link call-link' href='tel:0430389724' aria-label='Call GDB Media on 0430 389 724'>0430 389 724</a>
+<a class='nav-link' href='/contact'>Contact</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+<span></span><span></span><span></span>
+</button>
+</nav>
+</div>
+</header>
 
-  <nav class="mobile-nav" id="mobileNav">
-    <button class="nav-close" id="navClose" aria-label="Close menu">
-      <span></span><span></span>
-    </button>
-    <a class='nav-link' href='/#services'>Services</a>
-    <a class='nav-link' href='/#approach'>Approach</a>
-    <div class="dropdown" data-dropdown>
-      <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="workMenuMobile">
-        Our Work <span class="caret" aria-hidden="true"></span>
-      </button>
-      <div class="dropdown-menu" id="workMenuMobile">
-        <a href='/work#plumbers'>Plumbers</a>
-        <a href='/work#electricians'>Electricians</a>
-        <a href='/work#gardeners'>Gardeners</a>
-        <a href='/work#barbers'>Barbers</a>
-        <a href='/work#music'>Music &amp; Lessons</a>
-        <a class='menu-all' href='/work'>View All Work</a>
-      </div>
-    </div>
-    <a class='nav-link call-link' href='tel:0430389724' aria-label='Call GDB Media on 0430 389 724'>0430 389 724</a>
-        <a class='nav-link' href='/contact'>Contact</a>
-  </nav>
+<nav class="mobile-nav" id="mobileNav">
+<button class="nav-close" id="navClose" aria-label="Close menu">
+<span></span><span></span>
+</button>
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="websitesMenuMobile">
+Websites <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="websitesMenuMobile">
+<a href='/plumbers'>Plumbers</a>
+<a href='/electricians'>Electricians</a>
+<a href='/gardeners'>Gardeners</a>
+<a href='/barbers'>Barbers</a>
+<a href='/music'>Music &amp; Lessons</a>
+<a class='menu-all' href='/websites'>All Websites</a>
+</div>
+</div>
+<a class='nav-link' href='/seo'>SEO</a>
+<div class="dropdown" data-dropdown>
+<button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="marketingMenuMobile">
+Digital Marketing <span class="caret" aria-hidden="true"></span>
+</button>
+<div class="dropdown-menu" id="marketingMenuMobile">
+<a href='/social-media'>Social Media</a>
+<a class='menu-all' href='/digital-marketing'>All Digital Marketing</a>
+</div>
+</div>
+<a class='nav-link' href='/work'>Our Work</a>
+<a class='nav-link call-link' href='tel:0430389724' aria-label='Call GDB Media on 0430 389 724'>0430 389 724</a>
+<a class='nav-link' href='/contact'>Contact</a>
+</nav>
 
-  <main id="main">
+<main id="main">
     <section class="page-head on-dark">
       <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="page-head-inner">
@@ -261,7 +279,7 @@
       <div class="work-teaser-inner">
         <p class="eyebrow">Pricing &amp; Process</p>
         <h2 class="section-title" id="plumber-work-heading">One fixed quote. <em class="u-wavy">No surprises.</em></h2>
-        <p class="lead">Every plumber's business is different — a sole trader needs a different site to a crew of six, and website design for plumbers in Melbourne looks different to a regional operator covering three towns. Tell us about yours and you'll get a fixed-price quote up front, GST included, with no lock-in contracts and no hosting hostage-taking. The finished website is yours to keep. See what plumber website design looks like when it's done properly in <a class="work-link" href="/work#plumbers">our work</a>.</p>
+        <p class="lead">Every plumber's business is different — a sole trader needs a different site to a crew of six, and website design for plumbers in Melbourne looks different to a regional operator covering three towns. Tell us about yours and you'll get a fixed-price quote up front, GST included, with no lock-in contracts and no hosting hostage-taking. The finished website is yours to keep. See what plumber website design looks like when it's done properly in <a class="work-link" href="/work">our work</a>.</p>
         <a class='btn-ghost' href='/work'>See Our Work</a>
       </div>
     </section>
@@ -287,16 +305,18 @@
         <span class="logo-sub">Media &amp; Marketing</span>
       </a>
       <nav class="footer-nav" aria-label="Footer">
-        <a href='/#services'>Services</a>
-        <a href='/#approach'>Approach</a>
-        <a href='/work'>Our Work</a>
-        <a href='/plumbers'>Plumbers</a>
-        <a href='/electricians'>Electricians</a>
-        <a href='/gardeners'>Gardeners</a>
-        <a href='/barbers'>Barbers</a>
-        <a href='/music'>Music</a>
-        <a href='/contact'>Contact</a>
-      </nav>
+<a href='/websites'>Websites</a>
+<a href='/seo'>SEO</a>
+<a href='/digital-marketing'>Digital Marketing</a>
+<a href='/social-media'>Social Media</a>
+<a href='/work'>Our Work</a>
+<a href='/plumbers'>Plumbers</a>
+<a href='/electricians'>Electricians</a>
+<a href='/gardeners'>Gardeners</a>
+<a href='/barbers'>Barbers</a>
+<a href='/music'>Music</a>
+<a href='/contact'>Contact</a>
+</nav>
       <div class="footer-social" aria-label="Social media">
         <a href="https://www.facebook.com/profile.php?id=61592230862081" target="_blank" rel="noopener" aria-label="GDB Media & Marketing on Facebook">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.9h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
