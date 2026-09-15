@@ -16,3 +16,11 @@
 .nav-left .dropdown-menu{right:auto;left:-0.5rem}
 .approach-image.is-blueprint{background:var(--navy);display:flex;align-items:center;justify-content:center;padding:7%}
 .approach-image .trade-blueprint{width:100%;height:100%;animation:none}
+
+/* ---- trade-page proof section (portfolio cards on /websites/* pages) ---- */
+.trade-proof{padding:5.5rem 1.5rem;background:var(--paper);border-top:1px solid var(--line)}
+.trade-proof-inner{max-width:1200px;margin:0 auto}
+.trade-proof p.lead{margin-top:1rem;color:var(--ink-soft);max-width:60ch;font-size:0.98rem}
+.trade-proof .work-grid{margin-top:2.5rem;grid-template-columns:repeat(auto-fit,minmax(258px,380px));justify-content:start}
+.trade-proof-more{margin-top:2.5rem}
+@media (min-width:900px){.trade-proof{padding:7rem 2.5rem}}
