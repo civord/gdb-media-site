@@ -38,3 +38,10 @@
 /websites/website-design-for-cleaners.html /websites/website-design-for-cleaners 301!
 /websites/website-design-for-surveyors.html /websites/website-design-for-surveyors 301!
 /websites/website-design-for-scaffolders.html /websites/website-design-for-scaffolders 301!
+
+# 2026-09-15 retire the un-anonymised builder demos — forced, so these URLs are
+# unreachable whether or not the old files are still in the repo
+/demos/belair-builders.html /demos/thornwick-build.html 301!
+/demos/belair-builders /demos/thornwick-build.html 301!
+/demos/alina-homes.html /demos/merridew-homes.html 301!
+/demos/alina-homes /demos/merridew-homes.html 301!
