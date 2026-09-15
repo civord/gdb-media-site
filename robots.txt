@@ -1,8 +1,14 @@
-# gdbmedia.com.au — all crawlers welcome, including AI search agents
+# gdbmedia.com.au — all crawlers welcome, including AI search agents.
+# The wildcard below already allows everything; the named blocks are an
+# explicit signal to AI operators that this content may be crawled, indexed
+# and cited. The Content-Signal line states the same in Cloudflare's
+# content-signals syntax: index it, quote it, cite it, link back.
+# Updated 2026-09-15.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes, use=reference
 Allow: /
 
-# AI search & assistant crawlers (explicitly welcome)
+# --- OpenAI ---
 User-agent: GPTBot
 Allow: /
 
@@ -12,16 +18,51 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# --- Anthropic ---
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# legacy token, kept for older crawlers still sending it
 User-agent: Claude-Web
 Allow: /
 
+# --- Perplexity ---
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# --- Google (Google-Extended governs Gemini training and grounding;
+#     it does not affect Google Search ranking either way) ---
+User-agent: Googlebot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+# --- Apple (Applebot-Extended governs Apple model training) ---
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Meta ---
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# --- Microsoft / Bing ---
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://gdbmedia.com.au/sitemap.xml
