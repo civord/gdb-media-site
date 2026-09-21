@@ -9,7 +9,8 @@ electricians: 'Electricians',
 gardeners: 'Gardeners',
 music: 'Music & Lessons',
 developers: 'Developers',
-concreting: 'Concreting'
+concreting: 'Concreting',
+'architectural-designers': 'Architectural Designers'
 };
 function applyFilter(filter) {
 let visible = 0;
@@ -27,7 +28,7 @@ countEl.textContent = `Showing ${visible} project${visible === 1 ? '' : 's'} for
 }
 function filterFromHash() {
 const hash = location.hash.replace('#', '');
-const valid = ['plumbers', 'electricians', 'gardeners', 'music', 'developers', 'concreting'];
+const valid = ['plumbers', 'electricians', 'gardeners', 'music', 'developers', 'concreting', 'architectural-designers'];
 return valid.includes(hash) ? hash : 'all';
 }
 chips.forEach(chip => {
