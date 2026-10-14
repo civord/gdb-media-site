@@ -52,3 +52,9 @@
 # 2026-10-14 Geelong SEO page
 /seo-geelong.html /seo-geelong 301!
 /seo/seo-geelong /seo-geelong 301!
+
+# 2026-10-14 SEO service pages and care plans
+/seo-for-plumbers.html /seo-for-plumbers 301!
+/seo-for-electricians.html /seo-for-electricians 301!
+/seo-packages.html /seo-packages 301!
+/website-care-plans.html /website-care-plans 301!
