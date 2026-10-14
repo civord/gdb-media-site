@@ -48,3 +48,7 @@
 
 # 2026-10-08 pricing page
 /pricing.html /pricing 301!
+
+# 2026-10-14 Geelong SEO page
+/seo-geelong.html /seo-geelong 301!
+/seo/seo-geelong /seo-geelong 301!
