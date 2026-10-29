@@ -340,6 +340,10 @@ h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.0
   .g-wide,.g-tall{grid-column:auto;grid-row:auto}
 }
 
+  /* GDB demo ribbon (side padding keeps the text clear of the fixed back-to-work pill) */
+  .demo-ribbon{background:#023047;color:#cfe0e6;text-align:center;font:500 .82rem/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:9px 64px}
+  .demo-ribbon b{color:#fff}
+  .demo-ribbon a{color:#8ecae6;font-weight:600}
 </style>
 
 <!-- Structured data: the business itself -->
@@ -441,6 +445,7 @@ h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.0
 </script>
 </head>
 <body>
+<div class="demo-ribbon">Demo site by <b>GDB Media</b> — <a href="https://gdbmedia.com.au/contact" target="_blank" rel="noopener">get a site like this &rarr;</a></div>
 <!-- GDB Media: back-to-work pill (injected) -->
 <style>
   .gdb-back-pill{position:fixed;top:18px;left:18px;z-index:2147483000;display:inline-flex;align-items:center;gap:.6rem;padding:.6rem .95rem .6rem .75rem;font-family:'Fraunces',serif;text-decoration:none;line-height:1;background:rgba(14,27,42,0.92);color:#F6F3EC;border:1px solid #B07D3C;border-radius:999px;box-shadow:0 10px 28px -12px rgba(0,0,0,.45);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);transition:transform .25s ease,box-shadow .25s ease,padding .25s ease}

@@ -22,7 +22,7 @@ Three tiers of page, each with a different relationship to the shared assets:
 
 1. **Agency pages** (repo root): `index`, `websites`, `seo`, `digital-marketing`, `work`, `contact`. Link `/style.css` + `/script.js`.
 2. **Trade landing pages** (`websites/website-design-for-<trade>.html`, 15 of them): the SEO surface. Same shell and assets as tier 1; each targets one trade keyword. Listed in `sitemap.xml`.
-3. **Client demos** (`demos/*.html`): fully self-contained sample sites for fictional businesses (Thornwick Build Co., Callister Plumbing, …). **Each has its own inline `<style>` and inline scripts — they deliberately do not use `/style.css` or `/script.js`.** All carry `robots: noindex, nofollow`. Changing site-wide styling never touches these; changing a demo never touches the main site.
+3. **Client demos** (`demos/*.html`): fully self-contained sample sites for fictional businesses (Thornwick Build Co., Callister Plumbing, …). **Each has its own inline `<style>` and inline scripts — they deliberately do not use `/style.css` or `/script.js`.** All carry `robots: noindex, nofollow`, and `_headers` adds `X-Robots-Tag: noindex, nofollow` to everything under `/demos/` as a backstop. Each live demo opens with a `.demo-ribbon` so visitors know it is a sample. Changing site-wide styling never touches these; changing a demo never touches the main site.
 
 There is no templating. The header, mobile nav, and footer are **copy-pasted into every tier-1 and tier-2 page**. A nav or footer change means editing ~21 files consistently — grep for the markup and apply the same edit to all of them, or the nav silently diverges between pages.
 

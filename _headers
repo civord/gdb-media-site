@@ -1,0 +1,6 @@
+# Netlify response headers
+
+# Demo and preview sites are samples for fictional or not-yet-launched businesses:
+# keep every one of them out of search, whatever its own robots meta says.
+/demos/*
+  X-Robots-Tag: noindex, nofollow
